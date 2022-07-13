@@ -12,17 +12,17 @@ const Navbar = ({click}) => {
         </div>
         {/* links */}
         <ul className="flex list-none items-center justify-center align-center font-quicksand text-pink-500  sm:text-md lg:text-2xl font-medium ">
-          <li className="mx-2 md:mx-4 px-2 text-center font-bold hover:text-yellow-300 cursor-pointer leading-tight hidden sm:inline-block">
+          <li className="mx-2 md:mx-4 px-2 text-center font-bold hover:text-yellow-300  hover:drop-shadow-[-2px_2px_0px_rgba(244,114,182,.80)] cursor-pointer leading-tight hidden sm:inline-block">
             <Link to="/product">
               Shop</Link>
           </li>
 
-          <li className="mx-2 md:mx-4 text-center font-bold hover:text-yellow-300 cursor-pointer hidden sm:inline-block">
+          <li className="mx-2 md:mx-4 text-center font-bold hover:text-yellow-300 cursor-pointer hidden sm:inline-block hover:drop-shadow-[-2px_2px_0px_rgba(244,114,182,.80)]">
             <Link to="/gallery">
               Gallery</Link>
           </li>
 
-          <li className="mx-2 md:mx-4 text-center font-bold hover:text-yellow-300 cursor-pointer hidden md:my-0 sm:inline-block">
+          <li className="mx-2 md:mx-4 text-center font-bold hover:text-yellow-300 cursor-pointer hidden md:my-0 sm:inline-block hover:drop-shadow-[-2px_2px_0px_rgba(244,114,182,.80)]">
             <Link to="/meetkendall">
               Meet Kendall</Link>
           </li>
@@ -30,12 +30,11 @@ const Navbar = ({click}) => {
           <li className="group mx-2 md:mx-2.5 md:w-60 hover:text-white cursor-pointer sm:flex sm:items-center sm:content-center hidden hover:drop-shadow-[-2px_4px_0px_rgba(234,117,7,.80)]">
             <Link
               to="/cart"
-              className="bg-slate-800 group-hover:bg-yellow-300 hover:text-black p-3 rounded-lg flex justify-center items-center text-center"
-            >
+              className="bg-slate-800 group-hover:bg-yellow-300 group-hover:text-pink-500 p-3 rounded-lg flex justify-center items-center text-center">
               <i className="fas fa-shopping-cart mx-2"></i>
-              <span className="px-1 flex font-bold justify-center items-center">
+              <span className="px-1 flex font-bold justify-center items-center group-hover:text-pink-500">
                 My Cart
-                <span className="mx-2.5 h-8 w-8 bg-slate-200 group-hover:bg-pink-500 hover:ease-in hover:duration-150 py-1.5 px-2.5 text-sm font-bold rounded-full ">
+                <span className="mx-2.5 h-8 w-8 bg-slate-200 group-hover:text-yellow-300 group-hover:bg-pink-500 group-hover:ease-in group-hover:duration-150 py-1.5 px-2.5 text-sm font-bold rounded-full ">
                   0
                 </span>
               </span>
