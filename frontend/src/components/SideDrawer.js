@@ -29,33 +29,40 @@ const SideDrawer = ({show, click}) => {
             </div>
 
             <ul
-                className="h-screen w-full bg-black ">
+                className="h-screen w-full bg-black list-none ">
 
                 <li className="hover:drop-shadow-[-2px_4px_0px_rgba(244,114,182,.80)] hover:text-yellow-300 text-5xl text-pink-500 font-quicksand font-bold flex justify-center items-center align-middle h-28">
-                    Shop
+                    <Link to="/product">
+                        Shop</Link>
                 </li>
 
                 <li className="hover:drop-shadow-[-2px_4px_0px_rgba(244,114,182,.80)] hover:text-yellow-300  text-5xl text-pink-500 font-quicksand font-bold flex justify-center items-center align-middle h-28 border-t-2 border-t-yellow-400">
-                    Gallery
+                    <Link to="/gallery">
+              Gallery</Link>
                 </li>
 
                 <li className="hover:drop-shadow-[-2px_4px_0px_rgba(244,114,182,.80)] hover:text-yellow-300 text-5xl text-pink-500 font-quicksand font-bold flex justify-center items-center align-middle  h-28 border-t-2 border-t-yellow-400">
-                    Meet Kendall
+                    <Link to="/meetkendall">
+              Meet Kendall</Link>
                 </li>
 
                 <li className="group hover:text-yellow-300 h-28 w-full flex justify-center align-middle items-center border-t-2 border-t-yellow-400">
                     <i className="fas fa-shopping-cart text-4xl text-pink-500 mx-4 group-hover:text-yellow-300 group-hover:drop-shadow-[-2px_4px_0px_rgba(244,114,182,.80)]"></i>
-              <span className="group-hover:text-yellow-300 px-1 flex text-5xl text-pink-500 font-quicksand font-bold justify-center items-center group-hover:drop-shadow-[-2px_4px_0px_rgba(244,114,182,.80)]">
-                My Cart
-                <span className="mx-2.5 h-8 w-8 bg-slate-200 group-hover:bg-yellow-300 py-1.5 px-2.5 text-xl group-hover:text-pink-500 sm:text-sm font-bold rounded-full flex items-center ">
-                  0
+                    <Link to="/cart">
+                    <span className="group-hover:text-yellow-300 px-1 flex text-5xl text-pink-500 font-quicksand font-bold justify-center items-center group-hover:drop-shadow-[-2px_4px_0px_rgba(244,114,182,.80)]">
+
+                            My Cart
+
+                            <span className=" h-8 w-8 bg-slate-200 group-hover:bg-yellow-300 py-1.5 px-2.5 mx-4 text-xl group-hover:text-pink-500 sm:text-sm font-bold rounded-full flex items-center ">
+                                0
+                            </span>
                         </span>
-                        </span>
+                    </Link>
                 </li>
                 <li className="flex flex-row justify-center pt-8 mx-8 space-x-8">
-                    <ul><i class="fa-brands fa-instagram  text-slate-100 text-5xl opacity-90 hover:drop-shadow-[-2px_4px_0px_rgba(244,114,182,.80)] hover:opacity-100 hover:text-yellow-300"></i></ul>
-                    <ul><i class="fa-brands fa-facebook-square  text-slate-100 text-5xl opacity-90 hover:drop-shadow-[-2px_4px_0px_rgba(244,114,182,.80)] hover:opacity-100 hover:text-yellow-300"></i></ul>
-                    <ul><i class="fa-brands fa-reddit-square  text-slate-100 text-5xl opacity-90 hover:drop-shadow-[-2px_4px_0px_rgba(244,114,182,.80)] hover:opacity-100 hover:text-yellow-300"></i></ul>
+                    <ul><i className="fa-brands fa-instagram  text-slate-100 text-5xl opacity-90 hover:drop-shadow-[-2px_4px_0px_rgba(244,114,182,.80)] hover:opacity-100 hover:text-yellow-300"></i></ul>
+                    <ul><i className="fa-brands fa-facebook-square  text-slate-100 text-5xl opacity-90 hover:drop-shadow-[-2px_4px_0px_rgba(244,114,182,.80)] hover:opacity-100 hover:text-yellow-300"></i></ul>
+                    <ul><i className="fa-brands fa-reddit-square  text-slate-100 text-5xl opacity-90 hover:drop-shadow-[-2px_4px_0px_rgba(244,114,182,.80)] hover:opacity-100 hover:text-yellow-300"></i></ul>
                 </li>
             </ul>
           </div>

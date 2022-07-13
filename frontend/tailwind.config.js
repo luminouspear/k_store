@@ -8,7 +8,10 @@ module.exports = {
       fontFamily: {
         'quicksand': ['Quicksand', 'sans-serif'],
         'berkshire': ['"Berkshire Swash"', 'cursive']
-        }
+      },
+      backgroundImage: {
+        'hero': "url('./assets/image_skulliver.jpeg')"
+      }
 
     },
   },

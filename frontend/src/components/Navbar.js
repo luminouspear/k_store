@@ -6,7 +6,7 @@ const Navbar = ({click}) => {
       <nav className="navbar w-full max-w-7xl container mx-auto bg-black flex justify-between items-center py-6 px-4 z-50 h-28">
         {/* logo */}
         <div className="logo">
-          <h1 className="font-berkshire text-pink-500 text-4xl sm:text-2xl lg:text-6xl cursor-pointer font-bold drop-shadow-[-2px_2px_0px_rgba(234,117,7,.80)]">
+          <h1 className="font-berkshire text-pink-500 text-4xl sm:text-2xl lg:text-6xl cursor-pointer font-bold drop-shadow-[-2px_2px_0px_rgba(234,117,7,1.0)]">
             Simcoe Stitchcraft
           </h1>
         </div>
