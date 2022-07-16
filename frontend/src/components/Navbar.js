@@ -3,10 +3,10 @@ import { Link } from "react-router-dom";
 const Navbar = ({click}) => {
   return (
     <div className="w-full bg-black">
-      <nav className="navbar w-full max-w-7xl container mx-auto bg-black flex justify-between items-center py-6 px-4 z-50 h-28">
+      <nav className="navbar w-full max-w-7xl min-w-full container mx-auto bg-black flex justify-between  py-6 px-4 md:px-4 lg:px-6 xl:px-16 z-50 h-28">
         {/* logo */}
-        <div className="logo">
-          <h1 className="font-berkshire text-pink-500 text-4xl sm:text-2xl lg:text-6xl cursor-pointer font-bold drop-shadow-[-2px_2px_0px_rgba(234,117,7,1.0)]">
+        <div className="logo flex align-middle content-center items-center">
+          <h1 className="font-berkshire bg-gradient-to-r bg-clip-text h-12 lg:h-20 text-transparent from-pink-500 via-pink-200 to-pink-500 animate-glow text-4xl sm:text-2xl md:text-3xl sm:mt-2.5 lg:mt-6 xl:mt-2 lg:text-4xl xl:text-6xl cursor-pointer font-bold drop-shadow-[-2px_2px_0px_rgba(234,117,7,1.0)]">
             Simcoe Stitchcraft
           </h1>
         </div>
@@ -27,7 +27,7 @@ const Navbar = ({click}) => {
               Meet Kendall</Link>
           </li>
 
-          <li className="group mx-2 md:mx-2.5 md:w-60 hover:text-white cursor-pointer sm:flex sm:items-center sm:content-center hidden hover:drop-shadow-[-2px_4px_0px_rgba(234,117,7,.80)]">
+          <li className="group  lg:w-fit hover:text-white cursor-pointer sm:flex sm:items-center sm:content-center hidden hover:drop-shadow-[-2px_4px_0px_rgba(234,117,7,.80)]">
             <Link
               to="/cart"
               className="bg-slate-800 group-hover:bg-yellow-300 group-hover:text-pink-500 p-3 rounded-lg flex justify-center items-center text-center">
