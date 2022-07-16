@@ -82,36 +82,35 @@ class HomeScreen extends Component {
 
 
 
-      <div className='bg-black w-full h-fit'>
+      <div className='bg-black w-full h-fit z-[-2]'>
         <div className="flex flex-col lg:flex-row space-x-12">
-            <div className="mx-auto lg:ml-12 lg:my-12 my-4 w-10/12 h-[65vh] max-w-full min-h-1/2 bg-gray-100 overflow-clip rounded-3xl ">
+            <div className="mx-auto lg:ml-12 lg:my-12 my-4 w-10/12 h-[65vh] max-w-full min-h-1/2 bg-gray-100 overflow-hidden rounded-3xl ">
                 <div className="bg-hero bg-cover bg-no-repeat bg-center w-full h-full scale-[120%] -translate-x-5 "></div>
             </div>
             <div className="mx-auto mt-12 w-10/12 lg:mr-16 lg:max-w-[600px] flex flex-col align-center justify-center">
                 <h2 className="font-quicksand text-5xl text-center text-white leading-tight"><span className="font-berkshire font-bold
                     text-chill-grad bg-chill-grad bg-clip-text text-transparent bg-400 animate-shine ">Handmade</span>
                     &nbsp;quilts made in Barrie, Ontario, Canada.</h2>
-            <div className="relative before:absolute after:absolute
-                                    mt-12 mx-auto mb-0 w-10/12 py-8 rounded-full
-                                    before:content-[''] after:content-['']
-                                    bg-[linear-gradient(0deg,_#000,_#272727)]
-                                    before:rounded-full after:rounded-full
+            <button className="relative before:absolute after:absolute
+                     z-[0] before:z-[-10] after:z-[-10]
+                     mt-12 mx-auto mb-0 h-8 w-10/12 py-8 rounded-full flex align-middle
+                     justify-center text-white items-center group cursor-pointer
+                     bg-[linear-gradient(0deg,#000,#272727)]
 
-                                    before:-left-[2px] after:-left-[2px]
-                                    before:-top-[2px] after:-top-[2px]
-                                    before:bg-chill-grad after:bg-chill-grad
-                                    before:bg-400 after:bg-400
-                                    before:w-[calc(100%_+_4px)] after:w-[calc(100%_+_4px)]
-                                    before:h-[calc(100%_+_4px)] after:h-[calc(100%_+_4px)]
-                                    before:-z-[1] after:-z-[1]
-                                    before:animate-shine after:animate-shine
-                                    after:blur-[2rem]
-                                    flex align-middle justify-center items-center group cursor-pointer" >
+                     before:rounded-full after:rounded-full
+                     before:-left-[2px] after:-left-[2px]
+                     before:-top-[2px] after:-top-[2px]
+                     before:bg-chill-grad after:bg-chill-grad
+                     before:w-[calc(100%_+_4px)] after:w-[calc(100%_+_4px)]
+                     before:h-[calc(100%_+_4px)] after:h-[calc(100%_+_4px)]
+                     before:bg-400 after:bg-400
+                     before:animate-shine after:animate-shine
+                            " >
                     <span
-                        className="font-quicksand text-3xl font-bold text-white/90
+                        className="font-quicksand text-2xl font-bold text-white/90
                                      group-hover:bg-chill-grad group-hover:bg-clip-text group-hover:text-transparent group-hover:bg-400 animate-shine ">See
                         What's Available</span>
-                </div>
+                </button>
             </div>
         </div>
       </div>

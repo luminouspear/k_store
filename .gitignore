@@ -8,7 +8,7 @@ node_modules/
 
 # testing
 /coverage
-frontend/src/playground/
+# frontend/src/playground/
 
 
 # production
