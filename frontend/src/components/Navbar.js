@@ -6,7 +6,7 @@ const Navbar = ({click}) => {
       <nav className="navbar w-full max-w-7xl min-w-full container mx-auto bg-black flex justify-between  py-6 px-4 md:px-4 lg:px-6 xl:px-16 z-50 h-28">
         {/* logo */}
         <div className="logo flex align-middle content-center items-center">
-          <h1 className="font-berkshire bg-gradient-to-r bg-clip-text h-12 lg:h-20 text-transparent from-pink-500 via-pink-200 to-pink-500 animate-glow text-4xl sm:text-2xl md:text-3xl sm:mt-2.5 lg:mt-6 xl:mt-2 lg:text-4xl xl:text-6xl cursor-pointer font-bold drop-shadow-[-2px_2px_0px_rgba(234,117,7,1.0)]">
+          <h1 className="font-berkshire bg-gradient-to-r bg-clip-text h-12 lg:h-20 text-transparent from-pink-500 via-pink-200 to-pink-500 animate-glow text-4xl sm:text-2xl md:text-3xl sm:mt-2.5 lg:mt-6 xl:mt-2 lg:text-4xl xl:text-6xl cursor-pointer font-bold drop-shadow-[-2px_2px_0_rgba(234,117,7,1.0)]">
             Simcoe Stitchcraft
           </h1>
         </div>
