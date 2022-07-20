@@ -1,19 +1,9 @@
+import { Fragment } from 'react';
 import './App.css';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { useState } from 'react';
 
 //Screens
-import HomeScreen from "./screens/HomeScreen";
-import ProductScreen from "./screens/ProductScreen";
-import CartScreen from "./screens/CartScreen";
-import GalleryScreen from "./screens/GalleryScreen";
-import MeetKendallScreen from "./screens/MeetKendallScreen";
 
-//Components
-
-import Navbar from './components/Navbar';
-import Backdrop from './components/Backdrop';
-import SideDrawer from './components/SideDrawer';
+import Background from './components/Background';
 
 function App() {
 
@@ -25,43 +15,14 @@ function App() {
   // or close the menu.
 
 
-  const [sideToggle, setSideToggle] = useState(false);
+
 
   return (
 
-    <Router>
-      { /* Navbar */}
-      <Navbar click={() => {
-        console.log("Navbar: " + sideToggle);
-        setSideToggle(true);
-      }
-      } />
+<Fragment>
+      <Background />
+</Fragment>
 
-
-      {/* SideDrawer */}
-      <SideDrawer show={sideToggle} click={() => {
-        setSideToggle(false);
-        console.log('text sideToggle')
-      }
-      } />
-      {/* Backdrop */}
-      <Backdrop show={sideToggle} click={() => setSideToggle(false)} />
-      <main>
-        <Routes>
-           {/* Used to be "Switch" */}
-          <Route exact path="/" element={HomeScreen} />
-          <Route exact path="/product/:id" element={ProductScreen} />
-          <Route exact path="/cart" element={CartScreen} />
-          <Route exact path='/gallery' element={GalleryScreen} />
-          <Route exact path='/meetkendall' element={MeetKendallScreen} />
-        </Routes>
-      </main>
-      {/* HomeScreen */}
-      <HomeScreen />
-      {/* ProductScreen */}
-      {/* CartScreen */}
-
-    </Router>
   );
 }
 
