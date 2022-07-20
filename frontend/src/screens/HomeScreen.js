@@ -1,9 +1,11 @@
 import React, { Component, Fragment } from 'react';
 import HeroSection from '../components/HeroSection'
 import WhatsNew from '../components/WhatsNew';
+import CustomQuilts from '../components/CustomQuilts';
 import gallery1 from '../assets/image_skulliver.jpeg';
 import gallery2 from '../assets/image_hand.jpeg';
 import gallery3 from '../assets/image_dragonfly_spock.jpeg';
+import GalleryPreview from '../components/GalleryPreview';
 
 export default class HomeScreen extends Component {
 
@@ -28,6 +30,9 @@ export default class HomeScreen extends Component {
       <Fragment>
         <HeroSection />
         <WhatsNew />
+        <CustomQuilts />
+        <GalleryPreview />
+
       </Fragment>
 
     )

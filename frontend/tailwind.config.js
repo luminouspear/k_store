@@ -41,7 +41,7 @@ module.exports = {
                     },
                     'animation': {
                         'glow': 'glow 6s ease infinite',
-                        'shiny': 'shine 30s linear infinite'
+                        'shiny': 'shine 40s linear infinite'
                     },
                     'keyframes': {
                         'glow': {
