@@ -6,6 +6,11 @@ import gallery1 from '../assets/image_skulliver.jpeg';
 import gallery2 from '../assets/image_hand.jpeg';
 import gallery3 from '../assets/image_dragonfly_spock.jpeg';
 import GalleryPreview from '../components/GalleryPreview';
+import AboutKendall from '../components/AboutKendall';
+import JoinMailingList from '../components/JoinMailingList';
+import FAQ from '../components/FAQ';
+import ContactMe from '../components/ContactMe';
+import Footer from '../components/Footer';
 
 export default class HomeScreen extends Component {
 
@@ -32,7 +37,11 @@ export default class HomeScreen extends Component {
         <WhatsNew />
         <CustomQuilts />
         <GalleryPreview />
-
+        <AboutKendall />
+        <JoinMailingList />
+        <FAQ />
+        <ContactMe />
+        <Footer />
       </Fragment>
 
     )

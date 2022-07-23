@@ -3,7 +3,7 @@ import React from 'react'
 const GalleryPreview = () => {
   return (
     <section className="w-full bg-[#111] py-12">
-      <div className="w-full max-w-7xl container mx-auto bg-transparent mt-8 md:mt-20">
+      <div className="w-full max-w-7xl container mx-auto bg-transparent mt-6 md:mt-12">
   <h2 className="mx-auto text-center font-berkshire text-kyellow text-4xl drop-shadow-kmag2">
     <span className="text-5xl">k</span>endall's{" "}
     <span className="text-5xl">F</span>avourites

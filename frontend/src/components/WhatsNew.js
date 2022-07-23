@@ -2,7 +2,7 @@ import React from 'react'
 
 const WhatsNew = () => {
   return (
-    <section className="w-full bg-[#111] py-12">
+    <section className="w-full bg-[#111] pt-6 pb-5">
   <div className="w-full max-w-7xl container mx-auto bg-transparent mt-6 md:mt-12 mb-12">
     <h2 className="mx-auto text-center font-berkshire text-kyellow text-4xl drop-shadow-kmag2">
       <span className="text-5xl">w</span>hat's{" "}

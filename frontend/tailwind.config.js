@@ -71,8 +71,6 @@ module.exports = {
                 },
             },
   plugins: [
-    plugin(function({ addVariant }) {
-      addVariant('not-last-of-type', '&:not(:last-of-type)')
-    })
+    require('@tailwindcss/aspect-ratio')
   ]
 }
