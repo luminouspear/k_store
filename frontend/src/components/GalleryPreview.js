@@ -10,7 +10,7 @@ const GalleryPreview = () => {
   </h2>
   <div className="mx-12 mt-12 lg:mt-24 grid grid-cols-2 gap-6 gap-y-0 md:gap-12 md:gap-y-0 lg:gap-y-12 lg:grid-cols-3 2xl:gap-12">
     <div className=" mt-12 lg:mt-0 cursor-pointer">
-      <div className="aspect-square bg-white/50 rounded-3xl drop-shadow-kyellow4 overflow-hidden">
+      <div className="aspect-w-4 aspect-h-4 bg-white/50 rounded-3xl drop-shadow-kyellow4 overflow-hidden">
         <img
           src={require("../assets/image_desert.jpeg")}
           className="object-cover object-center w-full scale-110 "
@@ -20,7 +20,7 @@ const GalleryPreview = () => {
       </div>
     </div>
     <div className=" mt-12 lg:mt-0 cursor-pointer">
-      <div className="aspect-square bg-white/50 rounded-3xl drop-shadow-kcyan4 overflow-hidden">
+      <div className="aspect-w-4 aspect-h-4 bg-white/50 rounded-3xl drop-shadow-kcyan4 overflow-hidden">
         <img
           src={require("../assets/image_night_lemur.jpeg")}
           className="object-cover object-center w-full scale-110 "
@@ -30,7 +30,7 @@ const GalleryPreview = () => {
       </div>
     </div>
     <div className=" mt-12 lg:mt-0 cursor-pointer">
-      <div className="aspect-square bg-white/50 rounded-3xl drop-shadow-kyellow4 overflow-hidden">
+      <div className="aspect-w-4 aspect-h-4 bg-white/50 rounded-3xl drop-shadow-kyellow4 overflow-hidden">
         <img
           src={require("../assets/image_triangles.jpeg")}
           className="object-cover object-center w-full scale-110 "
@@ -40,7 +40,7 @@ const GalleryPreview = () => {
       </div>
     </div>
     <div className=" mt-12 lg:mt-0 cursor-pointer">
-      <div className="aspect-square bg-white/50 rounded-3xl drop-shadow-kcyan4 overflow-hidden">
+      <div className="aspect-w-4 aspect-h-4 bg-white/50 rounded-3xl drop-shadow-kcyan4 overflow-hidden">
         <img
           src={require("../assets/image_the_goat.jpg")}
           className="object-cover object-center w-full scale-110 "
@@ -50,7 +50,7 @@ const GalleryPreview = () => {
       </div>
     </div>
     <div className=" mt-12 lg:mt-0 cursor-pointer">
-      <div className="aspect-square bg-white/50 rounded-3xl drop-shadow-kyellow4 overflow-hidden">
+      <div className="aspect-w-4 aspect-h-4 bg-white/50 rounded-3xl drop-shadow-kyellow4 overflow-hidden">
         <img
           src={require("../assets/image_monsterra.jpeg")}
           className="object-cover object-center w-full scale-110 "
@@ -60,12 +60,11 @@ const GalleryPreview = () => {
       </div>
     </div>
     <div className=" mt-12 lg:mt-0 cursor-pointer">
-      <div className="aspect-square bg-white/50 rounded-3xl drop-shadow-kcyan4 overflow-hidden">
+      <div className="aspect-w-4 aspect-h-4 bg-white/50 rounded-3xl drop-shadow-kcyan4 overflow-hidden">
         <img
-          src={require("../assets/image_moths.jpeg")}
+          src={require("../assets/image_cheetah.jpeg")}
           className="object-cover object-center w-full scale-110 "
-          alt="Two multi-coloured moths on a black field"
-
+          alt="A noble cheetah block."
         />
       </div>
     </div>

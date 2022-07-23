@@ -10,7 +10,7 @@ const WhatsNew = () => {
     </h2>
     <div className="flex mt-12 lg:mt-24 align-center justify-center items-center flex-col lg:flex-row lg:items-start lg:space-x-12 mx-12 xl:mx-0">
       <div className="w-full mt-6 lg:mt-0 cursor-pointer group">
-        <div className="w-full  aspect-square bg-white/50 rounded-3xl drop-shadow-kyellow4 overflow-hidden">
+        <div className="w-full  aspect-w-4 aspect-h-4 bg-white/50 rounded-3xl drop-shadow-kyellow4 overflow-hidden">
           <img
             src={require("../assets/image_uterus.jpeg")}
             className="object-cover object-center h-full scale-110 "
@@ -25,7 +25,7 @@ const WhatsNew = () => {
         </div>
       </div>
       <div className="w-full mt-12 lg:mt-0 cursor-pointer group">
-        <div className="w-full  aspect-square bg-white/50 rounded-3xl drop-shadow-kmag4 overflow-hidden">
+        <div className="w-full  aspect-w-4 aspect-h-4 bg-white/50 rounded-3xl drop-shadow-kmag4 overflow-hidden">
           <img
             src={require("../assets/image_hand.jpeg")}
             className="object-cover object-center h-full scale-110 "
@@ -40,7 +40,7 @@ const WhatsNew = () => {
         </div>
       </div>
       <div className="w-full mt-12 lg:mt-0 cursor-pointer group">
-        <div className="w-full  aspect-square bg-white/50 rounded-3xl drop-shadow-kyellow4 overflow-hidden">
+        <div className="w-full  aspect-w-4 aspect-h-4 bg-white/50 rounded-3xl drop-shadow-kyellow4 overflow-hidden">
           <img
             src={require("../assets/image_uterus2.jpeg")}
             className="object-cover object-center w-full scale-110 "
