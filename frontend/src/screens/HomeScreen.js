@@ -30,7 +30,6 @@ export default class HomeScreen extends Component {
   }
 
   render() {
-    console.log(this.state.items[0].imageAlt)
     return (
       <Fragment>
         <HeroSection />

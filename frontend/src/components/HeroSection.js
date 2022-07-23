@@ -15,10 +15,10 @@ const HeroSection = () => {
                 alt="Skulliver, a giant foundation paper-pieced skull made by Kendall.">
               </img>
             </div>
-            <div class="w-full lg:w-8/12 h-6 md:h-8 flex justify-center align-middle items-center content-center space-x-4 pt-6">
-                    <div class="w-2 md:w-4 h-2 md:h-4 bg-kyellow drop-shadow-kmag2 rounded-full active:scale-125 active"></div>
-                    <div class="w-2 md:w-4 h-2 md:h-4 bg-kyellow drop-shadow-kmag2 rounded-full active:scale-125"></div>
-                    <div class="w-2 md:w-4 h-2 md:h-4 bg-kyellow drop-shadow-kmag2 rounded-full active:scale-125"></div>
+            <div className="w-full lg:w-8/12 h-6 md:h-8 flex justify-center align-middle items-center content-center space-x-4 pt-6">
+                    <div className="w-2 md:w-4 h-2 md:h-4 bg-kyellow drop-shadow-kmag2 rounded-full active:scale-125 active"></div>
+                    <div className="w-2 md:w-4 h-2 md:h-4 bg-kyellow drop-shadow-kmag2 rounded-full active:scale-125"></div>
+                    <div className="w-2 md:w-4 h-2 md:h-4 bg-kyellow drop-shadow-kmag2 rounded-full active:scale-125"></div>
 
                 </div>
 
