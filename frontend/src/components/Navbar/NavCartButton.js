@@ -5,7 +5,7 @@ export function NavCartButton(section) {
 
   return <li className="ml-2 md:ml-4 text-center hover:Font-bold hover:text-kyellow  group lg:w-fit sm:flex sm:items-center sm:content-center hidden hover:drop-shadow-kmag2  lg:inline" key={section.id}>
     <Link
-      to="/cart"
+      to={section.linkLocation}
       className="bg-kmag group-hover:bg-kyellow group-hover:text-kmag p-2 flex justify-center items-center text-center w-full rounded-full">
       <i className="fas fa-shopping-cart mx-2"  />
       <span className="px-1 flex justify-center items-center">

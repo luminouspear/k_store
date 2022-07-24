@@ -1,7 +1,8 @@
 import React from 'react'
 
 const FAQ = () => {
-return (
+    return (
+    
     <section className="w-full  max-w-7xl container mx-auto bg-transparent my-20 ">
 {/* Section Header (Frequently Asked Questions) */}
 <h2 className="mx-auto text-center  font-berkshire text-kyellow text-4xl drop-shadow-kmag2">

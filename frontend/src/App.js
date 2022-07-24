@@ -1,4 +1,3 @@
-import { Fragment } from 'react';
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { useState } from 'react';
@@ -28,14 +27,17 @@ function App() {
   // This will let me call setSideToggle(value) to open
   // or close the menu.
 
+    const [sideToggle, setSideToggle] = useState(false);
+
 
 
 
   return (
 
-    <div className="bg-texture bg-repeat w-full min-h-screen bg-left bg-[length:200px_200px]">
+      <main className=" bg-texture bg-repeat w-full min-h-screen bg-left bg-[length:200px_200px] ">
+          <div className="w-full h-full bg-black-grad ">
 
-      <div
+        <div
         className=" fixed bottom-0 right-0 w-12 h-12 bg-cyan-400 text-black/90 flex align-middle text-center items-center justify-center font-bold ">
         <span className="sm:hidden">xs</span>
         <span className="hidden sm:inline md:hidden">sm</span>
@@ -50,15 +52,11 @@ function App() {
         <span className="hidden 7xl:inline 8xl:hidden">7xl</span>
 
 
-    </div>
+        </div>
 
       <Router>
                     { /* Navbar */}
-                    <Navbar click={() => {
-                    //    console.log("Navbar: " + sideToggle);
-                        // setSideToggle(true);
-                    }
-                    } />
+                  <Navbar toggleNav={sideToggle} click={() => setSideToggle(!sideToggle)} setSideToggle={setSideToggle} />
 
 
                     {/* SideDrawer */}
@@ -73,22 +71,23 @@ function App() {
                     <Backdrop
                         // show={sideToggle} click={() => setSideToggle(false)}
                     />
-                    <main>
+                    <div>
                         <Routes>
                             {/* Used to be "Switch" */}
-                            <Route exact path="/" element={HomeScreen} />
-                            <Route exact path="/product/:id" element={ProductScreen} />
-                            <Route exact path="/cart" element={CartScreen} />
-                            <Route exact path='/gallery' element={GalleryScreen} />
-                            <Route exact path='/meetkendall' element={MeetKendallScreen} />
+                            <Route exact path="/" component={HomeScreen} />
+                            <Route exact path="/product/:id" component={ProductScreen} />
+                            <Route exact path="/cart" component={CartScreen} />
+                            <Route exact path='/gallery' component={GalleryScreen} />
+                            <Route exact path='/meetkendall' component={MeetKendallScreen} />
                         </Routes>
-                    </main>
+                    </div>
                     {/* HomeScreen */}
                     <HomeScreen />
                     {/* ProductScreen */}
                     {/* CartScreen */}
                 </Router>
-      </div>
+          </div>
+      </main>
 
   );
 }

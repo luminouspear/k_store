@@ -2,10 +2,11 @@ import React from 'react'
 
 const JoinMailingList = () => {
   return (
+    
     <section className="w-full  max-w-7xl container mx-auto pt-12 pb-24">
   <h2 className="mx-auto text-center  font-berkshire text-kyellow text-4xl drop-shadow-kmag2">
     <span className="text-5xl">j</span>oin <span className="text-5xl">m</span>y{" "}
-    <span className="text-5xl">m</span>ailing
+    <span className="text-5xl">m</span>ailing{" "}
     <span className="text-5xl">l</span>ist
   </h2>
   <div className="w-full aspect-video px-12 my-6 lg:my-0 lg:h-3/6 lg:w-8/12 pt-12 lg:flex lg:align-middle lg:items-center lg:justify-center lg:mx-auto lg:pt-24">
