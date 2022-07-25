@@ -8,5 +8,5 @@ export function CTAButton(text, level) {
         <button className={CTAStyles}>
             {text}
         </button>
-    </div>;
+    </div>
 }

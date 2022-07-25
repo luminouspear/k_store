@@ -1,7 +1,7 @@
 import React from 'react'
 import { CTAButton } from './Global/CTAButton';
 import { Link } from 'react-router-dom';
-import { TextCalloutContainer } from './HomeScreen/TextCalloutContainer'
+import { TextCalloutBox } from './HomeScreen/TextCalloutBox'
 
 const HeroSection = () => {
   return (
@@ -27,21 +27,24 @@ const HeroSection = () => {
 
         </div>
 
-        <TextCalloutContainer>{<>
-          <h1 className="mt-12 w-10/12 md:w-6/12 lg:w-10/12 mx-auto font-quicksand text-4xl xl:text-5xl text-center text-white lg:text-kblack font-normal leading-tight xl:leading-[3.6rem]">
-            <span className="font-berkshire font-bold text-chill-grad bg-chill-grad bg-clip-text text-transparent drop-shadow-kcyan2 bg-400 animate-shiny whitespace-nowrap">
-              <span className="text-5xl xl:text-6xl">h</span>andmade <s className="text-5xl xl:text-6xl">q</s>uilts
-            </span>
-            <br className="hidden md:inline lg:hidden" />
-            crafted in Barrie, Ontario, Canada</h1>
-          <Link to="/shop"
-            className="">
-            {CTAButton("See What's Available", "primary")}
-          </Link>
-        </h1>
-        </>
-        })
-      </TextCalloutContainer>
+        <TextCalloutBox contents={
+          <>
+            <h1 className="mt-12 w-10/12 md:w-6/12 lg:w-10/12 mx-auto font-quicksand text-4xl xl:text-5xl text-center text-white lg:text-kblack font-normal leading-tight xl:leading-[3.6rem] border-4 border-red-500">
+              <span className="font-berkshire font-bold text-chill-grad bg-chill-grad bg-clip-text text-transparent drop-shadow-kcyan2 bg-400 animate-shiny ">
+                <span className="whitespace-nowrap">
+                  <span className="text-5xl xl:text-6xl">h</span>andmade <s className="text-5xl xl:text-6xl">q</s>uilts</span>{" "}
+              </span>
+              <br className="hidden md:inline lg:hidden" />
+              crafted in Barrie, Ontario, Canada</h1>
+            <Link to="/shop"
+              className="">
+              {CTAButton("See What's Available", "primary")}
+            </Link>
+          </>
+        }/>
+
+
+        </div>
     </section>
   )
 }
