@@ -24,14 +24,17 @@ const JoinMailingList = () => {
           Leave your email address and I'll let you know when I've finished new
           projects.
         </p>
-        <input
-          className="w-full md:w-8/12 py-4 md:py-6 mt-12 rounded-full text-2xl px-6 text-kblack placeholder:text-2xl placeholder:text-kblack/60 "
-          placeholder="email address"
-          type="email"
-        />
-        <button className="w-full md:w-8/12 mt-6 py-4 md:py-6 text-2xl lg:text-3xl font-bold bg-kcyan rounded-full shadow-kyellow4">
-          Join the Newsletter
-        </button>
+        <form className="form-vertical w-full mx-auto flex flex-col items-center">
+          <input
+            className="w-full md:w-8/12 py-4 md:py-6 mt-12 rounded-full text-2xl px-6 text-kblack placeholder:text-2xl placeholder:text-kblack/60 "
+            placeholder="email address"
+            type="email"
+          />
+          <button className="w-full md:w-8/12 mt-6 py-4 md:py-6 text-2xl lg:text-3xl font-bold bg-kcyan rounded-full shadow-kyellow4"
+            type="submit">
+            Join the Newsletter
+          </button>
+        </form>
       </div>
     </section>
 
