@@ -9,10 +9,6 @@ const WhatsNew = (props) => {
   const { newestItems, sectionTitle } = props
   const newestProducts = newestItems.map((product) => ProductTile(product))
 
-  const sectionString = sectionTitle.toString()
-  console.log(`sectionString is: ${sectionString}`)
-
-
   return (
     <section className="w-full bg-[#111] pt-6 pb-5">
       <div className="w-full max-w-7xl container mx-auto bg-transparent mt-6 md:mt-12 mb-12">
