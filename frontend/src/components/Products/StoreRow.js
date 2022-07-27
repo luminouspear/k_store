@@ -1,7 +1,7 @@
 import React from 'react'
-import { CTAButton } from './Global/CTAButton';
-import ProductTile from './Products/ProductTile';
-import { KStoreSubtitle } from "./Global/KStoreSubtitle";
+import { CTAButton } from '../global/userinterface/CTAButton';
+import ProductTile from './ProductTile';
+import { KStoreSubtitle } from "../global/KStoreSubtitle";
 
 const WhatsNew = (props) => {
 
@@ -16,12 +16,12 @@ const WhatsNew = (props) => {
           {KStoreSubtitle(sectionTitle)}
         </h2>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-12 lg:grid-flow-row mt-12 lg:mt-24  items-center flex-col md:items-start mx-12 xl:mx-0 ">
-          {newestProducts}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-12 lg:grid-flow-row mt-12 lg:mt-24  items-center flex-col md:items-start mx-12 xl:mx-0  ">
           {newestProducts}
         </div>
         <div className="w-full md:w-10/12 lg:w-5/12 mx-auto">
-          {CTAButton("View the Shop", "secondary")}</div>
+          <CTAButton text={"See What's Available"} level={"secondary"} location={"/shop"} />
+        </div>
       </div>
     </section>
 

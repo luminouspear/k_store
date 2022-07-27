@@ -1,7 +1,7 @@
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { useState } from 'react';
-import { menuData } from "../src/components/Navbar/MenuData";
+import { menuData } from "./components/global/localdata/MenuData";
 
 //Screens
 import HomeScreen from "./screens/HomeScreen";
@@ -9,11 +9,12 @@ import ProductScreen from "./screens/ProductScreen";
 import CartScreen from "./screens/CartScreen";
 import GalleryScreen from "./screens/GalleryScreen";
 import MeetKendallScreen from "./screens/MeetKendallScreen";
+import ProductDetailsScreen from "./screens/ProductDetailsScreen";
 
 
 //Components
 
-import Navbar from './components/Navbar';
+import Navbar from './components/global/navbar/Navbar';
 
 
 
@@ -64,6 +65,7 @@ function App() {
               {/* Used to be "Switch" */}
               <Route exact path="/" element={<HomeScreen />} />
               <Route path="/shop" element={<ProductScreen />} />
+              <Route path="/shop/:id" element={<ProductDetailsScreen />} />
               <Route exact path="/cart" element={<CartScreen />} />
               <Route exact path='/gallery' element={<GalleryScreen />} />
               <Route exact path='/meetkendall' element={<MeetKendallScreen />} />

@@ -1,14 +1,18 @@
 import React from 'react'
+import { KStoreSubtitle } from './KStoreSubtitle';
 
-const ContactMe = () => {
+const ContactMe = (props) => {
+
+  const {sectionTitle} = props
+
   return (
     <section className="w-full  max-w-7xl container mx-auto bg-transparent my-20 ">
-      {/* Section Header (Contact Me) */}
-      <h2 className="mx-auto text-center  font-berkshire text-kyellow text-4xl drop-shadow-kmag2">
-        <span className="text-5xl">c</span>ontact{" "}
-        <span className="text-5xl">m</span>e
-      </h2>
-      <div className="flex mx-auto w-full items-center px-6 pt-6 flex-col text-white font-quicksand lg:w-8/12 lg:pt-24">
+      <div className="w-full mb-6 flex justify-center">
+        {KStoreSubtitle(sectionTitle)}
+      </div>
+
+      <div className="flex mx-auto w-full items-center px-6  flex-col text-white font-quicksand lg:w-8/12 lg:pt-12
+      ">
         <h3 className="text-3xl md:text-4xl text-center  w-10/12 mb-6">
           Still have questions? Want to get something made? Let's talk!
         </h3>
