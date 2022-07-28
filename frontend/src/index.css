@@ -17,3 +17,13 @@
   font-family: 'Quicksand', sans-serif;
 
 }
+
+.alert {
+background-color: #f00;
+color: #fff;
+  }
+
+.alert-danger {
+  border-color: #f00;
+  border-width: 2px;
+}

@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 
 export function NavCartButton(section) {
-  console.log(`NavCartButton : ${section.id}`)
 
   return <li className="ml-2 md:ml-4 text-center  hover:text-kyellow  group lg:w-fit sm:flex sm:items-center sm:content-center hidden   lg:inline" key={section.id}>
     <Link
