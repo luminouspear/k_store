@@ -1,15 +1,15 @@
 import React from 'react'
-import { KStoreSubtitle } from './KStoreSubtitle';
+import { KStoreTitle } from '../../global/userinterface/KStoreTitle';
 
 const ContactMe = (props) => {
 
-  const {sectionTitle} = props
+  const { sectionTitle } = props
 
   return (
     <section className="w-full  max-w-7xl container mx-auto bg-transparent my-20 ">
-      <div className="w-full mb-6 flex justify-center">
-        {KStoreSubtitle(sectionTitle)}
-      </div>
+      <h2 className="mx-auto text-center ">
+        <KStoreTitle title={sectionTitle} textType={"sectionheader"} />
+      </h2>
 
       <div className="flex mx-auto w-full items-center px-6  flex-col text-white font-quicksand lg:w-8/12 lg:pt-12
       ">

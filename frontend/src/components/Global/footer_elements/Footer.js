@@ -1,5 +1,5 @@
 import React from 'react'
-import { KStoreTitle } from "../KStoreTitle"
+import { KStoreTitle } from "../userinterface/KStoreTitle"
 
 const Footer = () => {
   return (

@@ -1,9 +1,8 @@
 import React from 'react'
 import { LargeImageContainer } from '../global/userinterface/LargeImageContainer';
-import { KStoreSubtitle } from '../global/KStoreSubtitle';
 import { TextCalloutBox } from '../global/userinterface/TextCalloutBox';
 import { CTAButton } from '../global/userinterface/CTAButton';
-import { KStoreTitle } from '../global/KStoreTitle';
+import { KStoreTitle } from '../global/userinterface/KStoreTitle';
 
 const AboutKendall = (props) => {
 
@@ -12,9 +11,9 @@ const AboutKendall = (props) => {
   return (
     <section className="w-full  max-w-7xl container mx-auto mt-6 md:mt-12 bg-transparent">
 
-      <div className="w-full mb-12">
-        {KStoreSubtitle(sectionTitle)}
-      </div>
+      <h2 className="mx-auto text-center ">
+        <KStoreTitle title={sectionTitle} textType={"sectionheader"} />
+      </h2>
 
       <div className="w-full mt-16 lg:h-[72vh] xl:h-[65vh] 2xl:h-[75vh]    mx-auto static lg:relative">
 
@@ -26,8 +25,6 @@ const AboutKendall = (props) => {
               src={require("../../assets/image_portrait_kendall.png")}
 
               className="object-cover object-top-middle w-full h-full"
-
-              loading="lazy"
 
               alt="Kendall, the artist"
             />

@@ -5,12 +5,13 @@ import { Link } from 'react-router-dom';
 function ProductTile(item) {
 
     let linkLocation = "/shop/" + item.productUrl
+    
 
     return (
         <Link to={
             {
                 pathname: linkLocation,
-                chosenItem: item
+                item: item
             }
         }
             key={item.id} >

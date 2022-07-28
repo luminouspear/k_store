@@ -1,20 +1,21 @@
 import React, { Component, Fragment } from 'react';
 import HeroSection from '../components/homescreen/HeroSection'
-import WhatsNew from '../components/products/StoreRow';
+import StoreRow from '../components/products/StoreRow';
 import CustomQuilts from '../components/homescreen/CustomQuilts';
 import gallery1 from '../assets/image_skulliver.jpeg';
 import gallery2 from '../assets/image_hand.jpeg';
 import gallery3 from '../assets/image_dragonfly_spock.jpeg';
 import GalleryPreview from '../components/homescreen/GalleryPreview';
 import AboutKendall from '../components/homescreen/AboutKendall';
-import JoinMailingList from '../components/global/footer/JoinMailingList';
-import FAQ from '../components/global/footer/faq/FAQ';
-import ContactMe from '../components/global/ContactMe';
-import Footer from '../components/global/footer/Footer';
+import JoinMailingList from '../components/global/footer_elements/JoinMailingList';
+import FAQ from '../components/global/footer_elements/faq/FAQ';
+import ContactMe from '../components/global/footer_elements/ContactMe';
+import Footer from '../components/global/footer_elements/Footer';
 import { galleryData } from '../components/global/localdata/GalleryData';
 import { carouselData } from '../components/global/localdata/CarouselData';
 import { productData } from '../components/global/localdata/ProductData';
 import { faqData } from '../components/global/localdata/FAQData';
+import WhatsNew from '../components/homescreen/WhatsNew';
 
 export default class HomeScreen extends Component {
 
@@ -33,7 +34,9 @@ export default class HomeScreen extends Component {
     return (
       <Fragment>
         <HeroSection gallery={this.state.gallery} />
-        <WhatsNew newestItems={this.state.newestItems} sectionTitle={this.state.sectionTitles[0]} />
+        <WhatsNew sectionTitle={this.state.sectionTitles[0]} >
+          <StoreRow newestItems={this.state.newestItems} />
+          </WhatsNew>
         <CustomQuilts
           sectionTitle={this.state.sectionTitles[1]} />
         <GalleryPreview

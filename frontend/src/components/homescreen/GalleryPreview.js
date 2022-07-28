@@ -1,7 +1,7 @@
 import React from 'react'
 import { CTAButton } from '../global/userinterface/CTAButton';
-import { KStoreSubtitle } from '../global/KStoreSubtitle';
 import ProductTileImage from '../products/ProductTileImage';
+import { KStoreTitle } from '../global/userinterface/KStoreTitle';
 
 const GalleryPreview = (props) => {
 
@@ -13,7 +13,7 @@ const GalleryPreview = (props) => {
     <section className="w-full bg-[#111] py-12">
       <div className="w-full max-w-7xl container mx-auto bg-transparent mt-6 md:mt-12">
         <h2 className="mx-auto text-center ">
-          {KStoreSubtitle(sectionTitle)}
+          <KStoreTitle title={sectionTitle} textType={"sectionheader"} />
         </h2>
 
         <div className="mx-12 mt-12 lg:mt-24 grid grid-cols-2 gap-6 gap-y-0 md:gap-12 md:gap-y-0 lg:gap-y-12 lg:grid-cols-3 2xl:gap-12">

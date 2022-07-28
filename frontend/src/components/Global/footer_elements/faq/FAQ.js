@@ -1,7 +1,7 @@
 import React from 'react'
-import { KStoreSubtitle } from '../../KStoreSubtitle';
 import FAQComponent from './FAQComponent';
 import ErrorBoundary from '../../ErrorBoundary';
+import { KStoreTitle } from '../../../global/userinterface/KStoreTitle';
 
 const FAQ = (props) => {
 
@@ -16,9 +16,10 @@ const FAQ = (props) => {
 
         <section className="w-full  max-w-7xl container mx-auto bg-transparent my-20 ">
             {/* Section Header (Frequently Asked Questions) */}
-            <h2 className="mx-auto text-center  font-berkshire text-kyellow text-4xl drop-shadow-kmag2">
-                {KStoreSubtitle(sectionTitle)}
+            <h2 className="mx-auto text-center ">
+                <KStoreTitle title={sectionTitle} textType={"sectionheader"} />
             </h2>
+            
             {/* Accordion Content */}
             <div className="mx-auto font-quicksand">
                 {/* FAQ Container */}

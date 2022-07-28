@@ -1,7 +1,6 @@
 import React from 'react'
-import { KStoreSubtitle } from '../global/KStoreSubtitle';
 import { TextCalloutBox } from '../global/userinterface/TextCalloutBox';
-import { KStoreTitle } from '../global/KStoreTitle';
+import { KStoreTitle } from '../global/userinterface/KStoreTitle';
 import { CTAButton } from '../global/userinterface/CTAButton';
 import { LargeImageContainer } from '../global/userinterface/LargeImageContainer';
 
@@ -13,16 +12,18 @@ const CustomQuilts = (props) => {
   return (
     <section className="w-full bg-[#111] pt-1">
       <div className="w-full max-w-7xl container mx-auto  mt-6 md:mt-12 ">
-        {KStoreSubtitle(sectionTitle)}
+        <h2 className="mx-auto text-center ">
+          <KStoreTitle title={sectionTitle} textType={"sectionheader"} />
+        </h2>
         <div className="w-full mt-16 lg:h-[72vh] xl:h-[65vh] 2xl:h-[75vh]  mx-auto static lg:relative ">
 
           <LargeImageContainer contents={
-              <img
-                src={require("../../assets/image_dragonfly_spock.jpeg")}
-                className="object-cover object-center w-full h-full"
-                loading="lazy"
-                alt="Mr. Spock trying to help..."
-              />
+            <img
+              src={require("../../assets/image_dragonfly_spock.jpeg")}
+              className="object-cover object-center w-full h-full"
+
+              alt="Mr. Spock trying to help..."
+            />
           } layoutPrefs={"lg:h-5/6 2xl:h-[90%] lg:right-0 xl:right-12 2xl:right-0 lg:mx-12 xl:mx-0 lg:absolute lg:translate-y-12 xl:translate-x-0   shadow-kmag4"} />
 
           <TextCalloutBox contents={

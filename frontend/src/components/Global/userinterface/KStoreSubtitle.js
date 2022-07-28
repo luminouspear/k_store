@@ -17,7 +17,7 @@ export function KStoreSubtitle(subtitle) {
 
     return (
         <div className="">
-            <h2 className=" font-berkshire text-center text-kyellow drop-shadow-kmag1 lg:drop-shadow-kmag2 block inline-block whitespace-nowrap">
+            <h2 className=" font-berkshire text-center text-kyellow drop-shadow-kmag1 lg:drop-shadow-kmag2  inline-block whitespace-nowrap">
                 {output}
             </h2>
 

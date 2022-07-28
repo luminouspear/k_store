@@ -1,4 +1,4 @@
-import { KStoreTitle } from "../KStoreTitle";
+import { KStoreTitle } from "../userinterface/KStoreTitle";
 import MobileNavbar from "./MobileNavbar";
 import { NavStandardLink } from "./NavStandardLink";
 import { NavCartButton } from "./NavCartButton";

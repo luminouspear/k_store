@@ -2,8 +2,8 @@ import React from 'react'
 import { CTAButton } from '../global/userinterface/CTAButton';
 import { Link } from 'react-router-dom';
 import { TextCalloutBox } from '../global/userinterface/TextCalloutBox'
-import { KStoreTitle } from '../global/KStoreTitle';
-import { Dot } from '../global/Dot';
+import { KStoreTitle } from '../global/userinterface/KStoreTitle';
+import { Dot } from '../global/userinterface/Dot';
 import { HeroImageContainer } from './HeroImageContainer';
 
 const HeroSection = ({ gallery }) => {
