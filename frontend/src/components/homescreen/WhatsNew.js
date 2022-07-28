@@ -1,4 +1,5 @@
 import { KStoreTitle } from '../global/userinterface/KStoreTitle'
+import { CTAButton } from '../global/userinterface/CTAButton';
 
 const WhatsNew = props => {
 
@@ -11,6 +12,9 @@ const WhatsNew = props => {
                 <KStoreTitle title={sectionTitle} textType={"sectionheader"} />
             </h2>
             {props.children}
+            <div className="w-full md:w-10/12 lg:w-5/12 mx-auto">
+                <CTAButton text={"View the Store"} level={"secondary"} location={"/gallery"} />
+            </div>
 
         </div>
     </section>)

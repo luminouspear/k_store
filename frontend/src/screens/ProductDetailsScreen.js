@@ -13,6 +13,8 @@ const ProductDetails = (props) => {
     // const { item } = props.location
     // console.log(`${item}`)
 
+
+
     return (
         <Fragment>
             <section className="w-full bg-[#111] pt-6 pb-5">

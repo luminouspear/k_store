@@ -22,7 +22,7 @@ const GalleryPreview = (props) => {
 
         </div>
         <div className="w-full md:w-10/12 lg:w-5/12 mx-auto">
-          <CTAButton text={"View the Galllery"} level={"secondary"} location={"/gallery"} />
+          <CTAButton text={"View the Gallery"} level={"secondary"} location={"/gallery"} />
         </div>
       </div>
     </section>
