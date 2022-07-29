@@ -1,6 +1,6 @@
 import { React } from 'react';
 
-export function KStoreTitle({ title, textType }) {
+export function KStoreTitle({ title, textType, allowLineBreak = false }) {
   const wordInTitle = title.toString().split(' ')
   let output = []
   const titleStyle = {
@@ -13,6 +13,7 @@ export function KStoreTitle({ title, textType }) {
 
   const staticStyles = ['sectionheader', 'productTitle']
   const glowOnHover = ['productTitle']
+  const allowsLineBreak = allowLineBreak ? "whitespace-normal" : "whitespace-nowrap"
 
   for (let i = 0; i < wordInTitle.length; i++) {
     output.push(
@@ -29,7 +30,6 @@ export function KStoreTitle({ title, textType }) {
 
   }
 
-  console.log(`from ktitle ${staticStyles.indexOf(textType)}`)
 
   const colorStyling = staticStyles.indexOf(textType) >= 0 ? " text-kyellow drop-shadow-kmag1 lg:drop-shadow-kmag2 " : " text-chill-grad bg-chill-grad bg-clip-text text-transparent drop-shadow-kyellow1 bg-400 animate-shiny "
 
@@ -38,7 +38,7 @@ export function KStoreTitle({ title, textType }) {
 
   return (
     <div className="">
-      <span className={`whitespace-nowrap font-berkshire md:drop-shadow-kyellow2 block p-1.5 isolate ${colorStyling} ${animateOnHover} `} >
+      <span className={`${allowsLineBreak} font-berkshire md:drop-shadow-kyellow2 block p-1.5 isolate ${colorStyling} ${animateOnHover} `} >
         {output}
       </span>
 

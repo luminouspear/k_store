@@ -10,7 +10,7 @@ import { Link } from 'react-router-dom';
 
 
 const Navbar = ({ toggleNav, click, setSideToggle }) => {
-  console.log(`From NavBar: ${click}`)
+  
 
   return (
 

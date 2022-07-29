@@ -23,7 +23,7 @@ export default class HomeScreen extends Component {
     current: 0,
     gallery: carouselData,
     previewGallery: galleryData,
-    newestItems: productData,
+    productData: productData,
     sectionTitles: ["what's new", "work in progress", "kendall's Favourites", "about kendall", "join my mailing list", "frequently asked questions", "contact me"],
     faqData: faqData,
   };
@@ -36,7 +36,7 @@ export default class HomeScreen extends Component {
       <Fragment>
         <HeroSection gallery={this.state.gallery} />
         <WhatsNew sectionTitle={this.state.sectionTitles[0]} >
-          <StoreRow newestItems={this.state.newestItems} />
+          <StoreRow productData={this.state.productData} />
           </WhatsNew>
         <CustomQuilts
           sectionTitle={this.state.sectionTitles[1]} />

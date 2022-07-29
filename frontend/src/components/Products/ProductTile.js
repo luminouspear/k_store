@@ -4,16 +4,11 @@ import { Link } from 'react-router-dom';
 
 function ProductTile(item) {
 
-    let linkLocation = "/shop/" + item.productUrl
-    
+    const linkLocation = "/shop/" + item.productUrl
+
 
     return (
-        <Link to={
-            {
-                pathname: linkLocation,
-                item: item
-            }
-        }
+        <Link to={ linkLocation }
             key={item.id} >
             <div className="w-full mt-12 lg:mt-0 cursor-pointer group " >
                 {ProductTileImage(item)}

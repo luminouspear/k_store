@@ -1,7 +1,7 @@
 import React from 'react'
 import { LargeImageContainer } from '../userinterface/LargeImageContainer'
 
-import { KStoreTitle } from '../../global/userinterface/KStoreTitle';
+import { KStoreTitle } from '../userinterface/KStoreTitle';
 
 const JoinMailingList = (props) => {
 

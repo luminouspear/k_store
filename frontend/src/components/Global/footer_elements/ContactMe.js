@@ -1,5 +1,5 @@
 import React from 'react'
-import { KStoreTitle } from '../../global/userinterface/KStoreTitle';
+import { KStoreTitle } from '../userinterface/KStoreTitle';
 
 const ContactMe = (props) => {
 

@@ -15,13 +15,16 @@ export default class ProductScreen extends Component {
   state = {
     current: 0,
 
-    newestItems: productData,
+    productData: productData,
     sectionTitles: ["latest quilts for sale", "work in progress", "kendall's Favourites", "about kendall", "join my mailing list", "frequently asked questions", "contact me"],
     faqData: faqData
 
-  };
+  }
 
   render() {
+
+    console.log(`productData: ${this.state.productData}`)
+
     return (
       <Fragment>
         {/* <HeroSection /> */}
@@ -30,7 +33,7 @@ export default class ProductScreen extends Component {
         <h2 className="mx-auto text-center ">
           <KStoreTitle title={"quilts for sale"} textType={"sectionheader"} />
         </h2>
-            <StoreRow newestItems={this.state.newestItems} sectionTitle={this.state.sectionTitles[0]} />
+            <StoreRow productData={this.state.productData} sectionTitle={this.state.sectionTitles[0]} />
           </div>
           </div>
 
