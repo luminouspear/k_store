@@ -1,7 +1,7 @@
 import React from 'react'
 import { CTAButton } from '../global/userinterface/CTAButton';
 import { Link } from 'react-router-dom';
-import { TextCalloutBox } from '../global/userinterface/TextCalloutBox'
+import TextCalloutBox from '../global/userinterface/TextCalloutBox'
 import { KStoreTitle } from '../global/userinterface/KStoreTitle';
 import { Dot } from '../global/userinterface/Dot';
 import { HeroImageContainer } from './HeroImageContainer';
@@ -26,7 +26,7 @@ const HeroSection = ({ gallery }) => {
 
         </div>
 
-        <TextCalloutBox contents={
+        <TextCalloutBox layoutPrefs={"md:-mt-12 lg:top-[45%] lg:right-6 lg:-translate-x-0 xl:translate-x-0 lg:ml-16 2xl:ml-24 xl:ml-24 2xl:right-7/8 lg:w-5/12"}>
           <>
             <h1 className="mt-12 w-10/12 md:w-6/12 lg:w-10/12 mx-auto font-quicksand text-4xl xl:text-5xl text-center text-white lg:text-kblack font-normal leading-tight xl:leading-[3.6rem] ">
 
@@ -40,7 +40,7 @@ const HeroSection = ({ gallery }) => {
 
 
           </>
-        } layoutPrefs={"md:-mt-12 lg:top-[45%] lg:right-6 lg:-translate-x-0 xl:translate-x-0 lg:ml-16 2xl:ml-24 xl:ml-24 2xl:left-1/2 "} />
+       </TextCalloutBox>
 
 
       </div>

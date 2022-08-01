@@ -1,5 +1,5 @@
 import React from 'react'
-import { TextCalloutBox } from '../global/userinterface/TextCalloutBox';
+import TextCalloutBox from '../global/userinterface/TextCalloutBox';
 import { KStoreTitle } from '../global/userinterface/KStoreTitle';
 import { CTAButton } from '../global/userinterface/CTAButton';
 import { LargeImageContainer } from '../global/userinterface/LargeImageContainer';
@@ -26,7 +26,7 @@ const CustomQuilts = (props) => {
             />
           } layoutPrefs={"lg:h-5/6 2xl:h-[90%] lg:right-0 xl:right-12 2xl:right-0 lg:mx-12 xl:mx-0 lg:absolute lg:translate-y-12 xl:translate-x-0   shadow-kmag4"} />
 
-          <TextCalloutBox contents={
+          <TextCalloutBox layoutPrefs={" xl:mt-24 lg:top-[28%] xl:top-[33%] 2xl:top-[42%] lg:left-0 lg:mx-12 2xl:mx-0 2xl:-translate-x-24  2xl:ml-24  2xl:left-0 lg:w-5/12"} >
             <>
               <h2 className="mt-12 mb-12 w-10/12 md:w-6/12 lg:w-10/12 mx-auto font-quicksand text-3xl md:text-4xl text-center text-white lg:text-kblack font-regular   ">
                 Want something made{" "}<br className="sm:hidden" />
@@ -38,7 +38,7 @@ const CustomQuilts = (props) => {
               </h2>
               <CTAButton text={"View Work in Progress"} level={"secondary"} />
             </>
-          } layoutPrefs={" xl:mt-24 lg:top-[28%] xl:top-[33%] 2xl:top-[33%] lg:left-0 lg:mx-12 2xl:mx-0 2xl:-translate-x-24  2xl:ml-24  2xl:left-0 "} />
+          </TextCalloutBox>
         </div>
       </div>
     </section>

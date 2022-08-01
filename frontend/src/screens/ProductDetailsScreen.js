@@ -1,4 +1,4 @@
-import { Fragment } from "react"
+import { Fragment, useEffect } from "react"
 import ProductPhotoGrid from '../components/products/ProductPhotoGrid';
 import ProductInformation from '../components/products/ProductInformation';
 import { productData } from '../components/global/localdata/ProductData';
@@ -9,12 +9,28 @@ import ContactMe from '../components/global/footer_elements/ContactMe';
 import Footer from '../components/global/footer_elements/Footer';
 import { useParams } from 'react-router-dom'
 
+
 const ProductDetails = () => {
 
 
     const { id } = useParams()
 
     const item = productData.filter(product => product.productUrl === id)
+    const remainingItems = productData.filter(product => product.productUrl !== id).slice(0, 3)
+
+    useEffect(() => {
+        if (window.history.scrollRestoration) {
+            window.history.scrollRestoration = 'manual';
+        } else {
+            window.onbeforeunload = function () {
+                window.scrollTo(0, 0);
+            }
+        }
+    }, [])
+
+    window.onBeforeUnload = () => {
+        window.scrollTo(0, 0);
+    }
 
     console.log(item[0].itemTitle)
 
@@ -38,7 +54,7 @@ const ProductDetails = () => {
                 <h2 className="mx-auto text-center mt-12">
                     <KStoreTitle title={"you may also be interested in..."} textType={"sectionheader"} />
                 </h2>
-                <StoreRow productData={productData} />
+                <StoreRow productData={remainingItems} />
 
                 <div className="w-full lg:w-6/12 mx-auto">
                     <CTAButton text={"See More Things"} level={"secondary"} location={"/shop"} />

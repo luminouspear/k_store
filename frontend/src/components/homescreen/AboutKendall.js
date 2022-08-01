@@ -1,6 +1,6 @@
 import React from 'react'
 import { LargeImageContainer } from '../global/userinterface/LargeImageContainer';
-import { TextCalloutBox } from '../global/userinterface/TextCalloutBox';
+import TextCalloutBox from '../global/userinterface/TextCalloutBox';
 import { CTAButton } from '../global/userinterface/CTAButton';
 import { KStoreTitle } from '../global/userinterface/KStoreTitle';
 
@@ -32,7 +32,7 @@ const AboutKendall = (props) => {
         } layoutPrefs={ " lg:h-5/6 2xl:h-[80%]  lg:left-0 xl:left-12 lg:mx-12 xl:mx-0 lg:absolute  xl:translate-x-0 shadow-kyellow4 " } />
 
 
-        <TextCalloutBox contents={
+        <TextCalloutBox layoutPrefs={" lg:top-[28%] xl:top-[33%] 2xl:top-[40%] lg:right-0 lg:mx-12 2xl:mx-0 2xl:-translate-x-24  2xl:ml-24 lg:w-5/12 "} >
           <>
 
             <h2 className=" mb-12 lg:my-12 w-10/12 md:w-6/12 lg:w-10/12 mx-auto font-quicksand text-3xl lg:text-4xl text-center text-white lg:text-kblack font-regular leading-[3.8rem] lg:leading-tight">
@@ -47,7 +47,7 @@ const AboutKendall = (props) => {
 
 
           </>
-         } layoutPrefs={" lg:top-[28%] xl:top-[33%] 2xl:top-[33%] lg:right-0 lg:mx-12 2xl:mx-0 2xl:-translate-x-24  2xl:ml-24 "} />
+        </TextCalloutBox>
 
       </div>
 
