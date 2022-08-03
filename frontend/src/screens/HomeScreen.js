@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react'
+import React, { Fragment, useState } from 'react'
 import { connect } from 'react-redux'
 
 //Actions
@@ -20,54 +20,38 @@ import { carouselData } from '../components/global/localdata/CarouselData'
 import { productData } from '../components/global/localdata/ProductData'
 import { faqData } from '../components/global/localdata/FAQData'
 
-class HomeScreen extends Component {
+function HomeScreen(props) {
 
-  state = {
-    current: 0,
-    gallery: carouselData,
-    previewGallery: galleryData,
-    productData: productData,
-    sectionTitles: ["what's new", "work in progress", "kendall's Favourites", "about kendall", "join my mailing list", "frequently asked questions", "contact me"],
-    faqData: faqData,
-  }
+  const [current, setCurrent] = useState(0)
+  const [carousel, setCarousel] = useState(carouselData)
+  const [previewGallery, setPreviewGallery] = useState(galleryData)
+  const [products, setProductsData] = useState(productData)
+  const [sectionTitles, setSectionTitles] = useState(["what's new", "work in progress", "kendall's Favourites", "about kendall", "join my mailing list", "frequently asked questions", "contact me"])
+  const [faqs, setFaqData] = useState(faqData)
 
-  async componentDidMount() {
-    mapStateToProps(this.state)
-  }
-
-  render() {
-
-
-    return (
-      <Fragment>
-        <HeroSection gallery={this.state.gallery} />
-        <WhatsNew sectionTitle={this.state.sectionTitles[0]} >
-          <StoreRow productData={this.state.productData} />
-        </WhatsNew>
-        <CustomQuilts
-          sectionTitle={this.state.sectionTitles[1]} />
-        <GalleryPreview
-          sectionTitle={this.state.sectionTitles[2]}
-          galleryImages={this.state.previewGallery} />
-        <AboutKendall
-          sectionTitle={this.state.sectionTitles[3]} />
-        <JoinMailingList
-          sectionTitle={this.state.sectionTitles[4]} />
-        <FAQ
-          sectionTitle={this.state.sectionTitles[5]}
-          faqData={this.state.faqData} />
-        <ContactMe
-          sectionTitle={this.state.sectionTitles[6]} />
-        <Footer />
-      </Fragment>
-
-    )
-  }
+  return (
+    <Fragment>
+      <HeroSection gallery={carousel} />
+      <WhatsNew sectionTitle={sectionTitles[0]} >
+        <StoreRow productData={products} />
+      </WhatsNew>
+      <CustomQuilts
+        sectionTitle={sectionTitles[1]} />
+      <GalleryPreview
+        sectionTitle={sectionTitles[2]}
+        galleryImages={previewGallery} />
+      <AboutKendall
+        sectionTitle={sectionTitles[3]} />
+      <JoinMailingList
+        sectionTitle={sectionTitles[4]} />
+      <FAQ
+        sectionTitle={sectionTitles[5]}
+        faqData={faqs} />
+      <ContactMe
+        sectionTitle={sectionTitles[6]} />
+      <Footer />
+    </Fragment>
+  )
 }
 
-const mapStateToProps = (state) => {
-  console.log(`mapStateToProps: ${state.productTitle}`)
-  return { productData: state }
-}
-
-export default connect(mapStateToProps, null)(HomeScreen)
+export default HomeScreen
