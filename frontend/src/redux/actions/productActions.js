@@ -6,6 +6,7 @@ export const getProducts = () =>
         try {
             dispatch({ type: actionTypes.GET_PRODUCTS_REQUEST })
 
+            // const { data } = await axios.get("https://jsonplaceholder.typicode.com/posts")
             const { data } = await axios.get("/api/products")
 
             dispatch({

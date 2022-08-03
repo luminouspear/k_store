@@ -1,5 +1,5 @@
-import React, { Fragment, useState } from 'react'
-import { connect } from 'react-redux'
+import React, { Fragment, useState, useEffect } from 'react'
+import { connect, useDispatch, useSelector } from 'react-redux'
 
 //Actions
 import { getProducts as listProducts } from '../redux/actions/productActions'
@@ -25,9 +25,25 @@ function HomeScreen(props) {
   const [current, setCurrent] = useState(0)
   const [carousel, setCarousel] = useState(carouselData)
   const [previewGallery, setPreviewGallery] = useState(galleryData)
-  const [products, setProductsData] = useState(productData)
+  // const [productList, setProductsData] = useState(productData)
   const [sectionTitles, setSectionTitles] = useState(["what's new", "work in progress", "kendall's Favourites", "about kendall", "join my mailing list", "frequently asked questions", "contact me"])
   const [faqs, setFaqData] = useState(faqData)
+
+  const dispatch = useDispatch()
+
+  const getProducts = useSelector(state => state.getProducts)
+
+  const { products, loading, error } = getProducts
+
+  console.log(`Products: ${products}`)
+
+  useEffect(() => {
+    dispatch(listProducts())
+  }, [dispatch])
+
+
+
+
 
   return (
     <Fragment>
