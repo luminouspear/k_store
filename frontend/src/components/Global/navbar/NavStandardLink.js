@@ -5,7 +5,7 @@ export function NavStandardLink(section) {
 
 
   return (
-    <li className="ml-2 md:ml-4 px-2 text-center hover:font-bold hover:text-kyellow hover:drop-shadow-kmag1 whitespace-nowrap"
+    <li className="px-2 ml-2 text-center md:ml-4 hover:font-bold hover:text-kyellow hover:drop-shadow-kmag1 whitespace-nowrap"
       key={section.id}>
       <Link to={section.linkLocation}>
         {section.sectionTitle}

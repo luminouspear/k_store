@@ -11,7 +11,7 @@ const CustomQuilts = (props) => {
 
   return (
     <section className="w-full bg-[#111] pt-1">
-      <div className="w-full max-w-7xl container mx-auto  mt-6 md:mt-12 ">
+      <div className="container w-full mx-auto mt-6 max-w-7xl  md:mt-12">
         <h2 className="mx-auto text-center ">
           <KStoreTitle title={sectionTitle} textType={"sectionheader"} />
         </h2>
@@ -28,7 +28,7 @@ const CustomQuilts = (props) => {
 
           <TextCalloutBox layoutPrefs={" xl:mt-24 lg:top-[28%] xl:top-[33%] 2xl:top-[42%] lg:left-0 lg:mx-12 2xl:mx-0 2xl:-translate-x-24  2xl:ml-24  2xl:left-0 lg:w-5/12"} >
             <>
-              <h2 className="mt-12 mb-12 w-10/12 md:w-6/12 lg:w-10/12 mx-auto font-quicksand text-3xl md:text-4xl text-center text-white lg:text-kblack font-regular   ">
+              <h2 className="w-10/12 mx-auto mt-12 mb-12 text-3xl text-center text-white md:w-6/12 lg:w-10/12 font-quicksand md:text-4xl lg:text-kblack font-regular ">
                 Want something made{" "}<br className="sm:hidden" />
                 <KStoreTitle title="just for you?" textType="nocaps" />
                 {" "}

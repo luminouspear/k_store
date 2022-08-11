@@ -4,12 +4,15 @@ import { composeWithDevTools } from 'redux-devtools-extension'
 
 //Reducers
 import { cartReducer } from './reducers/cartReducers'
-import { getProductsReducer, getProductDetailsReducer  } from './reducers/productReducers'
+import { getProductsReducer, getProductDetailsReducer } from './reducers/productReducers'
+import { getGalleryReducer } from './reducers/galleryReducers'
 
 const reducer = combineReducers({
     cart: cartReducer,
     getProducts: getProductsReducer,
-    getProductDetails: getProductDetailsReducer
+    getGallery: getGalleryReducer,
+    getProductDetails: getProductDetailsReducer,
+
 })
 
 // Helps make async requests in actions

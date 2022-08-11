@@ -1,8 +1,11 @@
 import React, { Fragment, useState, useEffect } from 'react'
 import { connect, useDispatch, useSelector } from 'react-redux'
+import axios from 'axios'
 
 //Actions
 import { getProducts as listProducts } from '../redux/actions/productActions'
+import { getGallery as listGallery } from '../redux/actions/galleryActions'
+
 
 import HeroSection from '../components/homescreen/HeroSection'
 import WhatsNew from '../components/homescreen/WhatsNew'
@@ -15,33 +18,43 @@ import FAQ from '../components/global/footer_elements/faq/FAQ'
 import ContactMe from '../components/global/footer_elements/ContactMe'
 import Footer from '../components/global/footer_elements/Footer'
 
-import { galleryData } from '../components/global/localdata/GalleryData'
 import { carouselData } from '../components/global/localdata/CarouselData'
-import { productData } from '../components/global/localdata/ProductData'
 import { faqData } from '../components/global/localdata/FAQData'
 
-function HomeScreen(props) {
+function HomeScreen() {
 
-  const [current, setCurrent] = useState(0)
+
   const [carousel, setCarousel] = useState(carouselData)
-  const [previewGallery, setPreviewGallery] = useState(galleryData)
-  // const [productList, setProductsData] = useState(productData)
+
   const [sectionTitles, setSectionTitles] = useState(["what's new", "work in progress", "kendall's Favourites", "about kendall", "join my mailing list", "frequently asked questions", "contact me"])
   const [faqs, setFaqData] = useState(faqData)
 
   const dispatch = useDispatch()
+  // const galleryDispatch = useDispatch()
 
   const getProducts = useSelector(state => state.getProducts)
-
   const { products, loading, error } = getProducts
 
-  console.log(`Products: ${products}`)
+  const getGallery = useSelector(state => state.getGallery)
+  const { gallery, galleryLoading, galleryError } = getGallery
+
+
+  // useEffect(() => {
+  //   productDispatch(listProducts())
+  // }, [productDispatch])
+
+  // useEffect(() => {
+  //   galleryDispatch(listGallery())
+  // },[galleryDispatch])
 
   useEffect(() => {
     dispatch(listProducts())
-  }, [dispatch])
+    dispatch(listGallery())
+
+   }, [dispatch])
 
 
+  console.log(`${gallery}`)
 
 
 
@@ -49,13 +62,16 @@ function HomeScreen(props) {
     <Fragment>
       <HeroSection gallery={carousel} />
       <WhatsNew sectionTitle={sectionTitles[0]} >
-        <StoreRow productData={products} />
+        <StoreRow products={products} productsLoading={loading} productError={error} />
       </WhatsNew>
       <CustomQuilts
         sectionTitle={sectionTitles[1]} />
       <GalleryPreview
         sectionTitle={sectionTitles[2]}
-        galleryImages={previewGallery} />
+        gallery={gallery}
+        galleryLoading={galleryLoading}
+        galleryError={galleryError}
+         />
       <AboutKendall
         sectionTitle={sectionTitles[3]} />
       <JoinMailingList

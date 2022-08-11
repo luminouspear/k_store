@@ -6,7 +6,7 @@ import { KStoreTitle } from '../../userinterface/KStoreTitle';
 const FAQ = (props) => {
 
     const { sectionTitle, faqData } = props
-    console.log(faqData)
+    // console.log(faqData)
     const faqs = faqData.map((question) => FAQComponent(question))
     // const faqs = faqData.map((question) => console.log(question))
 
@@ -14,7 +14,7 @@ const FAQ = (props) => {
 
     return (
 
-        <section className="w-full  max-w-7xl container mx-auto bg-transparent my-20 ">
+        <section className="container w-full mx-auto my-20 bg-transparent  max-w-7xl">
             {/* Section Header (Frequently Asked Questions) */}
             <h2 className="mx-auto text-center ">
                 <KStoreTitle title={sectionTitle} textType={"sectionheader"} />

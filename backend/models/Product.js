@@ -1,13 +1,13 @@
-const mongoose = require('mongoose');
+ const mongoose = require('mongoose');
 
-// start building our schema
+// // start building our schema
 
 const productSchema = new mongoose.Schema({
     itemTitle: {
         type: String,
         required: true
     },
-    imageAlt: {
+    itemAlt: {
         type: String,
         required: true
     },
@@ -31,10 +31,10 @@ const productSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    images: {
-        type: [String],
-        required: true
+        images: {
+        type: [String]
     },
+        id: { type: Number, required: true}
 }
 );
 

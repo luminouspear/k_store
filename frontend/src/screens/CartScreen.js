@@ -14,8 +14,8 @@ export default class CartScreen extends Component {
     return (
       <div className="w-full bg-[#111] mt-4 pt-6 pb-5">
         <div className="w-full max-w-7xl container mx-auto bg-transparent mt-6 md:mt-12 mb-12 min-h-[95%] ">
-          <div className="flex lg:flex-row flex-col w-full">
-            <div className="basis-full lg:basis-9/12  mx-auto w-full flex flex-col">
+          <div className="flex flex-col w-full lg:flex-row">
+            <div className="flex flex-col w-full mx-auto basis-full lg:basis-9/12 ">
               <div className="w-full px-6 mb-6 text-center lg:text-left">
                 <KStoreTitle title="your cart" textType="sectionheader" /></div>
               <CartItem />

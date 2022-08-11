@@ -38,7 +38,7 @@ function App() {
       <div className="w-full h-full bg-black-grad ">
 
         <div
-          className=" fixed bottom-0 right-0 w-12 h-12 bg-cyan-400 text-black/90 flex align-middle text-center items-center justify-center font-bold ">
+          className="fixed bottom-0 right-0 flex items-center justify-center w-12 h-12 font-bold text-center align-middle  bg-cyan-400 text-black/90">
           <span className="sm:hidden">xs</span>
           <span className="hidden sm:inline md:hidden">sm</span>
           <span className="hidden md:inline lg:hidden">md</span>

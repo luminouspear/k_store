@@ -29,7 +29,7 @@ export default class ProductScreen extends Component {
       <Fragment>
         {/* <HeroSection /> */}
         <div className="w-full bg-[#111] mx-auto ">
-          <div className=" w-full md:w-10/12 lg:w-8/12 py-6 mx-auto ">
+          <div className="w-full py-6 mx-auto  md:w-10/12 lg:w-8/12">
         <h2 className="mx-auto text-center ">
           <KStoreTitle title={"quilts for sale"} textType={"sectionheader"} />
         </h2>
@@ -37,7 +37,7 @@ export default class ProductScreen extends Component {
           </div>
           </div>
 
-      <div className="w-full md:w-10/12 lg:w-8/12 py-0 mx-auto ">
+      <div className="w-full py-0 mx-auto md:w-10/12 lg:w-8/12 ">
         <JoinMailingList sectionTitle={this.state.sectionTitles[4]} />
         <FAQ sectionTitle={this.state.sectionTitles[5]}
           faqData={this.state.faqData} />

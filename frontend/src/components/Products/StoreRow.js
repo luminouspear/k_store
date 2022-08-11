@@ -3,16 +3,19 @@ import ProductTile from './ProductTile';
 
 const StoreRow = (props) => {
 
+  const { products, loading, error } = props
+  
+  const ProductTiles = loading
+    ? (<h2>Loading...</h2>)
+    : error ? (<h2>{error}</h2>)
+    : (products.map((product) => ProductTile(product)))
 
-  const { productData } = props
-  const ProductTiles = productData.map((product) => ProductTile(product))
 
-  console.log(`productData: ${productData}`)
 
   return (
 
 
-    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-12 lg:grid-flow-row mt-12 lg:mt-24  items-center flex-col md:items-start mx-12 xl:mx-0  ">
+    <div className="grid flex-col items-center gap-12 mx-12 mt-12 md:grid-cols-2 lg:grid-cols-3 lg:grid-flow-row lg:mt-24 md:items-start xl:mx-0">
       {ProductTiles}
     </div>
 

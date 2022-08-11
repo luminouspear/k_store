@@ -9,7 +9,7 @@ const AboutKendall = (props) => {
   const { sectionTitle } = props
 
   return (
-    <section className="w-full  max-w-7xl container mx-auto mt-6 md:mt-12 bg-transparent">
+    <section className="container w-full mx-auto mt-6 bg-transparent  max-w-7xl md:mt-12">
 
       <h2 className="mx-auto text-center ">
         <KStoreTitle title={sectionTitle} textType={"sectionheader"} />
@@ -24,7 +24,7 @@ const AboutKendall = (props) => {
             <img
               src={require("../../assets/image_portrait_kendall.png")}
 
-              className="object-cover object-top-middle w-full h-full"
+              className="object-cover w-full h-full object-top-middle"
 
               alt="Kendall, the artist"
             />

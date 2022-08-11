@@ -3,11 +3,13 @@ import axios from 'axios'
 
 export const getProducts = () =>
     async (dispatch) => {
+
+        const API_URL = 'http://localhost:5000/'
         try {
             dispatch({ type: actionTypes.GET_PRODUCTS_REQUEST })
 
             // const { data } = await axios.get("https://jsonplaceholder.typicode.com/posts")
-            const { data } = await axios.get("/api/products")
+            const { data } = await axios.get(`${API_URL}api/products`)
 
             dispatch({
                 type: actionTypes.GET_PRODUCTS_SUCCESS,
@@ -26,10 +28,11 @@ export const getProducts = () =>
 
 
 export const getProductDetails = (id) => async (dispatch) => {
+    const API_URL = 'http://localhost:5000/'
     try {
         dispatch({ type: actionTypes.GET_PRODUCT_DETAILS_REQUEST })
 
-        const { data } = await axios.get(`/api/products/${id}`)
+        const { data } = await axios.get(`${API_URL}products/${id}`)
 
         dispatch({
             type: actionTypes.GET_PRODUCT_DETAILS_SUCCESS,

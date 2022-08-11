@@ -38,7 +38,7 @@ const ProductDetails = () => {
     return (
         <Fragment>
             <section className="w-full bg-[#111] pt-6 pb-5">
-                <div className="w-full max-w-7xl container mx-auto bg-transparent mt-6 md:mt-12 mb-12 ">
+                <div className="container w-full mx-auto mt-6 mb-12 bg-transparent max-w-7xl md:mt-12 ">
                     <div className="flex flex-col lg:flex-row">
                         <div className="w-1/2 lg:max-w-1/2"><ProductPhotoGrid
                             images={item[0].images}
@@ -50,13 +50,13 @@ const ProductDetails = () => {
                         </div></div>
                 </div>
             </section>
-            <div className="w-full md:w-10/12 lg:w-8/12 mx-auto">
-                <h2 className="mx-auto text-center mt-12">
+            <div className="w-full mx-auto md:w-10/12 lg:w-8/12">
+                <h2 className="mx-auto mt-12 text-center">
                     <KStoreTitle title={"you may also be interested in..."} textType={"sectionheader"} />
                 </h2>
                 <StoreRow productData={remainingItems} />
 
-                <div className="w-full lg:w-6/12 mx-auto">
+                <div className="w-full mx-auto lg:w-6/12">
                     <CTAButton text={"See More Things"} level={"secondary"} location={"/shop"} />
                 </div>
             </div>

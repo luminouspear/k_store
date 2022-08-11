@@ -2,22 +2,26 @@ import React from 'react'
 import ProductTileImage from './ProductTileImage';
 import { Link } from 'react-router-dom';
 
-function ProductTile(item) {
+function ProductTile(product) {
 
-    const linkLocation = "/shop/" + item.productUrl
+    const { productUrl, imageUrl, imageAlt, id, itemTitle, itemPrice  } = product
+
+
+
+    const linkLocation = "/shop/" + productUrl
 
 
     return (
         <Link to={ linkLocation }
-            key={item.id} >
-            <div className="w-full mt-12 lg:mt-0 cursor-pointer group " >
-                {ProductTileImage(item)}
+            key={id} >
+            <div className="w-full mt-12 cursor-pointer lg:mt-0 group " >
+                {ProductTileImage(imageUrl, imageAlt, id)}
 
-                <div className="w-full px-12 pt-12 pb-6 text-center font-quicksand text-white text-medium text-2xl lg:text-xl sm:leading-10 group-hover:text-kyellow">
-                    {item.itemTitle}
+                <div className="w-full px-12 pt-12 pb-6 text-2xl text-center text-white font-quicksand text-medium lg:text-xl sm:leading-10 group-hover:text-kyellow">
+                    {itemTitle}
                 </div>
-                <div className="w-full px-12 py-3 text-center font-quicksand text-white font-bold text-2xl lg:text-xl group-hover:text-kcyan ">
-                    {item.itemPrice}
+                <div className="w-full px-12 py-3 text-2xl font-bold text-center text-white font-quicksand lg:text-xl group-hover:text-kcyan ">
+                    {itemPrice}
                 </div>
 
             </div>
