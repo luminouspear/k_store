@@ -4,7 +4,7 @@ import axios from 'axios'
 export const getGallery = () =>
     async (dispatch) => {
 
-        const API_URL = 'http://localhost:5000/'
+        const API_URL = 'http://localhost:5005/'
         try {
             dispatch({
                 type: actionTypes.GET_GALLERY_REQUEST

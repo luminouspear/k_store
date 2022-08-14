@@ -15,7 +15,7 @@ app.use(express.json());
 app.use(cors())
 
 
-//Any request going to server 5000 will have access through these routes.
+//Any request going to server 5005 will have access through these routes.
 app.get('/', (req, res) => {
     console.log(`API Running`);
   res.json({ message: "API Running"})
@@ -24,6 +24,6 @@ app.get('/', (req, res) => {
 app.use('/api/products', productRoutes)
 app.use('/api/gallery', galleryRoutes)
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 5005;
 
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`))

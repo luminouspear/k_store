@@ -4,7 +4,7 @@ import axios from 'axios'
 
 //Actions
 import { getProducts as listProducts } from '../redux/actions/productActions'
-import { getGallery as listGallery } from '../redux/actions/galleryActions'
+// import { getGallery as listGallery } from '../redux/actions/galleryActions'
 
 
 import HeroSection from '../components/homescreen/HeroSection'
@@ -35,8 +35,7 @@ function HomeScreen() {
   const getProducts = useSelector(state => state.getProducts)
   const { products, loading, error } = getProducts
 
-  const getGallery = useSelector(state => state.getGallery)
-  const { gallery, galleryLoading, galleryError } = getGallery
+
 
 
   // useEffect(() => {
@@ -49,12 +48,12 @@ function HomeScreen() {
 
   useEffect(() => {
     dispatch(listProducts())
-    dispatch(listGallery())
+    // dispatch(listGallery())
 
    }, [dispatch])
 
 
-  console.log(`${gallery}`)
+  // console.log(`${gallery}`)
 
 
 
@@ -68,9 +67,6 @@ function HomeScreen() {
         sectionTitle={sectionTitles[1]} />
       <GalleryPreview
         sectionTitle={sectionTitles[2]}
-        gallery={gallery}
-        galleryLoading={galleryLoading}
-        galleryError={galleryError}
          />
       <AboutKendall
         sectionTitle={sectionTitles[3]} />
