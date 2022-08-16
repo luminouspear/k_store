@@ -10,12 +10,12 @@ const CustomQuilts = (props) => {
   const { sectionTitle } = props
 
   return (
-    <section className="w-full bg-[#111] pt-1">
-      <div className="container w-full mx-auto mt-6 max-w-7xl  md:mt-12">
+    <section className="w-full bg-[#111] pt-1 lg:pb-12 ">
+      <div className="container w-full mx-auto mt-6 max-w-7xl md:mt-12">
         <h2 className="mx-auto text-center ">
           <KStoreTitle title={sectionTitle} textType={"sectionheader"} />
         </h2>
-        <div className="w-full mt-16 lg:h-[72vh] xl:h-[65vh] 2xl:h-[75vh]  mx-auto static lg:relative ">
+        <div className="static w-full mx-auto mt-16 lg:relative ">
 
           <LargeImageContainer contents={
             <img
@@ -24,9 +24,9 @@ const CustomQuilts = (props) => {
 
               alt="Mr. Spock trying to help..."
             />
-          } layoutPrefs={"lg:h-5/6 2xl:h-[90%] lg:right-0 xl:right-12 2xl:right-0 lg:mx-12 xl:mx-0 lg:absolute lg:translate-y-12 xl:translate-x-0   shadow-kmag4"} />
+          } layoutPrefs={"lg:h-5/6 2xl:h-[90%]  2xl:right-0  xl:mx-0 lg:inline-block lg:translate-y-0 lg:translate-x-[45%]   shadow-kmag4"} />
 
-          <TextCalloutBox layoutPrefs={" xl:mt-24 lg:top-[28%] xl:top-[33%] 2xl:top-[42%] lg:left-0 lg:mx-12 2xl:mx-0 2xl:-translate-x-24  2xl:ml-24  2xl:left-0 lg:w-5/12"} >
+          <TextCalloutBox layoutPrefs={" lg:top-[28%] xl:top-[25%] 2xl:top-[25%] lg:left-12  2xl:mx-0 2xl:-translate-x-24  2xl:ml-24  2xl:left-0 lg:w-5/12 "} >
             <>
               <h2 className="w-10/12 mx-auto mt-12 mb-12 text-3xl text-center text-white md:w-6/12 lg:w-10/12 font-quicksand md:text-4xl lg:text-kblack font-regular ">
                 Want something made{" "}<br className="sm:hidden" />

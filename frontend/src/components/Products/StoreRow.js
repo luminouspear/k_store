@@ -4,11 +4,11 @@ import ProductTile from './ProductTile';
 const StoreRow = (props) => {
 
   const { products, loading, error } = props
-  
+
   const ProductTiles = loading
     ? (<h2>Loading...</h2>)
     : error ? (<h2>{error}</h2>)
-    : (products.map((product) => ProductTile(product)))
+    :  (products.length > 0 && products.map((product) => ProductTile(product)))
 
 
 
