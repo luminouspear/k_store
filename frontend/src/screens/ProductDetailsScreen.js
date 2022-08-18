@@ -1,4 +1,4 @@
-import { Fragment, useEffect } from "react"
+import { Fragment, useEffect, useState } from "react"
 import ProductPhotoGrid from '../components/products/ProductPhotoGrid';
 import ProductInformation from '../components/products/ProductInformation';
 import { productData } from '../components/global/localdata/ProductData';
@@ -8,12 +8,37 @@ import { KStoreTitle } from '../components/global/userinterface/KStoreTitle';
 import ContactMe from '../components/global/footer_elements/ContactMe';
 import Footer from '../components/global/footer_elements/Footer';
 import { useParams } from 'react-router-dom'
+import { useDispatch, useSelector } from 'react-redux';
+
+//Actions
+
+import { getProductDetails } from '../redux/actions/productActions'
+// import { addToCart } from '../redux/actions/cartActions'
 
 
-const ProductDetails = () => {
+
+const ProductDetails = ({ match, history }) => {
+
+    const [qty, setQty] = useState(1);
+
+    let {id} = useParams()
+    // console.log(`id is ${id} . match.params.id is ${match.params.id}`)
+
+    id = match ? match.params.id : id
+
+    const dispatch = useDispatch()
+
+    const productDetails = useSelector(state => state.getProductDetails)
+    const { loading, error, product } = productDetails
+
+    useEffect(
+        () => {
+            if (product && match?.params.id !== product.id) {
+            dispatch(getProductDetails(match.params.id))
+        }
+        }, [dispatch, product, match])
 
 
-    const { id } = useParams()
 
     const item = productData.filter(product => product.productUrl === id)
     const remainingItems = productData.filter(product => product.productUrl !== id).slice(0, 3)
@@ -32,7 +57,6 @@ const ProductDetails = () => {
         window.scrollTo(0, 0);
     }
 
-    console.log(item[0].itemTitle)
 
 
     return (

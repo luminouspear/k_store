@@ -19,10 +19,8 @@ const GalleryPreview = (props) => {
 
   useEffect(() => {
         dispatch(listGallery())
-        console.log(sectionTitle, gallery, galleryLoading, galleryError)
    }, [dispatch])
 
-  // console.log(sectionTitle, gallery, galleryLoading, galleryError)
 
   const galleryPreviewImages = galleryLoading
   ? (<h2>Loading...</h2>)
@@ -30,7 +28,6 @@ const GalleryPreview = (props) => {
   : (gallery.length > 0 && gallery[0].images.map(image => ProductTileImage(image.galleryItemURL, image.galleryItemAlt, image.id)))
 
 
-  console.log(sectionTitle, gallery, galleryLoading, galleryError)
 
   return (
     <section className="w-full bg-[#111] py-12">

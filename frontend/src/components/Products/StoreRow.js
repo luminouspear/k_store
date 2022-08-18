@@ -8,7 +8,7 @@ const StoreRow = (props) => {
   const ProductTiles = loading
     ? (<h2>Loading...</h2>)
     : error ? (<h2>{error}</h2>)
-    :  (products.length > 0 && products.map((product) => ProductTile(product)))
+    :  (products && products.map((product) => ProductTile(product)))
 
 
 
