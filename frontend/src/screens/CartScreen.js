@@ -5,7 +5,11 @@ import Footer from '../components/global/footer_elements/Footer'
 import { KStoreTitle } from '../components/global/userinterface/KStoreTitle';
 import { useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
+
+//actions
+
+import {removeFromCart} from '../redux/actions/cartActions'
 
 
 
@@ -16,7 +20,18 @@ function CartScreen() {
   const cart = useSelector(state => state.cart)
   const { cartItems } = cart
 
-  console.log(cartItems)
+  const removeHandler = (id) => {
+    dispatch(removeFromCart(id))
+  }
+
+  const getCartCount = () => {
+    return cartItems.reduce((qty, item) => Number(item.quantity) + qty, 0)
+  }
+
+  const getCartSubtotal = () => {
+    return cartItems.reduce((flPrice, item) => (item.flPrice * item.quantity) + flPrice, 0 )
+  }
+
     return (
       <div className="w-full bg-[#111] mt-4 pt-6 pb-5">
         <div className="w-full max-w-7xl container mx-auto bg-transparent mt-6 md:mt-12 mb-12 min-h-[95%] ">
@@ -27,14 +42,20 @@ function CartScreen() {
               {
                 cartItems.length === 0 ? (
                   <div className="flex flex-col w-full"><h2 className="mb-12 text-4xl text-center text-white font-quicksand">Your cart is empty.</h2>
-                    <Link to="/" className="text-3xl font-medium text-center text-kmag font-quicksand hover:text-kyellow">Let's find something for you!</Link>
+                    <Link to="/shop" className="text-3xl font-medium text-center text-kmag font-quicksand hover:text-kyellow">Let's find something for you!</Link>
                   </div>
                 ) : cartItems.map(item => (
-                  <CartItem key={item.id} />
+                  <CartItem
+                    key={item.id}
+                    item={item}
+                    removeHandler={removeHandler} />
               ))
               }
             </div>
-            <CartBug />
+            <CartBug
+              count={getCartCount()}
+              subtotal={getCartSubtotal()}
+            />
 
           </div>
         </div>
