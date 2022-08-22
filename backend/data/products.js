@@ -1,58 +1,48 @@
 const products = [
   {
-    name: "PlayStation 5",
-    imageUrl:
-      "https://images.unsplash.com/photo-1606813907291-d86efa9b94db?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1352&q=80",
-    description:
-      "PlayStation 5 (PS5) is a home video game console developed by Sony Interactive Entertainment. Announced in 2019 as the successor to the PlayStation 4, the PS5 was released on November 12, 2020 in Australia, Japan, New Zealand, North America, Singapore, and South Korea, and November 19, 2020 onwards in other major markets except China and India.",
-    price: 499,
-    countInStock: 15,
+    itemTitle: "Uterus on Coat Hanger Mini Quilt for Planned Parenthood",
+    itemAlt: "A foundation paper-pieced uterus on a field of coathangers.",
+    itemDescription: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat assumenda itaque ipsum tempore unde nulla neque eaque excepturi voluptatem voluptates",
+    itemPrice: "CA$150.00",
+    flPrice: 150.00,
+    productUrl: "mini-uterus-a001",
+    imageUrl: "image_uterus.jpeg",
+    images: ["image_stub64.svg", "image_stub64.svg", "image_stub64.svg", "image_stub64.svg"],
+    id: 1
   },
   {
-    name: "Iphone 12",
-    imageUrl:
-      "https://images.unsplash.com/photo-1605787020600-b9ebd5df1d07?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1463&q=80",
-    description:
-      "Welcome to a new era of iPhone. Beautifully bright 6.1-inch Super Retina XDR display.1 Ceramic Shield with 4x better drop performance.2 Incredible low-light photography with Night mode on all cameras. Cinema-grade Dolby Vision video recording, editing, and playback. Powerful A14 Bionic chip. And new MagSafe accessories for easy attach and faster wireless charging.3 Let the fun begin.",
-    price: 1099,
-    countInStock: 10,
+    itemTitle: "Hamza Mini Quilt",
+    itemAlt: "A hamsa hand icon.",
+    itemPrice: "CA$75.00",
+    itemDescription: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat assumenda itaque ipsum tempore unde nulla neque eaque excepturi voluptatem voluptates.",
+    flPrice: 75.00,
+    productUrl: "mini-hamsa-a001",
+    imageUrl: "image_hand.jpeg",
+    images: ["image_stub64.svg", "image_stub64.svg", "image_stub64.svg", "image_stub64.svg"],
+    id: 2
   },
   {
-    name: "Cannon EOS-1D",
-    imageUrl:
-      "https://images.unsplash.com/photo-1519183071298-a2962feb14f4?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
-    description:
-      "The EOS-1D X combines speed with image quality, to create the next generation camera for professionals. Full frame 18 megapixel sensor with Dual “DIGIC 5+” processors sets the standard, and up to 12 frames per second shooting takes it beyond.",
-    price: 1300,
-    countInStock: 5,
+    itemTitle: "Uterus on Flower Print Mini Quilt for Planned Parenthood",
+    itemAlt: "A foundation paperpieced uterus on a light flower background",
+    itemDescription: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat assumenda itaque ipsum tempore unde nulla neque eaque excepturi voluptatem voluptates.",
+    itemPrice: "CA$200.00",
+    flPrice: 200.00,
+    productUrl: "mini-uterus-a002",
+    imageUrl: "image_uterus2.jpeg",
+    images: ["image_stub64.svg", "image_stub64.svg", "image_stub64.svg", "image_stub64.svg"],
+    id: 3,
   },
   {
-    name: "Amazon Alexa",
-    imageUrl:
-      "https://images.unsplash.com/photo-1518444065439-e933c06ce9cd?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1267&q=80",
-    description:
-      "It is capable of voice interaction, music playback, making to-do lists, setting alarms, streaming podcasts, playing audiobooks, and providing weather, traffic, sports, and other real-time information, such as news. Alexa can also control several smart devices using itself as a home automation system.",
-    price: 50,
-    countInStock: 25,
-  },
-  {
-    name: "Audio Technica Headphones",
-    imageUrl:
-      "https://images.unsplash.com/photo-1558756520-22cfe5d382ca?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
-    description:
-      "Outfitted with 45mm large-aperture dynamic drivers and an over-ear, closed-back design, the ATH-M50x headphones deliver clarity, deep bass, and extended bandwidth (15 Hz to 28 kHz) while isolating you from outside sounds.",
-    price: 233,
-    countInStock: 4,
-  },
-  {
-    name: "JBL FLIP 4",
-    imageUrl:
-      "https://images.unsplash.com/photo-1564424224827-cd24b8915874?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1489&q=80",
-    description:
-      "JBL Flip 4 is the next generation in the award-winning Flip series; it is a portable Bluetooth speaker that delivers surprisingly powerful stereo sound. This compact speaker is powered by a 3000mAh rechargeable Li-ion battery that offers up to 12 hours of continuous, high-quality audio playtime.",
-    price: 140,
-    countInStock: 10,
-  },
-];
-
+    itemTitle: "Skulliver",
+    itemAlt: "A giant, 60 x 80in multi-coloured foundation paper-pieced skull.",
+    itemDescription: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat assumenda itaque ipsum tempore unde nulla neque eaque excepturi voluptatem voluptates.",
+    itemPrice: "CA$1600.00",
+    flPrice: 1600.00,
+    productUrl: "skulliver-a001",
+    imageUrl: "image_skulliver.jpeg",
+    images: ["https://source.unsplash.com/pHANr-CpbYM/800x600", "https://source.unsplash.com/3PmwYw2uErY/800x600", "https://source.unsplash.com/uOi3lg8fGl4/800x600", "https://source.unsplash.com/CwkiN6_qpDI/800x600"],
+    id: 4
+  }
+]
 module.exports = products;
+

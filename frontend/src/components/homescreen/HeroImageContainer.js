@@ -4,13 +4,13 @@ export function HeroImageContainer({ gallery }) {
 
     function showGallery(galleryImage) {
 
-        return <div className="absolute min-w-full min-h-full bg-black z-100 inset-0">
+        return <div className="absolute inset-0 min-w-full min-h-full bg-black z-100">
             <p>Content</p>
         </div>
     }
 
     // const imgSrc = require(`${}`)
-    return <div className="w-11/12 lg:w-8/12 relative">
+    return <div className="relative w-11/12 lg:w-8/12">
 
         <img className="object-cover w-full h-[60vh] md:h-[65vh] xl:h-[75vh] object-center mx-auto rounded-3xl shadow-kcyan4 isolate"
             src={gallery[0].image}

@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/static/css/main.567089b6.css",
+    "main.js": "/static/js/main.68d4e225.js",
+    "static/js/787.cda612ba.chunk.js": "/static/js/787.cda612ba.chunk.js",
+    "static/media/image_uterus.jpeg": "/static/media/image_uterus.f16a7fd3fdb71f3aac92.jpeg",
+    "static/media/image_uterus2.jpeg": "/static/media/image_uterus2.4b8b8a15009f8ea47ab8.jpeg",
+    "static/media/image_hand.jpeg": "/static/media/image_hand.6906ee235dd75274c50d.jpeg",
+    "static/media/image_dragonfly_spock.jpeg": "/static/media/image_dragonfly_spock.ff76cc2471d7743048cb.jpeg",
+    "static/media/image_skulliver.jpeg": "/static/media/image_skulliver.409a4964b2bffaf92f60.jpeg",
+    "static/media/image_portrait_kendall.png": "/static/media/image_portrait_kendall.4d3e0cf60112fed22d2a.png",
+    "static/media/image_mountains.png": "/static/media/image_mountains.e9512d73f6bb3ecad21f.png",
+    "static/media/bg_texture_diamonds.png": "/static/media/bg_texture_diamonds.c2d5495d7f0367542cc6.png",
+    "index.html": "/index.html",
+    "static/media/image_stub64.svg": "/static/media/image_stub64.cfa2d6b4e15dfccf21fbf4a6392e3862.svg",
+    "main.567089b6.css.map": "/static/css/main.567089b6.css.map",
+    "main.68d4e225.js.map": "/static/js/main.68d4e225.js.map",
+    "787.cda612ba.chunk.js.map": "/static/js/787.cda612ba.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.567089b6.css",
+    "static/js/main.68d4e225.js"
+  ]
+}

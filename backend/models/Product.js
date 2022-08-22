@@ -1,28 +1,44 @@
-const mongoose = require('mongoose');
+ const mongoose = require('mongoose');
 
-// start building our schema
+// // start building our schema
 
 const productSchema = new mongoose.Schema({
-    name: {
+    itemTitle: {
         type: String,
         required: true
     },
-    description: {
+    itemAlt: {
         type: String,
         required: true
     },
-    price: {
+    itemDescription: {
+        type: String,
+        required: true
+    },
+    itemPrice: {
+        type: String,
+        required: true
+    },
+    flPrice: {
         type: Number,
         required: true
     },
-    countInStock: {
-        type: Number,
+    productUrl: {
+        type: String,
         required: true
     },
     imageUrl: {
         type: String,
         required: true
-    }
+    },
+        images: {
+        type: [String]
+    },
+    id: {
+        type: Number,
+        required: true
+    },
+        _id: Object
 }
 );
 

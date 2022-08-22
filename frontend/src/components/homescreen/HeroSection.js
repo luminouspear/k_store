@@ -11,14 +11,14 @@ const HeroSection = ({ gallery }) => {
 
 
   return (
-    <section className=" mx-auto max-w-7xl pb-0 md:pb-12">
+    <section className="pb-0 mx-auto  max-w-7xl md:pb-12">
       {/* Section Content Container */}
-      <div className="max-w-full my-6 lg:my-12 lg:ml-6 mx-auto static lg:relative flex flex-col space-y-0 lg:block align-middle items-center content-center ">
+      <div className="static flex flex-col items-center content-center max-w-full mx-auto my-6 align-middle lg:my-12 lg:ml-6 lg:relative space-y-0 lg:block ">
         {/* Gallery Container */}
-        <div className="flex flex-col w-full items-center lg:items-start lg:justify-start  ">
+        <div className="flex flex-col items-center w-full lg:items-start lg:justify-start ">
           {/* Image Container */}
           <HeroImageContainer gallery={gallery} />
-          <div className="w-full lg:w-8/12 h-6 md:h-8 flex justify-center align-middle items-center content-center space-x-4 pt-6">
+          <div className="flex items-center content-center justify-center w-full h-6 pt-6 align-middle lg:w-8/12 md:h-8 space-x-4">
             <Dot dotState="active" />
             <Dot />
             <Dot />
