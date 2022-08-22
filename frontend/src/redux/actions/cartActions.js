@@ -1,7 +1,10 @@
 import * as actionTypes from '../constants/cartConstants'
 import axios from 'axios'
+import mongoose from 'mongoose'
 
 export const addToCart = (id, quantity) => async (dispatch, getState) => {
+    console.log(`id: ${id} quantity: ${quantity}`)
+
     const { data } = await axios.get(`/api/products/${id}`)
 
     dispatch({

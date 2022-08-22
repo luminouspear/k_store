@@ -19,7 +19,7 @@ const products = [
     productUrl: "mini-hamsa-a001",
     imageUrl: "image_hand.jpeg",
     images: ["image_stub64.svg", "image_stub64.svg", "image_stub64.svg", "image_stub64.svg"],
-      id: 2
+    id: 2
   },
   {
     itemTitle: "Uterus on Flower Print Mini Quilt for Planned Parenthood",
@@ -45,3 +45,4 @@ const products = [
   }
 ]
 module.exports = products;
+

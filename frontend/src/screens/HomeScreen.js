@@ -1,6 +1,5 @@
 import React, { Fragment, useState, useEffect } from 'react'
-import { connect, useDispatch, useSelector } from 'react-redux'
-import axios from 'axios'
+import {  useDispatch, useSelector } from 'react-redux'
 
 //Actions
 import { getProducts as listProducts } from '../redux/actions/productActions'
@@ -35,16 +34,7 @@ function HomeScreen() {
   const getProducts = useSelector(state => state.getProducts)
   const { products, loading, error } = getProducts
 
-
-
-
-  // useEffect(() => {
-  //   productDispatch(listProducts())
-  // }, [productDispatch])
-
-  // useEffect(() => {
-  //   galleryDispatch(listGallery())
-  // },[galleryDispatch])
+  const [homeScreenCount, setHomeScreenCount] = useState(3)
 
   useEffect(() => {
     dispatch(listProducts())
@@ -61,7 +51,11 @@ function HomeScreen() {
     <Fragment>
       <HeroSection gallery={carousel} />
       <WhatsNew sectionTitle={sectionTitles[0]} >
-        <StoreRow products={products} productsLoading={loading} productError={error} />
+        <StoreRow
+          products={products}
+          productsLoading={loading}
+          productError={error}
+          count={ homeScreenCount } />
       </WhatsNew>
       <CustomQuilts
         sectionTitle={sectionTitles[1]} />

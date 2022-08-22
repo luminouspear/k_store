@@ -34,7 +34,11 @@ const productSchema = new mongoose.Schema({
         images: {
         type: [String]
     },
-        id: { type: Number, required: true}
+    id: {
+        type: Number,
+        required: true
+    },
+        _id: Object
 }
 );
 

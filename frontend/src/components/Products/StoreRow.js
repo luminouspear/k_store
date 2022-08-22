@@ -3,12 +3,14 @@ import ProductTile from './ProductTile';
 
 const StoreRow = (props) => {
 
-  const { products, loading, error } = props
+  const { products, loading, error, count } = props
+
+  console.log(products)
 
   const ProductTiles = loading
     ? (<h2>Loading...</h2>)
     : error ? (<h2>{error}</h2>)
-    :  (products && products.map((product) => ProductTile(product)))
+    :  (products && products.map((product) => ProductTile(product)).slice(0,count))
 
 
 

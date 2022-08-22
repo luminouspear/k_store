@@ -31,9 +31,11 @@ export const getProductDetails = (id) => async (dispatch) => {
     const API_URL = 'http://localhost:5005/'
     try {
         dispatch({ type: actionTypes.GET_PRODUCT_DETAILS_REQUEST })
+        console.log("Starting request for product details")
 
-        const { data } = await axios.get(`${API_URL}products/${id}`)
+        const { data } = await axios.get(`${API_URL}api/products/${id}`)
 
+        console.log(`Returned data: ${data}`)
         dispatch({
             type: actionTypes.GET_PRODUCT_DETAILS_SUCCESS,
             payload: data
