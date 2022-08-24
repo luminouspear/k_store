@@ -10,13 +10,20 @@
   box-sizing: border-box;
 }
 
-
-
-
-.font-quicksand {
-  font-family: 'Quicksand', sans-serif;
-
+@font-face{
+  font-family: 'Berkshire Swash';
+  src: url("./fonts/Berkshire_Swash/BerkshireSwash-Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
 }
+@font-face{
+  font-family: 'Quicksand';
+  src: url("./fonts/Quicksand/Quicksand-VariableFont_wght.ttf");
+  font-weight: normal, bold;
+  font-style: normal, italic;
+}
+
+
 
 .alert {
 background-color: #f00;

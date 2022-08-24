@@ -36,7 +36,7 @@ const GalleryPreview = (props) => {
           <KStoreTitle title={sectionTitle} textType={"sectionheader"} />
         </h2>
 
-        <div className="grid grid-cols-2 gap-6 mx-12 mt-12 lg:mt-24 gap-y-0 md:gap-12 md:gap-y-12 lg:gap-y-12 lg:grid-cols-3 2xl:gap-12">
+        <div className="grid grid-cols-2 gap-6 mx-12 mt-12 lg:mt-24 md:gap-12 md:gap-y-12 lg:gap-y-12 lg:grid-cols-3 2xl:gap-12">
 
           { galleryPreviewImages }
 

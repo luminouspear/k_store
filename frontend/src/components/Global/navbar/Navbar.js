@@ -21,7 +21,7 @@ const Navbar = ({ toggleNav, click, setSideToggle }) => {
   return (
 
 
-    <nav className="container relative z-50 flex justify-between w-full px-6 pb-6 mx-auto bg-transparent max-w-7xl lg:pb-2 md:px-8 lg:pl-6 lg:pr-6 xl:pr-2 h-28 2xl:h-28 ">
+    <nav className="container relative z-50 flex justify-between w-full px-6 pb-6 mx-auto bg-transparent max-w-7xl lg:pb-2 md:px-8 lg:px-6 h-28 2xl:h-28 ">
       <div className="flex items-center justify-start pb-4 lg:pb-0 lg:pt-2 xl:pt-0 2xl:pb-2 h-24 w-[600px] " onClick={() => setSideToggle(false)}>
         <Link to="/">
           <h1 className="flex justify-center h-full align-middle w- lg:mt-0"><KStoreTitle title={"simcoe stitchcraft"} textType={"logo"} /></h1>

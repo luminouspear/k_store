@@ -1,6 +1,6 @@
 import React from 'react';
 
-export function HeroImageContainer({ gallery }) {
+export function HeroImageContainer({ gallery, containerPrefs, imagePrefs }) {
 
     function showGallery(galleryImage) {
 
@@ -10,12 +10,12 @@ export function HeroImageContainer({ gallery }) {
     }
 
     // const imgSrc = require(`${}`)
-    return <div className="relative w-11/12 lg:w-8/12">
-
-        <img className="object-cover w-full h-[60vh] md:h-[65vh] xl:h-[75vh] object-center mx-auto rounded-3xl shadow-kcyan4 isolate"
+    return(
+    <div className={containerPrefs}>
+        <img className={imagePrefs + "  "}
             src={gallery[0].image}
             alt={gallery[0].imageAlt}
-            onClick={ () => showGallery(gallery[0]) } />
+            onClick={() => showGallery(gallery[0])} />
+    </div>)
 
-    </div>;
 }

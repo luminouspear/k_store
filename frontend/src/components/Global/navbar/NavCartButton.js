@@ -7,7 +7,7 @@ export function NavCartButton(section, count) {
       to={section.linkLocation}
       className="flex items-center justify-center w-full p-2 text-center rounded-full bg-kmag group-hover:bg-kyellow group-hover:text-kmag group-hover:shadow-kmag2">
       <i className="mx-2 fas fa-shopping-cart" />
-      <span className="flex items-center justify-center px-1">
+      <span className="flex items-center justify-center px-1 whitespace-nowrap">
         {section.sectionTitle}
         <span className="mx-2.5 h-8 w-8 text-kmag bg-slate-200 group-hover:text-kyellow group-hover:bg-kmag group-hover:transition-all  group-hover:duration-300 py-1.5 px-2.5 text-sm font-bold rounded-full">
           {count}</span>
