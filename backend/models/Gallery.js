@@ -13,6 +13,6 @@ const gallerySchema = new mongoose.Schema({
 }
 );
 
-const homeScreenGallery = mongoose.model('homeScreenGallery', gallerySchema);
+const Gallery = mongoose.model('Gallery', gallerySchema);
 
-module.exports = homeScreenGallery;
+module.exports = Gallery;

@@ -1,4 +1,4 @@
-const homeScreenGallery = [
+const gallery = [
     {
         galleryName: "HomeScreen",
         images: [
@@ -41,4 +41,4 @@ const homeScreenGallery = [
         ]
     }
   ]
-  module.exports = homeScreenGallery;
+  module.exports = gallery;

@@ -3,16 +3,15 @@ import { KStoreTitle } from '../userinterface/KStoreTitle';
 
 const ContactMe = (props) => {
 
-  const { sectionTitle } = props
+  const sectionTitle = "contact me"
 
   return (
-    <section className="container w-full mx-auto my-20 bg-transparent  max-w-7xl">
+    <section className="container w-full mx-auto my-20 bg-transparent max-w-7xl">
       <h2 className="mx-auto text-center ">
         <KStoreTitle title={sectionTitle} textType={"sectionheader"} />
       </h2>
 
-      <div className="flex flex-col items-center w-full px-6 mx-auto text-white  font-quicksand lg:w-8/12 lg:pt-12
-">
+      <div className="flex flex-col items-center w-full px-6 mx-auto text-white font-quicksand lg:w-8/12 lg:pt-12 ">
         <h3 className="w-10/12 mb-6 text-3xl text-center md:text-4xl ">
           Still have questions? Want to get something made? Let's talk!
         </h3>

@@ -29,7 +29,6 @@ function HomeScreen() {
   const [faqs, setFaqData] = useState(faqData)
 
   const dispatch = useDispatch()
-  // const galleryDispatch = useDispatch()
 
   const getProducts = useSelector(state => state.getProducts)
   const { products, loading, error } = getProducts
@@ -38,12 +37,7 @@ function HomeScreen() {
 
   useEffect(() => {
     dispatch(listProducts())
-    // dispatch(listGallery())
-
    }, [dispatch])
-
-
-  // console.log(`${gallery}`)
 
 
 

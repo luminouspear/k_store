@@ -15,7 +15,7 @@ export default function CartBug(props) {
         if (shippingTotal) {
             return shippingTotal
         }
-        else return <h3 class="font-quicksand text-lg ">Estimated at checkout</h3>
+        else return <h3 className="text-lg font-quicksand ">Estimated at checkout</h3>
     }
 
     let shipping = getShippingTotal()

@@ -5,10 +5,10 @@ import { KStoreTitle } from '../userinterface/KStoreTitle';
 
 const JoinMailingList = (props) => {
 
-  const { sectionTitle } = props
+  const sectionTitle = "join the mailing list"
   return (
 
-    <section className="container w-full py-24 mx-auto  max-w-7xl">
+    <section className="container w-full py-24 mx-auto max-w-7xl">
       <h2 className="mx-auto text-center ">
         <KStoreTitle title={sectionTitle} textType={"sectionheader"} />
       </h2>
@@ -20,9 +20,9 @@ const JoinMailingList = (props) => {
         />} layoutPrefs={"shadow-kcyan4"} />
       </div>
 
-      <div className="flex flex-col items-center w-full px-6 mx-auto text-white  font-quicksand lg:w-8/12 lg:pt-12">
+      <div className="flex flex-col items-center w-full px-6 mx-auto text-white font-quicksand lg:w-8/12 lg:pt-12">
         <h3 className="w-full mb-6 text-4xl text-center ">Let's stay in touch!</h3>
-        <p className="mt-6 text-2xl text-center  md:w-8/12">
+        <p className="mt-6 text-2xl text-center md:w-8/12">
           Leave your email address and I'll let you know when I've finished new
           projects.
         </p>

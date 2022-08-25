@@ -37,19 +37,22 @@ function CartScreen() {
         <div className="w-full max-w-7xl container mx-auto bg-transparent mt-6 md:mt-12 mb-12 min-h-[95%] ">
           <div className="flex flex-col w-full lg:flex-row">
             <div className="flex flex-col w-full mx-auto basis-full lg:basis-9/12 ">
-              <div className="w-full px-6 mb-6 text-center lg:text-left">
-                <KStoreTitle title="your cart" textType="sectionheader" /></div>
+
               {
                 cartItems.length === 0 ? (
-                  <div className="flex flex-col w-full"><h2 className="mb-12 text-4xl text-center text-white font-quicksand">Your cart is empty.</h2>
+                  <div className="flex flex-col w-full"><h2 className="my-12 text-4xl text-center text-white lg:my-24 font-quicksand">Your cart is empty.</h2>
                     <Link to="/shop" className="text-3xl font-medium text-center text-kmag font-quicksand hover:text-kyellow">Let's find something for you!</Link>
                   </div>
-                ) : cartItems.map(item => (
-                  <CartItem
-                    key={item.id}
-                    item={item}
-                    removeHandler={removeHandler} />
-              ))
+                ) : <>
+                  <div className="w-full px-6 mb-6 text-center lg:text-left">
+                <KStoreTitle title="your cart" textType="sectionheader" /></div>
+                    {cartItems.map(item => (
+                      <CartItem
+                        key={item.id}
+                        item={item}
+                        removeHandler={removeHandler} />
+                    ))}
+                    </>
               }
             </div>
             <CartBug

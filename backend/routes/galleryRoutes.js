@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 
-const { getGallery } = require('../controller/galleryControllers');
+const { getGallery, getGalleryDetails } = require('../controller/galleryControllers');
 
 
 // @desc    GET all products from db
@@ -14,6 +14,6 @@ router.get('/', getGallery)
 // @route   GET /api/products
 // @access  Public
 
-// router.get('/:id', getProductById)
+router.get('/:id', getGalleryDetails)
 
 module.exports = router;

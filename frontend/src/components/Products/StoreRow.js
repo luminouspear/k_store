@@ -5,7 +5,7 @@ const StoreRow = (props) => {
 
   const { products, loading, error, count } = props
 
-  console.log(products)
+  // console.log(products)
 
   const ProductTiles = loading
     ? (<h2>Loading...</h2>)

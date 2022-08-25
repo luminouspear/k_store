@@ -1,7 +1,7 @@
 const Product = require('../models/Product');
 
 const getProducts = async (req, res) => {
-    console.log('getProducts running in ProductControllers.js')
+    console.log('getProducts running in productControllers.js')
     try {
         const products = await Product.find({});
         res.json(products);
