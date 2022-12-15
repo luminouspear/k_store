@@ -13,8 +13,9 @@ const GalleryPreview = (props) => {
   const getGalleryDetails = useSelector(state => state.getGalleryDetails)
   const { gallery, galleryLoading, galleryError } = getGalleryDetails
 
-  const id = "HomeScreen"
+  const id = "ew, david"
   const sectionTitle = "kendall's Favourites"
+  const pathToImages ="/assets/"
 
   useEffect(() => {
         dispatch(listGallery(id))
@@ -26,8 +27,9 @@ const GalleryPreview = (props) => {
     galleryPreviewImages = galleryLoading
       ? (<h2>Loading...</h2>)
       : galleryError ? (<h2>{galleryError}</h2>)
-        : gallery.images.map(image => ProductTileImage(image.galleryItemURL, image.galleryItemAlt, image.id))
+        : gallery.images.map(image => ProductTileImage(image.galleryItemURL, image.galleryItemAlt, image.id, pathToImages))
   }
+
 
   return (
     <section className="w-full bg-[#111] py-12">

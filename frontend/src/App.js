@@ -1,7 +1,7 @@
 import './App.css';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { useState } from 'react';
-import { menuData } from "./components/global/localdata/MenuData";
+
 
 //Screens
 import HomeScreen from "./screens/HomeScreen";
@@ -15,6 +15,7 @@ import ProductDetailsScreen from "./screens/ProductDetailsScreen";
 //Components
 
 import Navbar from './components/global/navbar/Navbar';
+import NotFound from './screens/NotFound';
 
 
 
@@ -38,7 +39,7 @@ function App() {
       <div className="w-full h-full bg-black-grad ">
 
         <div
-          className="fixed bottom-0 right-0 flex items-center justify-center w-12 h-12 font-bold text-center align-middle  bg-cyan-400 text-black/90">
+          className="fixed bottom-0 right-0 flex items-center justify-center w-12 h-12 font-bold text-center align-middle bg-cyan-400 text-black/90">
           <span className="sm:hidden">xs</span>
           <span className="hidden sm:inline md:hidden">sm</span>
           <span className="hidden md:inline lg:hidden">md</span>
@@ -63,12 +64,14 @@ function App() {
           <div>
             <Routes>
               {/* Used to be "Switch" */}
-              <Route exact path="/" element={<HomeScreen />} />
-              <Route path="/shop" element={<ProductScreen />} />
               <Route path="/shop/:id" element={<ProductDetailsScreen />} />
-              <Route exact path="/cart" element={<CartScreen />} />
-              <Route exact path='/gallery' element={<GalleryScreen />} />
-              <Route exact path='/meetkendall' element={<MeetKendallScreen />} />
+              <Route path="/shop" element={<ProductScreen />} />
+              <Route path="/cart" element={<CartScreen />} />
+              <Route path='/gallery' element={<GalleryScreen />} />
+              <Route path='/meetkendall' element={<MeetKendallScreen />} />
+              <Route path='/404' element={<NotFound />} />
+              <Route path='*' element={<NotFound />} />
+              <Route path="/" element={<HomeScreen />} />
             </Routes>
           </div>
           {/* HomeScreen */}

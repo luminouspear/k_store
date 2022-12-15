@@ -8,7 +8,7 @@ export default function CartItem(props) {
     return (
         <div className="flex flex-col mx-6 my-6 basis-full lg:basis-9/12 md:flex-row " >
             <img
-                src={require(`../../assets/${imageUrl}`)} className="w-full h-full bg-cover md:w-64 rounded-3xl shadow-kcyan4 hover:shadow-kmag4 " alt={itemAlt}
+                src={`/assets/${imageUrl}`} className="w-full h-full bg-cover md:w-64 rounded-3xl shadow-kcyan4 hover:shadow-kmag4 " alt={itemAlt}
             />
 
             <ul className="flex flex-col w-full px-6 mt-6 space-y-6 list-none lg:w-10/12 md:mt-0 ">

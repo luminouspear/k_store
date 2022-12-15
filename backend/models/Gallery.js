@@ -4,6 +4,8 @@ const mongoose = require('mongoose');
 
 const gallerySchema = new mongoose.Schema({
     galleryName: { type: String, required: true },
+    galleryDescription: { type: String },
+    galleryLength: {type: Number },
     images: [{
         galleryItemURL: { type: String, required: true },
         galleryItemTitle: { type: String, required: true },
