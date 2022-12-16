@@ -1,8 +1,7 @@
 import * as actionTypes from '../constants/galleryConstants'
 import axios from 'axios'
 
-export const getGallery = () =>
-    async (dispatch) => {
+export const getGalleries = () => async (dispatch) => {
 
         const API_URL = 'http://localhost:5005/'
         try {
@@ -15,6 +14,7 @@ export const getGallery = () =>
                 type: actionTypes.GET_GALLERY_SUCCESS,
                 payload: data
             })
+            console.log(data)
         }
         catch (error) {
             dispatch({

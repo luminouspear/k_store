@@ -1,23 +1,23 @@
 import * as actionTypes from '../constants/galleryConstants'
 
-export const getGalleryReducer = (state = { gallery: [] }, action) => {
+export const getGalleryReducer = (state = { galleries: [] }, action) => {
 
     switch (action.type) {
         case actionTypes.GET_GALLERY_REQUEST:
             return {
-                galleryLoading: true,
-                gallery: []
+                galleriesLoading: true,
+                galleries: []
             }
         case actionTypes.GET_GALLERY_SUCCESS:
             return {
 
-                galleryLoading: false,
-                gallery: action.payload
+                galleriesLoading: false,
+                galleries: action.payload
             }
         case actionTypes.GET_GALLERY_FAIL:
             return {
-                galleryLoading: false,
-                galleryError: action.payload
+                galleriesLoading: false,
+                galleriesError: action.payload
             }
         default:
             return state

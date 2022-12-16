@@ -8,13 +8,13 @@ import { getGalleryDetails as listGallery } from '../../redux/actions/galleryAct
 
 const GalleryPreview = (props) => {
 
+  const {sectionTitle} = props
   const dispatch = useDispatch()
 
   const getGalleryDetails = useSelector(state => state.getGalleryDetails)
   const { gallery, galleryLoading, galleryError } = getGalleryDetails
 
-  const id = "ew, david"
-  const sectionTitle = "kendall's Favourites"
+  const id = "HomeScreen"
   const pathToImages ="/assets/"
 
   useEffect(() => {
@@ -27,7 +27,8 @@ const GalleryPreview = (props) => {
     galleryPreviewImages = galleryLoading
       ? (<h2>Loading...</h2>)
       : galleryError ? (<h2>{galleryError}</h2>)
-        : gallery.images.map(image => ProductTileImage(image.galleryItemURL, image.galleryItemAlt, image.id, pathToImages))
+        : gallery.images.map(image =>
+          ProductTileImage(image.galleryItemURL, image.galleryItemAlt, image.id, pathToImages))
   }
 
 

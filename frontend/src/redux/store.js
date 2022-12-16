@@ -11,7 +11,7 @@ import { getFAQsReducer } from './reducers/faqReducers';
 const reducer = combineReducers({
     cart: cartReducer,
     getProducts: getProductsReducer,
-    getGallery: getGalleryReducer,
+    getGalleries: getGalleryReducer,
     getGalleryDetails: getGalleryDetailsReducer,
     getProductDetails: getProductDetailsReducer,
     getFAQs: getFAQsReducer
