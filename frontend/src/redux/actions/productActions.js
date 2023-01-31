@@ -9,7 +9,8 @@ export const getProducts = () =>
             dispatch({ type: actionTypes.GET_PRODUCTS_REQUEST })
 
             // const { data } = await axios.get("https://jsonplaceholder.typicode.com/posts")
-            const { data } = await axios.get(`${API_URL}api/products`)
+            const queryString = `?cacheBust=${Date.now()}`
+            const { data } = await axios.get(`${API_URL}api/products${queryString}`)
 
             dispatch({
                 type: actionTypes.GET_PRODUCTS_SUCCESS,

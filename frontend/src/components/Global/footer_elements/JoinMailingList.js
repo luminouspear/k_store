@@ -14,7 +14,7 @@ const JoinMailingList = (props) => {
       </h2>
       <div className="pt-12">
         <LargeImageContainer contents={<img
-          src={"/assets/image_mountains.png"}
+          src={"/assets/image_mountains.jpg"}
           className="object-cover object-center w-full bg-no-repeat rounded-3xl"
           alt="A purple mountain quilt sitting over a bench outside."
         />} layoutPrefs={"shadow-kcyan4"} />

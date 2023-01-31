@@ -44,7 +44,6 @@ const ProductDetails = ({ match, history }) => {
             //     console.log("1")
             // } else {
                 dispatch(getProductDetails(id))
-                console.log("2")
 
             // }
 
@@ -53,7 +52,7 @@ const ProductDetails = ({ match, history }) => {
     useEffect(() => {
         dispatch(listProducts())
         return () => {
-            console.log(products)
+            console.log(`products: ${products}`)
         };
     }, [dispatch]);
 
@@ -67,9 +66,8 @@ const ProductDetails = ({ match, history }) => {
         }
     }
 
-    console.log(`loading: ${loading}`)
 
-    console.log(product)
+    console.log(`product: ${product}`)
     const itemTitle = !loading && product.itemTitle
     const itemImages = !loading && product.images
     const itemPrice = !loading && product.itemPrice
@@ -119,9 +117,11 @@ const ProductDetails = ({ match, history }) => {
             <section className="w-full bg-[#111] pt-6 pb-5">
                 <div className="container w-full mx-auto mt-6 mb-12 bg-transparent max-w-7xl md:mt-12 ">
                     <div className="flex flex-col lg:flex-row">
-                        <div className="w-full lg:w-1/2 lg:max-w-1/2"><ProductPhotoGrid
-                            images={itemImages}
-                        /></div>
+                                <div className="w-full lg:w-1/2 lg:max-w-1/2">
+
+                                    {console.log('itemImages: ', itemImages)}
+                                    <ProductPhotoGrid images={itemImages} />
+                                </div>
                         <div className="w-full lg:w-1/2 lg:max-w-1/2"><ProductInformation
                             itemPrice={itemPrice}
                             itemDescription={itemDescription}

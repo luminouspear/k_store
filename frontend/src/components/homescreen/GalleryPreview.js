@@ -8,18 +8,23 @@ import { getGalleryDetails as listGallery } from '../../redux/actions/galleryAct
 
 const GalleryPreview = (props) => {
 
-  const {sectionTitle} = props
   const dispatch = useDispatch()
 
   const getGalleryDetails = useSelector(state => state.getGalleryDetails)
   const { gallery, galleryLoading, galleryError } = getGalleryDetails
 
+  const { sectionTitle } = props
   const id = "HomeScreen"
-  const pathToImages ="/assets/"
+  const pathToImages = "/assets/"
+
 
   useEffect(() => {
         dispatch(listGallery(id))
   }, [dispatch, id])
+
+
+
+
 
   let galleryPreviewImages = []
 
@@ -32,7 +37,10 @@ const GalleryPreview = (props) => {
   }
 
 
-  return (
+  return ({
+    if (galleryLoading) {
+        <div>Loading...</div>
+  } else {
     <section className="w-full bg-[#111] py-12">
       <div className="container w-full mx-auto mt-6 bg-transparent max-w-7xl md:mt-12">
         <h2 className="mx-auto text-center ">
@@ -49,7 +57,7 @@ const GalleryPreview = (props) => {
         </div>
       </div>
     </section>
-  )
-}
+  }
+})
 
 export default GalleryPreview

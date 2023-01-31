@@ -22,7 +22,7 @@ const AboutKendall = (props) => {
 
 
             <img
-              src={"/assets/image_portrait_kendall.png"}
+              src={"/assets/image_portrait_kendall.jpg"}
 
               className="object-cover w-full h-full object-top-middle"
 

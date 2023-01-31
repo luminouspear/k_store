@@ -1,6 +1,6 @@
 export const carouselData = [
     {
-        image: '/assets/image_skulliver.jpeg',
+        image: '/assets/image_skulliver.jpg',
         imageAlt: '"Skulliver", a giant multi-coloured foundation paperpiecing skull."',
         id: 1
     },

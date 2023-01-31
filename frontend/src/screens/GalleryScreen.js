@@ -39,10 +39,13 @@ const Gallery = () => {
         <h2 className="mx-auto text-center ">
           <KStoreTitle title={sectionTitle} textType={"sectionheader"} />
           </h2>
+          <p className="mx-auto my-12 text-3xl font-medium text-center text-white lg:w-1/2 font-quicksand">A selection of some of Kendall's most recent work and some longtime favorites.</p>
           <div>
-            {galleries.filter(({ galleryName }) => !hiddenGalleries.includes(galleryName))
-              .map(({ galleryName, galleryDescription, images }) => (
-              <div key={galleryName}>
+            {galleries
+              .filter(({ galleryName }) => !hiddenGalleries.includes(galleryName))
+              .sort((a,b) => a.galleryNumber < b.galleryNumber)
+              .map(({ galleryName, galleryDescription, galleryNumber, images }) => (
+              <div key={galleryNumber}>
                 <GalleryTemplate title={galleryName} description={galleryDescription} images={images} pathToImages={pathToImages } />
               </div>
             ))}
@@ -72,7 +75,11 @@ function GalleryTemplate({ title, description, images, pathToImages }) {
           {description}
         </p>
         <div className="grid grid-cols-2 gap-6 mx-6 lg:grid-cols-3 ">
-          {images.map(image => ProductTileImage(image.galleryItemURL, image.galleryItemAlt, image.id, pathToImages))}
+          {
+            images.map(image =>
+              (<ProductTileImage imageUrl={image.galleryItemURL} imageAlt={image.galleryItemAlt} localPath={pathToImages} key={image.id} />))
+          }
+
         </div>
 
       </div>

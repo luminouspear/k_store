@@ -19,7 +19,7 @@ const CustomQuilts = (props) => {
 
           <LargeImageContainer contents={
             <img
-              src={"/assets/image_dragonfly_spock.jpeg"}
+              src={"/assets/image_dragonfly_spock.jpg"}
               className="object-cover object-center w-full h-full"
 
               alt="Mr. Spock trying to help..."

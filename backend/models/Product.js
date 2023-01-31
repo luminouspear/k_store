@@ -31,9 +31,12 @@ const productSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-        images: {
-        type: [String]
-    },
+    images: [{
+        imageUrl: { type: String, required: true },
+        imageTitle: { type: String, required: true },
+        imageAlt: { type: String, required: true },
+        id: {type: Number, required: true}
+    }],
     id: {
         type: Number,
         required: true
