@@ -14,6 +14,7 @@ frontend/.env
 # production
 /build
 Archive.zip
+frontend/build/assets/Archive.zip
 
 # misc
 .DS_Store
