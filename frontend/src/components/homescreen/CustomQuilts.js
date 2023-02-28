@@ -4,7 +4,7 @@ import { KStoreTitle } from '../global/userinterface/KStoreTitle';
 import { CTAButton } from '../global/userinterface/CTAButton';
 import { LargeImageContainer } from '../global/userinterface/LargeImageContainer';
 
-const CustomQuilts = (props) => {
+export default function CustomQuilts(props) {
 
 
   const { sectionTitle } = props
@@ -44,5 +44,3 @@ const CustomQuilts = (props) => {
     </section>
   )
 }
-
-export default CustomQuilts

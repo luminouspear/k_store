@@ -2,6 +2,7 @@ import React from 'react'
 import { KStoreTitle } from "../userinterface/KStoreTitle"
 
 const Footer = () => {
+
   return (
     <footer className="container w-full py-20 mx-auto bg-transparent max-w-7xl ">
       <div className="w-10/12 h-1 mx-auto my-12 border-b border-dotted xl:w-9/12 border-opacity-60" />
@@ -11,7 +12,7 @@ const Footer = () => {
         </div>
 
         <p className="text-sm text-center text-white font-quicksand md:text-left md:pl-6">
-          © 2022 Simcoe Stitchcraft.
+          © 2023 Simcoe Stitchcraft.
           <br />
           All Rights Reserved.{" "}
           <a href="/privacy_policy.html" className="text-white decoration-none">

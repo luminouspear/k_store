@@ -33,19 +33,35 @@ const ProductDetails = ({ match, history }) => {
     const { loading, error, product } = productDetails
     const getProducts = useSelector(state => state.getProducts)
     const { products, loading: productsLoading, error: productsError } = getProducts
+    // ...
+
+const [remainingItems, setRemainingItems] = useState([]);
+const [remainingItemsQty, setRemainingItemsQty] = useState(0);
+
+useEffect(() => {
+  if (products && productsLoading === false) {
+    const newRemainingItems = products.filter(
+        (product) => product.productUrl !== id
+        ).slice(0, 3);
+        setRemainingItems(newRemainingItems);
+        setRemainingItemsQty(newRemainingItems.length);
+        console.log('remainingItems: ', remainingItems);
+  }
+}, [products, id, productsLoading]);
+
 
 
 
 
     useEffect(
         () => {
-            // if (!product && match?.params.id !== product.id) {
-            //     dispatch(getProductDetails(match.params.id))
-            //     console.log("1")
-            // } else {
+            if (!product && match?.params.id !== product.id) {
+                dispatch(getProductDetails(match.params.id))
+                console.log("1")
+            } else {
                 dispatch(getProductDetails(id))
 
-            // }
+            }
 
         }, [dispatch, id, match])
 
@@ -74,11 +90,12 @@ const ProductDetails = ({ match, history }) => {
     const itemDescription = !loading && product.itemDescription
 
     console.log(product)
-    let remainingItems = []
 
-    if (products && productsLoading === false) {
-        remainingItems = product && products.filter(product => product.productUrl !== id).slice(0, 3)
-    }
+    // if (products && productsLoading === false) {
+    //     setRemainingItems(products.filter(product => product.productUrl !== id).slice(0, 3))
+    //     setRemainingItemsQty(remainingItems.length)
+    //     console.log('remainingItems: ', remainingItems);
+    // }
 
 
 
@@ -116,19 +133,19 @@ const ProductDetails = ({ match, history }) => {
         <Fragment>
             <section className="w-full bg-[#111] pt-6 pb-5">
                 <div className="container w-full mx-auto mt-6 mb-12 bg-transparent max-w-7xl md:mt-12 ">
-                    <div className="flex flex-col lg:flex-row">
-                                <div className="w-full lg:w-1/2 lg:max-w-1/2">
-
-                                    {console.log('itemImages: ', itemImages)}
-                                    <ProductPhotoGrid images={itemImages} />
-                                </div>
-                        <div className="w-full lg:w-1/2 lg:max-w-1/2"><ProductInformation
-                            itemPrice={itemPrice}
-                            itemDescription={itemDescription}
-                            itemTitle={itemTitle}
-                            id={id}
-                            onAddToCart={addToCartHandler} />
-                        </div></div>
+                    <div className="relative z-0 flex flex-col items-center justify-center p-12 align-middle lg:flex-row lg:items-start">
+                            <div className="z-10 w-full mx-12 lg:w-5/8 lg:max-w-1/2">
+                                <ProductPhotoGrid images={itemImages} />
+                            </div>
+                        <div className="w-full lg:w-1/2 lg:max-3/8">
+                            <ProductInformation
+                                itemPrice={itemPrice}
+                                itemDescription={itemDescription}
+                                itemTitle={itemTitle}
+                                id={id}
+                                onAddToCart={addToCartHandler} />
+                        </div>
+                    </div>
                 </div>
             </section>
             <div className="w-full mx-auto md:w-10/12 lg:w-8/12">
@@ -136,12 +153,14 @@ const ProductDetails = ({ match, history }) => {
                     <KStoreTitle title={"you may also be interested in..."} textType={"sectionheader"} />
                         </h2>
 
-                        < StoreRow
-                            products={remainingItems}
-                            loading={productsLoading}
-                            error={productsError}
-                            count={remainingItems.length}
-                        />
+                        {remainingItems.length > 0 && (
+        <StoreRow
+          products={remainingItems}
+          loading={productsLoading}
+          error={productsError}
+          count={remainingItems.length}
+        />
+      )}
 
 
 

@@ -9,7 +9,7 @@ const ProductInformation = (props) => {
 
 
     return (
-        <div className="flex flex-col items-start w-full px-6 space-y-6">
+        <div className="z-0 flex flex-col items-start w-full px-6 space-y-6">
             <div className="flex items-center justify-start text-white font-quicksand ">
                 <KStoreTitle title={itemTitle.toLowerCase()} textType={"productTitle"} allowLineBreak={true} />
             </div>

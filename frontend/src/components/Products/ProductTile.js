@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import ProductTileImage from './ProductTileImage';
 import { Link } from 'react-router-dom';
 
@@ -15,7 +15,10 @@ function ProductTile(product) {
         <Link to={ linkLocation }
             key={id} >
             <div className="w-full mt-12 cursor-pointer lg:mt-0 group " >
-                {ProductTileImage(imageUrl, imageAlt, id)}
+                <ProductTileImage
+                    imageUrl={imageUrl}
+                    imageAlt={imageAlt}
+                />
 
                 <div className="w-full px-12 pt-12 pb-6 text-2xl text-center text-white font-quicksand text-medium lg:text-xl sm:leading-10 group-hover:text-kyellow">
                     {itemTitle}

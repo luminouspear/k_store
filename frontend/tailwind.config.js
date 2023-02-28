@@ -89,7 +89,8 @@ module.exports = {
         },
     },
     plugins: [
-        require('@tailwindcss/aspect-ratio')
+        require('@tailwindcss/aspect-ratio'),
+        require('@tailwindcss/forms')
     ],
     variants: {
         dropShadow: ['responsive', 'odd', 'even', 'hover', 'focus'],

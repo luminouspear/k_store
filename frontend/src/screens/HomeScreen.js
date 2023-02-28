@@ -20,7 +20,7 @@ import Footer from '../components/global/footer_elements/Footer'
 import { carouselData } from '../components/global/localdata/CarouselData'
 import { faqData } from '../components/global/localdata/FAQData'
 
-function HomeScreen() {
+function HomeScreen(props) {
 
 
   const [carousel, setCarousel] = useState(carouselData)
@@ -57,7 +57,8 @@ function HomeScreen() {
         sectionTitle={sectionTitles[2]}
          />
       <AboutKendall
-        sectionTitle={sectionTitles[3]} />
+        sectionTitle={sectionTitles[3]}
+        scrollToTop={props.scrollToTop} />
       <JoinMailingList
         sectionTitle={sectionTitles[4]} />
       <FAQ

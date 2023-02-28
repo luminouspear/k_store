@@ -6,9 +6,9 @@ export function KStoreTitle({ title, textType, allowLineBreak = false }) {
   const titleStyle = {
     logo: 'first-letter:text-5xl first-letter:lg:text-6xl first-letter:xl:text-7xl first-letter:2xl:text-8xl first-letter:py-0 pr-2 lg:pr-3 text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl inline-block cursor-pointer',
     subheader: 'text-4xl first-letter:text-5xl sm:text-5xl sm:first-letter:text-6xl inline-block -mx-0 ',
-    nocaps: 'text-4xl  2xl:text-5xl ',
+    nocaps: 'text-4xl  2xl:text-5xl inline-block w-fit',
     sectionheader: 'text-4xl first-letter:text-5xl sm:text-5xl sm:first-letter:text-6xl first-letter:py-0 pr-2 lg:pr-3 inline-block',
-    productTitle: 'first-letter:text-8xl  first-letter:py-0 pr-2 lg:pr-3 text-6xl inline-block'
+    productTitle: 'first-letter:text-6xl  first-letter:py-0 pr-2 lg:pr-3 text-4xl inline-block'
   }
 
   const staticStyles = ['sectionheader', 'productTitle']
@@ -37,10 +37,10 @@ export function KStoreTitle({ title, textType, allowLineBreak = false }) {
 
 
   return (
-    <div className="">
-      <span className={`${allowsLineBreak} font-berkshire md:drop-shadow-kyellow2 block p-1.5 isolate ${colorStyling} ${animateOnHover} `} >
+    <>
+      <span className={`${allowsLineBreak} font-berkshire md:drop-shadow-kyellow2 p-1.5 isolate ${colorStyling} ${animateOnHover} `} >
         {output}
       </span>
 
-    </div>)
+    </>)
 }

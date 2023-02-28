@@ -1,49 +1,44 @@
-import React, {useState} from 'react'
+import React, { useState, useEffect } from 'react'
 
-function ProductTileImage(props) {
+function ProductTileImage({imageUrl, imageAlt, localPath = "/assets/", onSelectImage}) {
 
-    const { imageUrl, imageAlt, id, localPath } = props
-    const [showModal, setShowModal] = useState(false)
+
+
+    const [selectedImage, setSelectedImage] = useState(null)
 
     // Add state to track whether the modal is open or closed
 
 
-    const local = (localPath) ? "/assets/" : localPath
-    console.log('local: ', local);
-
-    const filePath = local + imageUrl
 
 
-    function handleImageClick() {
+    const filePath = localPath + imageUrl
 
-            setShowModal(true)
+
+    const handleImageClick = () => {
+        setSelectedImage(imageUrl)
+        onSelectImage(imageUrl, imageAlt)
         }
 
-    function handleCloseClick() {
-        setShowModal(false)
-    }
+    // function handleCloseClick() {
+    //     setSelectedImage(null)
+    // }
 
 
 
     return (
 
-        <div className="relative overflow-hidden bg-white aspect-w-4 aspect-h-4 rounded-3xl group-odd:shadow-kcyan4 shadow-kyellow4 isolate group-hover:shadow-kmag4" >
-            {(showModal && (
-                <div className=" inset-0 fixed z-[999] flex items-center justify-center w-full h-full bg-black/50">
-                    <div className="flex flex-col items-center overflow-auto bg-white rounded-md shadow-sm max-w-11/12 max-h-11/12">
-                    <button onClick={handleCloseClick} className="px-5 py-3 m-2 cursor-pointer radius-sm">Close</button>
-                    <img src={filePath} alt={imageAlt} onClick={handleCloseClick} />
-                </div>
-                </div>
-            ))}
-        <img
-                src={`${filePath}`}
+        <div className="relative overflow-hidden bg-white aspect-w-4 aspect-h-4 rounded-3xl group-odd:shadow-kcyan4 shadow-kyellow4 isolate group-odd:hover:shadow-kmag4">
+            <img
+                src={filePath}
                 className="object-cover object-center w-full scale-110 cursor-pointer"
                 alt={imageAlt}
                 onClick={handleImageClick}
             />
-        </div>
 
+
+
+
+        </div>
 
     )
 }
