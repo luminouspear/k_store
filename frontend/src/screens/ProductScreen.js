@@ -35,16 +35,16 @@ function ProductScreen() {
   } else {
     return (
  <Fragment>
-        <div className="w-full bg-[#111] mx-auto ">
-          <div className="w-full py-6 mx-auto md:w-10/12 lg:w-8/12">
-        <h2 className="mx-auto text-center ">
-          <KStoreTitle title={"quilts for sale"} textType={"sectionheader"} />
-        </h2>
-            <StoreRow
-          products={products}
-          loading={loading}
-          error={error}
-          count={ products.length } />
+        <div className=" w-full bg-[#111]  mx-auto">
+          <div className="container w-full py-6 mx-auto max-w-7xl">
+            <h2 className="mx-auto text-center ">
+              <KStoreTitle title={"quilts for sale"} textType={"sectionheader"} />
+            </h2>
+          <StoreRow
+            products={products}
+            loading={loading}
+            error={error}
+            count={ products.length } />
           </div>
           </div>
 

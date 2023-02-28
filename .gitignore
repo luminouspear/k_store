@@ -8,11 +8,12 @@ node_modules/
 
 # testing
 /coverage
-# frontend/src/playground/
-
+frontend/src/playground/
+frontend/.env
 
 # production
 /build
+Archive.zip
 
 # misc
 .DS_Store

@@ -22,17 +22,18 @@ const AboutKendall = (props) => {
               className="object-cover object-center w-full bg-no-repeat rounded-3xl shadow-kyellow4 hover:shadow-kcyan4 isolate"
               alt="Kendall, the artist" />
           </div>
-          <div className="w-full py-0 lg:mx-4 lg:p-8 lg:col-span-6 lg:col-start-6 xl:col-start-6 lg:row-start-1 lg:translate-y-48 lg:translate-y-32 xl:translate-y-48 lg:h-fit lg:max-w-lg">
+          <div className="w-full py-0 lg:mx-4 lg:p-8 lg:col-span-6 lg:col-start-6 xl:col-start-6 lg:row-start-1 lg:translate-y-32 xl:translate-y-48 lg:h-fit lg:max-w-lg">
             <TextCalloutBox layoutPrefs="">
-              <h2 className="w-10/12 mx-auto my-12 text-3xl lg:w-10/12 xl:w-10/12 font-quicksand lg:text-4xl text-center text-white lg:text-kblack font-regular leading-[3.8rem] lg:leading-tight "
+              <h2 className="flex flex-col items-center justify-center w-10/12 mx-auto mb-6 lg:my-12 lg:w-10/12 xl:w-10/12"
               >
-                Kendall is a quilter, crafter, maker and artist who believes in living life in <span className="whitespace-nowrap"><KStoreTitle title="full colour!" textType="nocaps" /></span>
+                <span className="text-2xl md:text-3xl text-center text-white font-quicksand sm:text-5xl lg:text-kblack font-normal leading-tighter sm:leading-[3.6rem]  ">Kendall is a quilter, crafter, maker and artist who believes in living life in</span> <span className="flex"><KStoreTitle title="full colour!" textType="nocaps" layoutPrefs="whitespace-nowrap" /></span>
               </h2>
             </TextCalloutBox>
           </div>
       </div>
-        <div className="w-full mx-auto md:w-10/12 lg:w-5/12">
-          <CTAButton text={"Meet Kendall"} level={"secondary"} location={"/meetkendall"} onClick={props.scrollToTop}  />
+        <div className="w-full mx-auto lg:mt-16 md:w-10/12 lg:w-5/12">
+          <CTAButton text={"Meet Kendall"} level={"secondary"} location={"/meetkendall"} onClick={props.scrollToTop}
+            layoutPrefs="w-10/12 lg:w-full mx-auto lg:mb-0" />
             </div>
 
 

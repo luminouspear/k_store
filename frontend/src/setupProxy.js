@@ -2,7 +2,7 @@ const { createProxyMiddleware } = require('http-proxy-middleware')
 
 module.exports = function (app) {
     app.use(
-        '/api',
+        '/api/mailchimp',
         createProxyMiddleware({
             target: 'https://us13.api.mailchimp.com',
             changeOrigin: true,

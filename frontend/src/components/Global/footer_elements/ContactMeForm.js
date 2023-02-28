@@ -1,5 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import InputField from '../userinterface/InputField'
+import ReCAPTCHA from 'react-google-recaptcha'
+
 
 const ContactMeForm = ({ status, message, onValidated, subscriptionStatus }) => {
 
@@ -8,6 +10,13 @@ const ContactMeForm = ({ status, message, onValidated, subscriptionStatus }) => 
   const [userName, setUsername] = useState('')
   const [userMessage, setUserMessage] = useState('')
   const [isSubscribedToNewsletter, setIsSubscribedToNewsletter] = useState("No")
+
+   //ReCAPTCHA Stuff
+  const [recaptchaToken, setRecaptchaToken] = useState(null)
+
+  const handleRecaptchaToken = (token) => {
+  setRecaptchaToken(token)
+  }
 
   const handleSubmit = (e) => {
 
@@ -18,7 +27,8 @@ const ContactMeForm = ({ status, message, onValidated, subscriptionStatus }) => 
       MERGE0: email,
       MERGE1: userName,
       MERGE2: userMessage,
-      MERGE3: isSubscribedToNewsletter  === "No" ? "No" : "Yes"
+      MERGE3: isSubscribedToNewsletter === "No" ? "No" : "Yes",
+      'g-recaptcha-response': recaptchaToken,
     })
 
   }
@@ -100,12 +110,12 @@ const ContactMeForm = ({ status, message, onValidated, subscriptionStatus }) => 
           </h3>
         )
       }
-      {status === "success" ? null :
+      {status === "success" ? null : (
       <InputField
         label="Send"
         type="submit"
         formValues={[email, userName, userMessage, isSubscribedToNewsletter]}
-        />}
+        />)}
 
   </form>);
 };

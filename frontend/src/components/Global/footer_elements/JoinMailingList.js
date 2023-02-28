@@ -4,9 +4,12 @@ import { LargeImageContainer } from '../userinterface/LargeImageContainer'
 import { KStoreTitle } from '../userinterface/KStoreTitle';
 import InputField from '../userinterface/InputField';
 import MailchimpSubscribe from 'react-mailchimp-subscribe'
+
+// require("dotenv-webpack").config()
+
 // require("dotenv").config();
-const userId = '7367edb94826638a5c585c285'
-const formId = '80be11e627'
+const userId = process.env.REACT_APP_MAILCHIMP_U
+const formId = process.env.REACT_APP_MAILCHIMP_ID
 
 
 const event = {
@@ -41,66 +44,14 @@ const [email, setEmail] = useState('')
   const [isValidEmail, setIsValidEmail] = useState(false)
   const [isSubscribedToNewsletter, setIsSubscribedToNewsletter] = useState("Yes")
 
-// const formAction = "https://icloud.us13.list-manage.com/subscribe/post?u=7367edb94826638a5c585c285&amp;id=80be11e627&amp;f_id=005691e2f0"
 
-// async function run() {
-// const response = await mailchimp.ping.get();
-// console.log('Response from mailchimp: ' + response)
-// }
-// run();
-
-// fetch('/api/ping', {
-// method: 'GET',
-// headers: {
-// Authorization: 'apikey 9bcace914c887eb5386a39620d1f3230-us13'
-// },
-// })
-// .then(res => res.json())
-// .then(data => console.log(data))
-// .then(err => console.error(err))
-
-
-  // const mailchimpUrl = "https://us13.api.mailchimp.com/3.0/lists/80be11e627/members"
-
-
-  // const handleSubmit = async (event) => {
-
-  //     event.preventDefault();
-
-  // if (!email || !email.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/)) {
-  //     alert('Please enter a valid email address.');
-  //     return;
-  //   }
-
-  //   try {
-  //     const res = await fetch('/api/mailchimp', {
-  //       method: 'POST',
-  //       headers: {
-  //         'Content-Type': 'application/json'
-  //       },
-  //       body: JSON.stringify({
-  //         url: mailchimpUrl,
-  //         data: {
-  //           email_address: email,
-  //           status: 'subscribed'
-  //         }
-  //       })
-  //     })
-  //     const data = await res.json()
-  //     console.log(data)
-  //   } catch (err) {
-  //     console.error(err)
-  //   }
-
-
-  // }
 
 
   return (
 
-    <section className="container w-full py-12 mx-auto md:py-24 max-w-7xl">
-      <h2 className="mx-auto text-center ">
-        <KStoreTitle title={sectionTitle} textType={"sectionheader"} />
+    <section className="container w-full pt-12 pb-12 mx-auto md:pt-4 max-w-7xl">
+      <h2 className="mx-auto text-center">
+        <KStoreTitle title={sectionTitle} textType={"sectionheader"} allowLineBreak={true} />
       </h2>
       <div className="pt-12">
         <LargeImageContainer contents={<img
@@ -111,7 +62,7 @@ const [email, setEmail] = useState('')
       </div>
 
       <div className="flex flex-col items-center w-full px-6 mx-auto text-white font-quicksand lg:w-10/12 lg:pt-12">
-        <h3 className="w-full mb-6 text-4xl text-center ">Let's stay in touch!</h3>
+        <h3 className="w-full mt-6 mb-4 text-4xl text-center ">Let's stay in touch!</h3>
         <p className="mt-6 text-2xl text-center md:w-8/12">
           Leave your email address and I'll let you know when I've finished new
           projects.

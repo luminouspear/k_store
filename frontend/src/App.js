@@ -33,7 +33,7 @@ function App() {
   const [selectedImageUrl, setSelectedImageUrl] = useState(null)
   const [selectedImageAlt, setSelectedImageAlt] = useState(null)
 
-  const debugWindowSize = false;
+  const debugWindowSize = true;
 
   const onSelectImage = (imageUrl, imageAlt) => {
     setSelectedImageUrl(imageUrl)
@@ -60,8 +60,8 @@ function App() {
 
   return (
 
-    <main className=" bg-texture bg-repeat w-full min-h-screen bg-left bg-[length:200px_200px] ">
-      <div className="w-full h-full bg-black-grad ">
+    <main className=" bg-texture bg-repeat w-full inset-0 min-w-[100vw] min-h-screen  bg-[length:200px_200px] ">
+      <div className="h-full min-w-full bg-black-grad ">
 
         {debugWindowSize && <div
           className="fixed bottom-0 right-0 flex items-center justify-center w-12 h-12 font-bold text-center align-middle bg-cyan-400 text-black/90">

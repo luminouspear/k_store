@@ -24,7 +24,6 @@ function ProductTileImage({imageUrl, imageAlt, localPath = "/assets/", onSelectI
     // }
 
 
-
     return (
 
         <div className="relative overflow-hidden bg-white aspect-w-4 aspect-h-4 rounded-3xl group-odd:shadow-kcyan4 shadow-kyellow4 isolate group-odd:hover:shadow-kmag4">

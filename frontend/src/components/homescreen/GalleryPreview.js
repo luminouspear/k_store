@@ -59,8 +59,9 @@ export default function GalleryPreview(props) {
               {galleryPreviewImages}
 
             </div>
-            <div className="w-full mx-auto md:w-10/12 lg:w-5/12">
-              <CTAButton text={"View the Gallery"} level={"secondary"} location={"/gallery"} />
+            <div className="w-full mx-auto mt-12 md:w-10/12 lg:w-5/12">
+              <CTAButton text={"View the Gallery"} level={"secondary"} location={"/gallery"}
+              layoutPrefs="w-10/12 lg:w-full mx-auto lg:mb-12" />
             </div>
           </div>
         </section>
