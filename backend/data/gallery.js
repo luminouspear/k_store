@@ -44,7 +44,7 @@ const gallery = [
         ]
     },
     {
-        galleryName: "ew, david",
+        galleryName: "omg, david",
         galleryNumber: 1,
         galleryDescription: "A current project in progress. Michaelangelo's 'The David' (two sided!) done at a massive scale.",
         galleryLength: 2,
