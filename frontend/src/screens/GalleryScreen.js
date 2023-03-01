@@ -43,7 +43,7 @@ const Gallery = ({onSelectImage}) => {
             <p className="mx-6 my-12 text-3xl font-medium text-center text-white lg:w-1/2 font-quicksand">A selection of some of Kendall's most recent work and some longtime favorites.</p>
           </div>
           <>
-            {galleries
+            {galleries && galleries
               .filter(({ galleryName }) => !hiddenGalleries.includes(galleryName))
               .sort((a,b) => a.galleryNumber < b.galleryNumber)
               .map(({ galleryName, galleryDescription, galleryNumber, images }) => (

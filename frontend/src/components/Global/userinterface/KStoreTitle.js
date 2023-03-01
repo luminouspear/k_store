@@ -8,7 +8,7 @@ export function KStoreTitle({ title, textType, allowLineBreak = false, layoutPre
     subheader: 'text-4xl first-letter:text-5xl sm:text-5xl sm:first-letter:text-6xl inline-block -mx-0 ',
     nocaps: 'text-4xl  2xl:text-5xl w-fit',
     sectionheader: 'text-4xl first-letter:text-5xl sm:text-5xl sm:first-letter:text-6xl first-letter:py-0 pr-2 lg:pr-3 inline-block',
-    productTitle: 'first-letter:text-6xl  first-letter:py-0 pr-2 lg:pr-3 text-4xl inline-block'
+    productTitle: 'first-letter:text-5xl  first-letter:py-0 pr-2 lg:pr-3 text-3xl inline-block'
   }
 
   const staticStyles = ['sectionheader', 'productTitle']

@@ -13,7 +13,7 @@ const WhatsNew = props => {
             </h2>
             {props.children}
             <div className="w-full mx-auto md:w-10/12 lg:w-5/12">
-                <CTAButton text={"View the Store"} level={"secondary"} location={"/gallery"}
+                <CTAButton text={"View the Store"} level={"secondary"} location={"/shop"}
                     layoutPrefs="w-10/12 lg:w-full mx-auto mt-8" />
             </div>
 

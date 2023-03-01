@@ -33,7 +33,7 @@ function App() {
   const [selectedImageUrl, setSelectedImageUrl] = useState(null)
   const [selectedImageAlt, setSelectedImageAlt] = useState(null)
 
-  const debugWindowSize = false;
+  const debugWindowSize = true;
 
   const onSelectImage = (imageUrl, imageAlt) => {
     setSelectedImageUrl(imageUrl)

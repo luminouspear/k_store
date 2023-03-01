@@ -4,7 +4,9 @@ import axios from 'axios'
 export const getProducts = () =>
     async (dispatch) => {
 
-        const API_URL = 'http://localhost:5005/'
+        const PORT = 5005
+
+        const API_URL = `http://localhost:${PORT}/`
         try {
             dispatch({ type: actionTypes.GET_PRODUCTS_REQUEST })
 
@@ -29,7 +31,10 @@ export const getProducts = () =>
 
 
 export const getProductDetails = (id) => async (dispatch) => {
-    const API_URL = 'http://localhost:5005/'
+
+    const PORT = 5005
+    const API_URL = `http://localhost:${PORT}/`
+    
     try {
         dispatch({ type: actionTypes.GET_PRODUCT_DETAILS_REQUEST })
         console.log("Starting request for product details")

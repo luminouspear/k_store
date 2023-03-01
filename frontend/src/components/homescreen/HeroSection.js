@@ -34,7 +34,7 @@ const HeroSection = ({ gallery }) => {
                <KStoreTitle title={"handmade quilts"} textType={"subheader"} />
 
 
-               <span className="text-3xl md:text-4xl text-center text-white font-quicksand sm:text-5xl lg:text-kblack font-normal leading-tight sm:leading-[3.6rem] ">crafted in Barrie, Ontario, Canada</span></h1>
+               <span className="text-3xl md:text-4xl text-center text-white font-quicksand sm:text-5xl lg:text-kblack font-normal leading-tight sm:leading-[3.6rem] ">crafted in Barrie,<br className=" md:block" /> Ontario, Canada</span></h1>
                   <CTAButton text="See What's Available" level="primary" location="/shop"
                 layoutPrefs="mt-6 mb-6 md:mt-6 md:mb-8 lg:mb-0"   />
 

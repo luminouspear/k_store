@@ -1,6 +1,6 @@
 {
   "name": "frontend",
-  "proxy": "http://127.0.0.1:5005/",
+  "proxy": "http://localhost:5005/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -29,7 +29,7 @@
     "path": false
   },
   "scripts": {
-    "start": "concurrently \"react-scripts start\" \"npm run build-webpack --trace-deprecation\"",
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",

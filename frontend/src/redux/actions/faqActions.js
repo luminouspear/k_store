@@ -5,7 +5,8 @@ export const getFAQs = () =>
     async (dispatch) => {
         console.log("getFAQs redux action running")
 
-        const API_URL = 'http://localhost:5005/'
+        const PORT = 5005
+        const API_URL = `http://localhost:${PORT}/`
         try {
             dispatch({
                 type: actionTypes.GET_FAQS_REQUEST

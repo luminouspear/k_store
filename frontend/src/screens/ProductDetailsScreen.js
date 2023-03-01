@@ -41,15 +41,23 @@ const [remainingItemsQty, setRemainingItemsQty] = useState(0);
 useEffect(() => {
   if (products && productsLoading === false) {
     const newRemainingItems = products.filter(
-        (product) => product.productUrl !== id
-        ).slice(0, 3);
-        setRemainingItems(newRemainingItems);
-        setRemainingItemsQty(newRemainingItems.length);
-        console.log('remainingItems: ', remainingItems);
+      (product) => product.productUrl !== id
+    );
+
+    // Shuffle array
+    for (let i = newRemainingItems.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [newRemainingItems[i], newRemainingItems[j]] = [newRemainingItems[j], newRemainingItems[i]];
+    }
+
+    // Slice first 3 items
+    const slicedRemainingItems = newRemainingItems.slice(0, 3);
+
+    setRemainingItems(slicedRemainingItems);
+    setRemainingItemsQty(slicedRemainingItems.length);
+    console.log('remainingItems: ', slicedRemainingItems);
   }
 }, [products, id, productsLoading]);
-
-
 
 
 
@@ -63,14 +71,14 @@ useEffect(() => {
 
             }
 
-        }, [dispatch, id, match])
+        }, [dispatch, id])
 
     useEffect(() => {
         dispatch(listProducts())
         return () => {
             console.log(`products: ${products}`)
         };
-    }, [dispatch]);
+    }, []);
 
 
 
@@ -88,6 +96,11 @@ useEffect(() => {
     const itemImages = !loading && product.images
     const itemPrice = !loading && product.itemPrice
     const itemDescription = !loading && product.itemDescription
+    const quantity = !loading && product.quantity
+    const itemSize = !loading && product.itemSize
+    const shippingPrice = !loading && product.shippingPrice
+    const itemCredit = !loading && product.itemCredit
+    const status = !loading && product.status
 
     console.log(product)
 
@@ -142,7 +155,11 @@ useEffect(() => {
                                 itemPrice={itemPrice}
                                 itemDescription={itemDescription}
                                 itemTitle={itemTitle}
-                                id={id}
+                                status={status}
+                                        quantity={quantity}
+                                        itemSize={itemSize}
+                                        shippingPrice={shippingPrice}
+                                        itemCredit={itemCredit}
                                 onAddToCart={addToCartHandler} />
                         </div>
                     </div>
@@ -164,7 +181,7 @@ useEffect(() => {
 
 
 
-                <div className="w-full mx-auto lg:w-6/12">
+                <div className="w-10/12 py-12 mx-auto lg:w-6/12">
                     <CTAButton text={"See More Things"} level={"secondary"} location={"/shop"} />
                 </div>
             </div>
