@@ -1,6 +1,5 @@
 import * as actionTypes from '../constants/cartConstants'
 import axios from 'axios'
-import mongoose from 'mongoose'
 
 export const addToCart = (id, quantity) => async (dispatch, getState) => {
     console.log(`id: ${id} quantity: ${quantity}`)
@@ -10,16 +9,16 @@ export const addToCart = (id, quantity) => async (dispatch, getState) => {
     dispatch({
         type: actionTypes.ADD_TO_CART,
         payload: {
-            id: data._id,
             itemTitle: data.itemTitle,
             itemAlt: data.itemAlt,
             itemPrice: data.itemPrice,
             itemDescription: data.itemDescription,
-            flPrice: data.flPrice,
+            itemSize: data.itemSize,
+            shippingPrice: data.shippingPrice,
             productUrl: data.productUrl,
             imageUrl: data.imageUrl,
             images: data.images,
-            quantity
+            quantitySelected: quantity
         }
     })
 

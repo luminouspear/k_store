@@ -5,6 +5,7 @@ import { KStoreTitle } from '../global/userinterface/KStoreTitle';
 const ProductInformation = (props) => {
 
     const { itemPrice, itemDescription, itemTitle, id, onAddToCart, status, quantity, itemSize, shippingPrice, itemCredit } = props
+    console.log('id: ', id);
     console.log('itemSize: ', itemSize);
 
     // const [hoverState, setHoverState] = useState(false)
@@ -28,15 +29,19 @@ const ProductInformation = (props) => {
                 <div className="w-full pt-2 text-lg font-semibold text-white font-quicksand">
                     Shipping: {shippingPrice === 0 ? "Free" : `CA $${shippingPrice.toFixed(2)}`}</div>
             </h2>
-            <div className="w-full pt-6">
-                <CTAButton
-                    text="Add to Cart"
-                    level="primary"
-                    location="/cart"
-                    onClickEvent={() => onAddToCart(id)}
-                    id={id}
-                />
-            </div>
+            {quantity > 0 ? (
+                <div className="w-full pt-6">
+                    <CTAButton
+                        text="Add to Cart"
+                        level="primary"
+                        location="/cart"
+                        onClickEvent={() => onAddToCart(id)}
+                        id={id}
+                    />
+                </div>) :
+                <div className="w-full pt-6">
+                    <h3 className="text-2xl font-bold text-kyellow hover:text-kmag font-quicksand">SOLD OUT!</h3>
+                </div>}
 
 
 

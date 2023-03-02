@@ -13,9 +13,9 @@ import { LoadingErrorMessage } from '../components/global/userinterface/LoadingE
 
 
 function ProductScreen() {
-  const [sectionTitles, setSectionTitles] = useState(["what's new", "work in progress", "kendall's Favourites", "about kendall", "join my mailing list", "frequently asked questions", "contact me"])
+  const sectionTitles = ["what's new", "work in progress", "kendall's Favourites", "about kendall", "join my mailing list", "frequently asked questions", "contact me"]
 
-    const dispatch = useDispatch()
+  const dispatch = useDispatch()
   const getProducts = useSelector(state => state.getProducts)
   const { products, loading, error } = getProducts
 
@@ -23,7 +23,8 @@ function ProductScreen() {
     dispatch(listProducts())
   }, [dispatch])
 
-
+  //Cause any products that have been sold to not show in this list.
+const filteredProducts = products.filter(product => product.quantity > 0)
 
 
 
@@ -41,7 +42,7 @@ function ProductScreen() {
               <KStoreTitle title={"quilts for sale"} textType={"sectionheader"} />
             </h2>
           <StoreRow
-            products={products}
+            products={filteredProducts}
             loading={loading}
             error={error}
             count={ products.length } />

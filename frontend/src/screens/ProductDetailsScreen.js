@@ -26,6 +26,7 @@ const ProductDetails = ({ match, history }) => {
     let { id } = useParams()
 
     id = match ? match.params.id : id
+    console.log('id: ', id);
 
     const dispatch = useDispatch()
 
@@ -55,7 +56,6 @@ useEffect(() => {
 
     setRemainingItems(slicedRemainingItems);
     setRemainingItemsQty(slicedRemainingItems.length);
-    console.log('remainingItems: ', slicedRemainingItems);
   }
 }, [products, id, productsLoading]);
 
@@ -84,6 +84,8 @@ useEffect(() => {
 
     const addToCartHandler = (id) => {
         console.log('addToCartHandler called')
+        console.log('id: ', id);
+        console.log('qty: ', qty);
         dispatch(addToCart(id, qty))
         if (history) {
             history.push(`/cart`)
@@ -160,6 +162,7 @@ useEffect(() => {
                                         itemSize={itemSize}
                                         shippingPrice={shippingPrice}
                                         itemCredit={itemCredit}
+                                        id={id}
                                 onAddToCart={addToCartHandler} />
                         </div>
                     </div>

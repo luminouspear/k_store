@@ -35,7 +35,7 @@ export default function CartBug(props) {
                         <div className="flex flex-row justify-between">
                             <span className="text-xl">Subtotal</span>
 
-                            <span className="text-2xl font-medium">CA${subtotal.toFixed(2)}</span>
+                            <span className="text-2xl font-medium">CA ${subtotal.toFixed(2)}</span>
                         </div>
                     </li>
                     <li className="w-full text-white font-quicksand lg:text-kblack">
@@ -49,7 +49,7 @@ export default function CartBug(props) {
                         <div className="flex flex-row items-end justify-between">
                             <span className="text-xl font-bold">Estimated Total</span>
 
-                            <span className="text-3xl font-bold">CA${totalWithShipping.toFixed(2)}</span>
+                            <span className="text-3xl font-bold">CA ${totalWithShipping.toFixed(2)}</span>
                         </div>
                     </li>
                 </ul>
