@@ -6,6 +6,7 @@ const productRoutes = require('./routes/productRoutes.js')
 const galleryRoutes = require('./routes/galleryRoutes.js')
 const faqRoutes = require('./routes/faqRoutes.js')
 const cors = require('cors')
+const path = require('path');
 
 
 connectDB();
@@ -22,6 +23,8 @@ app.use((req, res, next) => {
   next();
 });
 
+app.use(express.static(path.join(__dirname, '..', 'frontend', 'build')));
+
 
 //Any request going to server 5005 will have access through these routes.
 app.get('/', (req, res) => {
@@ -29,9 +32,13 @@ app.get('/', (req, res) => {
   res.json({ message: "API Running"})
 })
 
-app.use(path = '/api/faqs', faqRoutes)
-app.use(path = '/api/gallery', galleryRoutes)
-app.use(path = '/api/products', productRoutes)
+app.use('/api/faqs', faqRoutes)
+app.use('/api/gallery', galleryRoutes)
+app.use('/api/products', productRoutes)
+
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '..', 'frontend', 'build', 'index.html'));
+});
 
 const PORT = process.env.PORT || 5005;
 

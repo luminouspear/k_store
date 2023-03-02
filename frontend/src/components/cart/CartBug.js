@@ -2,6 +2,7 @@ import React from 'react'
 import TextCalloutBox from '../../components/global/userinterface/TextCalloutBox'
 import { KStoreTitle } from '../../components/global/userinterface/KStoreTitle'
 import { CTAButton } from '../../components/global/userinterface/CTAButton'
+import { PayPalScriptProvider, PayPalButtons } from "@paypal/react-paypal-js"
 
 export default function CartBug(props) {
 
@@ -45,8 +46,18 @@ export default function CartBug(props) {
                     </li>
                 </ul>
 
-                <CTAButton text="Checkout" level="primary" location="/checkout"
+                {/* <CTAButton text="Checkout" level="primary" location="/checkout"
                 layoutPrefs="py-8 lg:w-full"  />
+                 */}
+
+                <div
+                    className="lg:w-full py-8">
+                    <PayPalScriptProvider>
+                        <PayPalButtons />
+                    </PayPalScriptProvider>
+                </div>
+
+
 
             </TextCalloutBox>
         </aside>

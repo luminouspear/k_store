@@ -56,9 +56,9 @@ function CartScreen() {
                 ) : <>
                   <div className="w-full px-8 mb-8 text-center lg:text-left">
                 <KStoreTitle title="your cart" textType="sectionheader" /></div>
-                    {cartItems.map(item =>  (
+                    {cartItems.map((item, index) =>  (
                       <CartItem
-                        key={item.id}
+                        key={index}
                         item={item}
                         removeHandler={removeHandler} />
                     ))}

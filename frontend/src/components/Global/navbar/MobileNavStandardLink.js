@@ -6,8 +6,8 @@ export function MobileNavStandardLink(props) {
   const { menuData, click } = props
 
   return menuData.map(section => (section.type !== "button") ?
-    <Link to={section.linkLocation} className="w-full">
-    <div key={section.id} className="flex flex-col items-center justify-center w-10/12 mx-auto" >
+    <Link key={section.id} to={section.linkLocation} className="w-full">
+    <div  className="flex flex-col items-center justify-center w-10/12 mx-auto" >
       <li
         className="flex items-center justify-center w-full py-12 my-auto text-center cursor-pointer h-fit hover:font-bold hover:text-kyellow " onClick={click}>
           {section.sectionTitle}
