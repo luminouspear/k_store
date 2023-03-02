@@ -17,7 +17,7 @@ const StoreRow = (props) => {
   return (
 
 
-    <div className="grid flex-col items-center gap-12 mx-12 mt-12 md:grid-cols-2 lg:grid-cols-3 lg:grid-flow-row lg:mt-24 md:items-start xl:mx-0">
+    <div className="flex-col items-center mx-12 mt-12 grid gap-12 md:grid-cols-2 lg:grid-cols-3 lg:grid-flow-row lg:mt-24 md:items-start xl:mx-0">
       {ProductTiles}
     </div>
 

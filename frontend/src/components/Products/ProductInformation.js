@@ -5,6 +5,7 @@ import { KStoreTitle } from '../global/userinterface/KStoreTitle';
 const ProductInformation = (props) => {
 
     const { itemPrice, itemDescription, itemTitle, id, onAddToCart, status, quantity, itemSize, shippingPrice, itemCredit } = props
+    console.log('quantity: ', quantity);
     console.log('id: ', id);
     console.log('itemSize: ', itemSize);
 

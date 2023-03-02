@@ -2,31 +2,33 @@ import React from 'react'
 
 export default function CartItem(props) {
 
-    const { id, imageUrl, itemAlt, itemPrice, itemDescription, itemTitle, productUrl, quantity } = props.item
+    const { id, imageUrl, itemAlt, itemPrice, itemTitle, quantitySelected, quantity } = props.item
+    console.log('quantitySelected: ', quantitySelected);
+    console.log('quantity: ', quantity);
     const { removeHandler } = props
 
+    console.log(props.item)
+
     return (
-        <div className="flex flex-col mx-6 my-6 basis-full lg:basis-9/12 md:flex-row " >
+        <div className="grid mx-8 my-6 lg:grid-flow-col md:flex-row lg:grid-cols-10 " >
             <img
-                src={`/assets/${imageUrl}`} className="w-full h-full bg-cover md:w-64 rounded-3xl shadow-kcyan4 hover:shadow-kmag4 " alt={itemAlt}
+                src={`/assets/${imageUrl}`} className="object-cover h-auto max-w-full lg:col-span-4 aspect-1 rounded-3xl shadow-kcyan4 hover:shadow-kmag4 " alt={itemAlt}
             />
 
-            <ul className="flex flex-col w-full px-6 mt-6 space-y-6 list-none lg:w-10/12 md:mt-0 ">
-                <li><h2 className="pt-2 pb-8 text-4xl font-bold text-left text-white h-fit font-quicksand">
+            <ul className="flex flex-col w-full lg:col-span-6 px-6 mt-6 list-none lg:w-full md:mt-0 lg:space-y-2">
+                <li><h2 className="pt-8 lg:pt-0 pb-8 text-4xl font-bold text-left text-white h-fit font-quicksand">
                     {itemTitle}
                 </h2></li>
                 <li className="w-full text-white font-quicksand">
                     <div className="flex flex-row items-end justify-between w-full lg:w-10/12">
-                        <span className="text-lg font-normal">Quantity</span>
+                        {props.item.quantity === 1 ? (<div className="text-lg font-semibold font-quicksand text-kyellow ">One of a Kind!</div>) : (<span className="text-lg font-normal">Quantity: {quantitySelected}</span>)}
 
-                        <span className="text-xl font-normal">{quantity}</span>
                     </div>
                 </li>
                 <li className="w-full text-white font-quicksand">
-                    <div className="flex flex-row items-end justify-between w-full lg:w-10/12">
-                        <span className="text-lg font-normal">Estimated Total</span>
+                    <div className="flex flex-row items-end justify-between w-full align-baseline">
 
-                        <span className="text-xl font-normal">{itemPrice}</span>
+                        <span className="text-xl font-normal lg:text-lg lg:text-right">CA ${itemPrice.toFixed(2)}</span>
                     </div>
                 </li>
                 <li className="w-full text-white font-quicksand">

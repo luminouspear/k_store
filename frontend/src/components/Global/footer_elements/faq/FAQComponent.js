@@ -15,7 +15,7 @@ const FAQComponent = props => {
 
     return (
         <div>
-            <div className="flex items-center w-10/12 h-24 mx-auto mt-12 space-x-6 transition cursor-pointer accordion-header md:w-9/12 xl:w-7/12 hover:font-kyellow group "
+            <div className="flex items-center w-10/12 h-24 mx-auto mt-12 cursor-pointer space-x-6 transition accordion-header md:w-9/12 xl:w-7/12 hover:font-kyellow group "
             onClick={handleHeaderClick}>
                 <i className={`text-3xl fa-solid fa-caret-down text-kmag drop-shadow-kyellow2 ${headerState ? "-rotate-90" : "rotate-0"}`} />
                 <h3 className="text-3xl font-medium text-white">

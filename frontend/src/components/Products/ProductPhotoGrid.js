@@ -16,8 +16,8 @@ const ProductPhotoGrid = (props) => {
             <ProductTileImage imageUrl={imageUrl} imageAlt={imageAlt} id={imageId} />
         </div>
 
-            // <div className="grid w-full grid-cols-3 gap-6 p-6">
-            //     <div className="w-full col-span-3 row-span-3 overflow-hidden md:col-span-2 md:row-span-2 rounded-3xl isolate shadow-kcyan4 ">
+            // <div className="w-full p-6 grid grid-cols-3 gap-6">
+            //     <div className="w-full overflow-hidden col-span-3 row-span-3 md:col-span-2 md:row-span-2 rounded-3xl isolate shadow-kcyan4 ">
             //         <Stub />
             //     </div>
             //     <div className="w-full overflow-hidden rounded-3xl isolate shadow-kyellow4">

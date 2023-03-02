@@ -12,7 +12,7 @@ export function MobileNavStandardLink(props) {
         className="flex items-center justify-center w-full py-12 my-auto text-center cursor-pointer h-fit hover:font-bold hover:text-kyellow " onClick={click}>
           {section.sectionTitle}
       </li>
-      <div className="w-10/12 h-1 mx-auto border-b border-opacity-100 border-dotted border-slate-200"></div>
+      <div className="w-10/12 h-1 mx-auto border-b border-dotted border-opacity-100 border-slate-200"></div>
     </div>
         </Link>  :
     <div key={section.id}></div>

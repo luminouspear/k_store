@@ -56,7 +56,7 @@ const HeroSection = ({ gallery }) => {
 //         {/* Gallery Container */}
 //           {/* Image Container */}
 //
-//           <div className="flex items-center content-center justify-center w-full h-6 pt-6 space-x-4 align-middle lg:w-8/12 md:h-8">
+//           <div className="flex items-center content-center justify-center w-full h-6 pt-6 align-middle space-x-4 lg:w-8/12 md:h-8">
 //             <Dot dotState="active" />
 //             <Dot />
 //             <Dot />

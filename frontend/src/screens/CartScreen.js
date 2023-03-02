@@ -15,25 +15,35 @@ import {removeFromCart} from '../redux/actions/cartActions'
 
 function CartScreen() {
 
+
+
   const dispatch = useDispatch()
 
   const cart = useSelector(state => state.cart)
   const { cartItems } = cart
+  console.log('cartItems: ', cartItems);
 
   const removeHandler = (id) => {
     dispatch(removeFromCart(id))
   }
 
   const getCartCount = () => {
-    return cartItems.reduce((qty, item) => Number(item.quantity) + qty, 0)
+    return cartItems.reduce((qty, item) => {
+      console.log(item)
+      return item.quantitySelected + qty
+    }, 0)
   }
 
   const getCartSubtotal = () => {
     return cartItems.reduce((subtotal, item) => subtotal + (item.itemPrice * item.quantitySelected), 0 )
   }
 
+  const getShippingTotal = () => {
+    return cartItems.reduce((shippingTotal, item) => shippingTotal + (item.shippingPrice * item.quantitySelected), 0)
+  }
+
     return (
-      <div className="w-full bg-[#111] mt-4 pt-6 pb-5 h-screen lg:h-auto lg:min-h-[calc(100vh - {height of footer})]">
+      <div className="w-full bg-[#111]  mt-4 pt-6 pb-5 min-h-screen lg:h-auto ">
         <div className="w-full max-w-7xl container mx-auto bg-transparent mt-6 md:mt-12 mb-12 min-h-[95%] ">
           <div className="flex flex-col w-full lg:flex-row">
             <div className="flex flex-col w-full mx-auto basis-full lg:basis-9/12 ">
@@ -44,9 +54,9 @@ function CartScreen() {
                     <Link to="/shop" className="text-3xl font-medium text-center cursor-pointer text-kmag font-quicksand hover:text-kyellow">Let's find something for you!</Link>
                   </div>
                 ) : <>
-                  <div className="w-full px-6 mb-6 text-center lg:text-left">
+                  <div className="w-full px-8 mb-8 text-center lg:text-left">
                 <KStoreTitle title="your cart" textType="sectionheader" /></div>
-                    {cartItems.map(item => (
+                    {cartItems.map(item =>  (
                       <CartItem
                         key={item.id}
                         item={item}
@@ -58,11 +68,12 @@ function CartScreen() {
             <CartBug
               count={getCartCount()}
               subtotal={getCartSubtotal()}
+              shippingTotal={getShippingTotal()}
             />
 
           </div>
         </div>
-        <Footer ref={footerRef} />
+        <Footer />
       </div>
 
     )

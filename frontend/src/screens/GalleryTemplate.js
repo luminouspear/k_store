@@ -14,16 +14,16 @@ export function GalleryTemplate({ title, description, images, pathToImages, onSe
       <p className="w-8/12 mx-auto mb-12 text-2xl text-center text-white font-quicksand">
         {description}
       </p>
-      <div className="grid grid-cols-2 gap-6 mx-6 lg:grid-cols-3 ">
+      <div className="mx-6 grid grid-cols-2 gap-6 lg:grid-cols-3 ">
         {images.map(image => (
-          <ProductTileImage
+          <div><ProductTileImage
             imageUrl={image.galleryItemURL}
             imageAlt={image.galleryItemAlt}
             localPath={pathToImages}
             key={image.id}
             onSelectImage={onSelectImage}
             // onClick={() => setSelectedImage(image)}
-          />))}
+          /></div>))}
 
       </div>
 

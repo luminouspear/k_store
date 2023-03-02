@@ -13,7 +13,7 @@ export default function MobileNavbar(props) {
 
   return (
     <div className=" h-fit lg:hidden" >
-      <div className="flex items-center justify-end w-full h-24 space-x-0 align-middle ">
+      <div className="flex items-center justify-end w-full h-24 align-middle space-x-0 ">
         <Link to="/cart"
         className="flex flex-row items-center justify-center w-12 h-12 space-x-0 group">
           <i className="relative fas fa-shopping-cart h-8 w-8 text-center text-slate-200 text-2xl group-hover:text-kyellow group-hover:drop-shadow-kmag2 scale-[85%]">

@@ -29,12 +29,12 @@ export default function GalleryPreview(props) {
     console.log(gallery)
     galleryPreviewImages = [...gallery.images].map((image, index) => {
 
-      return (<ProductTileImage
+      return (<div><ProductTileImage
         key={index}
         imageUrl={image.galleryItemURL}
         imageAlt={image.galleryItemAlt}
         id={image.id}
-      />)
+      /></div>)
     })
   }
   if (galleryLoading) {
@@ -54,7 +54,7 @@ export default function GalleryPreview(props) {
               <KStoreTitle title={sectionTitle} textType={"sectionheader"} />
             </h2>
 
-            <div className="grid grid-cols-2 gap-6 mx-12 mt-12 lg:mt-24 md:gap-12 md:gap-y-12 lg:gap-y-12 lg:grid-cols-3 2xl:gap-12">
+            <div className="h-auto max-w-full mx-12 mt-12 grid grid-cols-2 gap-6 lg:mt-24 md:gap-12 md:gap-y-12 lg:gap-y-12 lg:grid-cols-3 2xl:gap-12">
 
               {galleryPreviewImages}
 

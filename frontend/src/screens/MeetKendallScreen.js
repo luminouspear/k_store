@@ -14,7 +14,7 @@ const MeetKendallScreen = () => {
         <h2 className="mx-auto text-center ">
           <KStoreTitle title={sectionTitle} textType={"sectionheader"} />
         </h2>
-        <div className="grid items-center justify-start grid-cols-1 mt-12 align-top lg:grid-cols-2">
+        <div className="items-center justify-start mt-12 align-top grid grid-cols-1 lg:grid-cols-2">
           <div className="flex flex-col w-full mx-12 ">
             <p className="w-10/12 mt-12 mb-8 text-xl font-medium text-white font-quicksand">Kendall McCollum is an artist, maker, quilter and career manageer who lives in Simcoe County, Barrie, Ontario, Canada.&nbsp; 🇨🇦</p>
             <p className="w-10/12 text-xl font-medium text-white font-quicksand">Originally from Los Angeles, California, Kendall learned quilting from her grandmothers, but she isn't your grandma's typical quilter. Known for bold color choices, daring textures and bright fabric choices, Kendall works every day to move the art of foundation paper piecing forward.</p>

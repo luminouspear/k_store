@@ -7,7 +7,7 @@ export function KStoreTitle({ title, textType, allowLineBreak = false, layoutPre
     logo: 'first-letter:text-4xl first-letter:sm:text-5xl first-letter:lg:text-6xl first-letter:xl:text-7xl first-letter:2xl:text-8xl first-letter:py-0 pr-2 lg:pr-3 text-2xl sm:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl inline-block cursor-pointer ',
     subheader: 'text-4xl first-letter:text-5xl sm:text-5xl sm:first-letter:text-6xl inline-block -mx-0 ',
     nocaps: 'text-4xl  2xl:text-5xl w-fit',
-    sectionheader: 'text-4xl first-letter:text-5xl sm:text-5xl sm:first-letter:text-6xl first-letter:py-0 pr-2 lg:pr-3 inline-block',
+    sectionheader: 'text-3xl first-letter:text-4xl sm:text-5xl sm:first-letter:text-6xl first-letter:py-0 pr-2 lg:pr-3 inline-block',
     productTitle: 'first-letter:text-5xl  first-letter:py-0 pr-2 lg:pr-3 text-3xl inline-block'
   }
 
