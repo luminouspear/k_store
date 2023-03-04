@@ -23,7 +23,9 @@ app.use((req, res, next) => {
   next();
 });
 
-app.use(express.static(path.join(__dirname, '..', 'frontend', 'build')));
+// Serve the static files from the React app
+app.use(express.static(path.join(__dirname, 'frontend', 'build')));
+
 
 
 //Any request going to server 5005 will have access through these routes.
@@ -36,9 +38,11 @@ app.use('/api/faqs', faqRoutes)
 app.use('/api/gallery', galleryRoutes)
 app.use('/api/products', productRoutes)
 
+// Return the main index.html file for all other requests
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '..', 'frontend', 'build', 'index.html'));
+  res.sendFile(path.join(__dirname, 'frontend', 'build', 'index.html'));
 });
+
 
 const PORT = process.env.PORT || 5005;
 

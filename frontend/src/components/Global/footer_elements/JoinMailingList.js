@@ -5,32 +5,9 @@ import { KStoreTitle } from '../userinterface/KStoreTitle';
 import InputField from '../userinterface/InputField';
 import MailchimpSubscribe from 'react-mailchimp-subscribe'
 
-// require("dotenv-webpack").config()
 
-// require("dotenv").config();
 const userId = process.env.REACT_APP_MAILCHIMP_U
 const formId = process.env.REACT_APP_MAILCHIMP_ID
-
-
-const event = {
-  name: 'Simcoe Stitchcraft Newsletter'
-}
-
-const footerContactInfo = {
-  company: 'Simcoe Stitchcraft',
-  address1: 'PO Box 99900',
-  city: 'Barrie',
-  province: 'ON',
-  postal: 'L4N 3A2',
-country: 'Canada'
-}
-
-const campaignDefaults = {
-  from_name: "Kendall @ SimcoeStitchcraft",
-  from_email: "kendall@simcoestitchcraft.com",
-  subject: "SimcoeStitchcraft Newsletter",
-  language: "EN_US",
-}
 
 const postUrl = `https://icloud.us13.list-manage.com/subscribe/post?u=${userId}&id=${formId}`
 
