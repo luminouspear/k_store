@@ -12,7 +12,7 @@ frontend/src/playground/
 frontend/.env
 
 # production
-/build
+frontend/build
 /dist
 /frontend/dist
 Archive.zip
