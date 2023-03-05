@@ -20,6 +20,7 @@ import { LoadingErrorMessage } from "../components/global/userinterface/LoadingE
 
 
 const ProductDetails = ({ match, history }) => {
+    console.log('history: ', history);
 
     const [qty, setQty] = useState(1);
 

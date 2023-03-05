@@ -22,6 +22,22 @@ export const cartReducer = (state = { cartItems: [] }, action ) => {
                 ...state,
                 cartItems: state.cartItems.filter(x => x.id !== action.payload)
             }
+        case actionTypes.QUANTITY_UPDATE:
+            const updatedProduct = action.payload
+            return {
+                ...state,
+                cartItems: state.cartItems.map((item) =>
+                item.product === updatedProduct._id ? {...item, quantity: item.quantity - updatedProduct.quantitySelected } : item)
+            }
+        case actionTypes.RESET_CART:
+            return {
+                ...state,
+                cartItems: state.cartItems.map(item => ({
+                    ...item,
+                    quantitySelected: 0
+                })),
+                cartQuantity: 0
+            }
         default:
             return state
     }

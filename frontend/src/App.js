@@ -10,6 +10,7 @@ import CartScreen from "./screens/CartScreen";
 import GalleryScreen from "./screens/GalleryScreen";
 import MeetKendallScreen from "./screens/MeetKendallScreen";
 import ProductDetailsScreen from "./screens/ProductDetailsScreen";
+import ConfirmationScreen from "./screens/ConfirmationScreen";
 import Modal from "./Modal.js";
 
 
@@ -33,7 +34,7 @@ function App() {
   const [selectedImageUrl, setSelectedImageUrl] = useState(null)
   const [selectedImageAlt, setSelectedImageAlt] = useState(null)
 
-  const debugWindowSize = true;
+  const debugWindowSize = false;
 
   const onSelectImage = (imageUrl, imageAlt) => {
     setSelectedImageUrl(imageUrl)
@@ -103,6 +104,7 @@ function App() {
               <Route path='/404' element={<NotFound />} onClick={scrollToTop} />
               <Route path='*' element={<NotFound />} onClick={scrollToTop} />
               <Route path="/" element={<HomeScreen onSelectImage={onSelectImage} />} onClick={scrollToTop} scrollToTop={scrollToTop} />
+              <Route path="/confirmation" element={<ConfirmationScreen onClick={scrollToTop} />} onClick={scrollToTop} />
             </Routes>
           </div>
           {/* HomeScreen */}

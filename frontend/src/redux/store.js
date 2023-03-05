@@ -1,5 +1,6 @@
 import { createStore, combineReducers, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk'
+import io from 'socket.io-client'
 import { composeWithDevTools } from 'redux-devtools-extension'
 
 //Reducers
@@ -34,5 +35,16 @@ const store = createStore(
     INITIAL_STATE,
     composeWithDevTools(applyMiddleware(...middleware))
 )
+
+//Create a websocket connection
+const socket = io('http://localhost:5005');
+
+//Listen for quantityUpdated event on the websocket connection
+socket.on('quantityUpdated', (data) => {
+    console.log('Quantity updated: ', data)
+    // Dispatch an action to update teh quantity on the redux store.
+
+    store.dispatch({type: 'UPDATE_QUANTITY', payload: data})
+})
 
 export default store;

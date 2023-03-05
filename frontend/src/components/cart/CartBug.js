@@ -1,12 +1,22 @@
-import React from 'react'
+import React, {useState} from 'react'
+import { useNavigate } from 'react-router-dom'
+import { useSelector, useDispatch } from 'react-redux'
 import TextCalloutBox from '../../components/global/userinterface/TextCalloutBox'
 import { KStoreTitle } from '../../components/global/userinterface/KStoreTitle'
 import { CTAButton } from '../../components/global/userinterface/CTAButton'
 import { PayPalScriptProvider, PayPalButtons } from "@paypal/react-paypal-js"
 
-export default function CartBug(props) {
+const paypalClientId = process.env.REACT_APP_PAYPAL_CLIENT_ID
+
+function CartBug(props) {
 
     const { count, subtotal, shippingTotal } = props
+    const cart = useSelector(state => state.cart)
+    const dispatch = useDispatch()
+    let navigate = useNavigate()
+
+    const currencyCode = "CAD"
+
 
     console.log(count, subtotal)
 
@@ -51,9 +61,65 @@ export default function CartBug(props) {
                  */}
 
                 <div
-                    className="lg:w-full py-8">
-                    <PayPalScriptProvider>
-                        <PayPalButtons />
+                    className="flex flex-col justify-center text-center w-full py-16 lg:py-8">
+                    <PayPalScriptProvider
+                        options={
+                            {
+                                "client-id": paypalClientId,
+                                "currency": currencyCode,
+                            }
+                        }>
+                        <PayPalButtons
+                            createOrder={(data, actions) => {
+                                return actions.order.create({
+                                    purchase_units: [
+                                        {
+                                            amount: {
+
+                                                value: totalWithShipping,
+                                            },
+                                        },
+                                    ],
+                                })
+                            }}
+                            onApprove={(data, actions) => {
+                                return actions.order.capture().then(function (details) {
+                                    // This function shows a transaction success message to the user.
+
+                                    // Update product quantities
+
+                                    const items = cart.cartItems
+                                    console.log('items: ', items);
+                                    items.forEach(async item => {
+                                        try {
+                                            const res = await fetch(`/api/products/${item.id}`, {
+                                                method: 'PUT',
+                                                headers: {
+                                                    'Content-Type': 'application/json'
+                                                },
+                                                body: JSON.stringify({
+                                                    quantity: item.quantitySelected
+                                                })
+                                            })
+                                        const data = res.json()
+                                            console.log('Data: ', data)
+
+                                        } catch (err) {
+                                            console.log("approve failed")
+                                            console.error(err)
+                                        }
+                                    })
+                                    // Update cart state
+                                    dispatch({type: 'RESET_CART'})
+                                /// redirect user to confirmation page
+                                    navigate('/confirmation')
+
+
+
+
+                                })
+                            }}
+                        />
                     </PayPalScriptProvider>
                 </div>
 
@@ -63,3 +129,5 @@ export default function CartBug(props) {
         </aside>
     )
 }
+
+export default CartBug

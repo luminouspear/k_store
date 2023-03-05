@@ -13,7 +13,7 @@ import {removeFromCart} from '../redux/actions/cartActions'
 
 
 
-function CartScreen() {
+function CartScreen(history) {
 
 
 
@@ -69,6 +69,8 @@ function CartScreen() {
               count={getCartCount()}
               subtotal={getCartSubtotal()}
               shippingTotal={getShippingTotal()}
+              cartItems={cartItems}
+              history={history}
             />
 
           </div>

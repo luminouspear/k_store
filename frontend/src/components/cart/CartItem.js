@@ -12,10 +12,10 @@ export default function CartItem(props) {
     return (
         <div className="grid mx-8 my-6 lg:grid-flow-col md:flex-row lg:grid-cols-10 " >
             <img
-                src={`/assets/${imageUrl}`} className="object-cover h-auto max-w-full lg:col-span-4 aspect-1 rounded-3xl shadow-kcyan4 hover:shadow-kmag4 " alt={itemAlt}
+                src={`/assets/${imageUrl}`} className="object-cover h-auto max-w-full lg:col-span-4  rounded-3xl shadow-kcyan4 hover:shadow-kmag4 " alt={itemAlt}
             />
 
-            <ul className="flex flex-col w-full lg:col-span-6 px-6 mt-6 list-none lg:w-full md:mt-0 lg:space-y-2">
+            <ul className="flex flex-col w-full space-y-2 lg:col-span-6 px-6 mt-6 list-none lg:w-full md:mt-0 lg:space-y-2">
                 <li><h2 className="pt-8 lg:pt-0 pb-8 text-4xl font-bold text-left text-white h-fit font-quicksand">
                     {itemTitle}
                 </h2></li>
@@ -34,9 +34,9 @@ export default function CartItem(props) {
                 <li className="w-full text-white font-quicksand">
                     <button className="flex flex-row items-center justify-end cursor-pointer lg:justify-start lg:w-10/12 text-kcyan hover:text-kyellow"
                     onClick={() => removeHandler(id)}>
-                        <i className="w-4 h-4 m-2 fa-solid fa-circle-minus"></i>
+                        <i className="w-4 h-4 mr-2 fa-solid fa-circle-minus"></i>
                         <span
-                            className="text-lg font-normal"
+                            className="text-lg font-normal hover:font-semibold cursor-pointer"
                         >
                             Remove
                         </span>

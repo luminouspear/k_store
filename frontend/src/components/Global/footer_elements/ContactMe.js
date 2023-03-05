@@ -2,7 +2,6 @@ import React, {useState} from 'react'
 import { KStoreTitle } from '../userinterface/KStoreTitle';
 import ContactMeForm from './ContactMeForm';
 import MailchimpSubscribe from 'react-mailchimp-subscribe';
-// require("dotenv").config();
 const userId = process.env.REACT_APP_MAILCHIMP_U
 const formId = process.env.REACT_APP_MAILCHIMP_ID
 
