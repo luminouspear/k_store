@@ -29,7 +29,7 @@ const Navbar = ({ toggleNav, click, setSideToggle }) => {
           <h1 className="flex flex-row justify-center h-full whitespace-nowrap align-left lg:mt-0"><KStoreTitle title={"simcoe stitchcraft"} textType={"logo"} /></h1>
         </Link>
       </div>
-      <ul className="items-center hidden font-light list-none cursor-pointer lg:flex font-quicksand text-slate-200 sm:text-md lg:text-lg xl:text-xl lg:mt-6 2xl:mt-4">
+      <ul className="lg:items-center hidden font-light list-none cursor-pointer lg:flex lg:flex-row lg:justify-center lg:space-x-10 lg:align-middle font-quicksand text-slate-200 lg:text-lg xl:text-xl lg:mt-6 2xl:mt-4">
         {
           menuData.map(section => (
           (section.type !== "button") ?

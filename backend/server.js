@@ -24,7 +24,7 @@ app.use((req, res, next) => {
 });
 
 // Serve the static files from the React app
-app.use(express.static(path.join(__dirname, 'frontend', 'build')));
+app.use(express.static(path.join(__dirname, '..', 'frontend', 'build')));
 
 
 
@@ -39,8 +39,8 @@ app.use('/api/gallery', galleryRoutes)
 app.use('/api/products', productRoutes)
 
 // Return the main index.html file for all other requests
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'frontend', 'build', 'index.html'));
+app.get('/*', (req, res) => {
+  res.sendFile(path.join(__dirname, '..', 'frontend', 'build', 'index.html'));
 });
 
 

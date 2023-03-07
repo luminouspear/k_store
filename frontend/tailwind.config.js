@@ -30,6 +30,7 @@ module.exports = {
                 'kblack': '#2D2D2D',
             },
             boxShadow: {
+                'kclear1': '-1px 1px 0 rgba(255, 214, 102, 0.01)',
                 'kyellow1': '-1px 1px 0 rgba(255, 214, 102, 1.0)',
                 'kcyan1': '-1px 1px 0 rgba(86, 180, 194, 1.0)',
                 'kmag1': '-1px 1px 0 rgba(255, 102, 196, 1.0)',
