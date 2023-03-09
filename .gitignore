@@ -16,6 +16,11 @@ frontend/.env
 frontend/build
 /dist
 /frontend/dist
+/backend/public
+
+#staging
+Dockerfile
+/app
 
 # misc
 .DS_Store
