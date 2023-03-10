@@ -21,8 +21,9 @@ export default function CustomQuilts(props) {
             <img
               src={"/assets/image_dragonfly_spock.jpg"}
               className="object-cover object-center w-full h-full"
-
               alt="Mr. Spock trying to help..."
+              loading="lazy"
+          decoding="async"
             />
           } layoutPrefs={"lg:h-5/6 2xl:h-[90%]  2xl:right-0  xl:mx-0 lg:inline-block lg:translate-y-0 lg:translate-x-[45%]   shadow-kmag4"} />
 

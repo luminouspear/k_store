@@ -34,7 +34,9 @@ const MeetKendallScreen = () => {
                 <img
                   src={"/assets/image_portrait_kendall.jpg"}
                   className="object-cover w-full h-full object-top-middle"
-                  alt="Kendall in downtown Barrie"
+                alt="Kendall in downtown Barrie"
+                loading="lazy"
+          decoding="async"
                 />
               } layoutPrefs={"mx-12 lg:mx-0 w-10/12 lg:w-full lg:h-full shadow-kyellow4 hover:shadow-kcyan4 "} />
           </div>

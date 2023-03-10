@@ -32,6 +32,8 @@ function ProductTileImage({imageUrl, imageAlt, localPath = "/assets/", onSelectI
                 className="inline-block object-cover object-center h-auto max-w-full cursor-pointer scale-110"
                 alt={imageAlt}
                 onClick={handleImageClick}
+                loading="lazy"
+          decoding="async"
             />
 
 
