@@ -32,7 +32,7 @@ export const getGalleryDetailsReducer = (state = { gallery: [] }, action) => {
                 galleryLoading: true
             }
         case actionTypes.GET_GALLERY_DETAILS_SUCCESS:
-            console.log(`Found gallery. Gallery name is ${action.payload.galleryName }`)
+            // console.log(`Found gallery. Gallery name is ${action.payload.galleryName }`)
             return {
                 galleryLoading: false,
                 gallery: action.payload

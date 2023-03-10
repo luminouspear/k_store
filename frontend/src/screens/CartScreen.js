@@ -21,7 +21,7 @@ function CartScreen(history) {
 
   const cart = useSelector(state => state.cart)
   const { cartItems } = cart
-  console.log('cartItems: ', cartItems);
+  // console.log('cartItems: ', cartItems);
 
   const removeHandler = (id) => {
     dispatch(removeFromCart(id))
@@ -29,7 +29,7 @@ function CartScreen(history) {
 
   const getCartCount = () => {
     return cartItems.reduce((qty, item) => {
-      console.log(item)
+      // console.log(item)
       return item.quantitySelected + qty
     }, 0)
   }

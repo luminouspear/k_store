@@ -20,14 +20,14 @@ import { LoadingErrorMessage } from "../components/global/userinterface/LoadingE
 
 
 const ProductDetails = ({ match, history }) => {
-    console.log('history: ', history);
+    // console.log('history: ', history);
 
     const [qty, setQty] = useState(1);
 
     let { id } = useParams()
 
     id = match ? match.params.id : id
-    console.log('id: ', id);
+    // console.log('id: ', id);
 
     const dispatch = useDispatch()
 
@@ -66,7 +66,7 @@ useEffect(() => {
         () => {
             if (!product && match?.params.id !== product.id) {
                 dispatch(getProductDetails(match.params.id))
-                console.log("1")
+                // console.log("1")
             } else {
                 dispatch(getProductDetails(id))
 
@@ -77,16 +77,16 @@ useEffect(() => {
     useEffect(() => {
         dispatch(listProducts())
         return () => {
-            console.log(`products: ${products}`)
+            // console.log(`products: ${products}`)
         };
     }, []);
 
 
 
     const addToCartHandler = (id) => {
-        console.log('addToCartHandler called')
-        console.log('id: ', id);
-        console.log('qty: ', qty);
+        // console.log('addToCartHandler called')
+        // console.log('id: ', id);
+        // console.log('qty: ', qty);
         dispatch(addToCart(id, qty))
         if (history) {
             history.push(`/cart`)
@@ -94,7 +94,7 @@ useEffect(() => {
     }
 
 
-    console.log(`product: ${product}`)
+    // console.log(`product: ${product}`)
     const itemTitle = !loading && product.itemTitle
     const itemImages = !loading && product.images
     const itemPrice = !loading && product.itemPrice
@@ -105,20 +105,8 @@ useEffect(() => {
     const itemCredit = !loading && product.itemCredit
     const status = !loading && product.status
 
-    console.log(product)
+    // console.log(product)
 
-    // if (products && productsLoading === false) {
-    //     setRemainingItems(products.filter(product => product.productUrl !== id).slice(0, 3))
-    //     setRemainingItemsQty(remainingItems.length)
-    //     console.log('remainingItems: ', remainingItems);
-    // }
-
-
-
-    // const {itemTitle, images, itemPrice, itemAlt, itemDescription, flPrice, imageUrl } = product
-
-
-    // const remainingItems = product && product.filter(product => product.productUrl !== id).slice(0, 3)
 
     useEffect(() => {
         if (window.history.scrollRestoration) {

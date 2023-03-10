@@ -3,8 +3,8 @@ import React from 'react'
 export default function CartItem(props) {
 
     const { id, imageUrl, itemAlt, itemPrice, itemTitle, quantitySelected, quantity } = props.item
-    console.log('quantitySelected: ', quantitySelected);
-    console.log('quantity: ', quantity);
+    // console.log('quantitySelected: ', quantitySelected);
+    // console.log('quantity: ', quantity);
     const { removeHandler } = props
 
     console.log(props.item)

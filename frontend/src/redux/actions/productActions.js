@@ -40,11 +40,11 @@ export const getProductDetails = (id) => async (dispatch) => {
 
     try {
         dispatch({ type: actionTypes.GET_PRODUCT_DETAILS_REQUEST })
-        console.log("Starting request for product details")
+        // console.log("Starting request for product details")
 
         const { data } = await axios.get(`${API_URL}api/products/${id}`)
 
-        console.log(`Returned data: ${data}`)
+        // console.log(`Returned data: ${data}`)
         dispatch({
             type: actionTypes.GET_PRODUCT_DETAILS_SUCCESS,
             payload: data

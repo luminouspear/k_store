@@ -18,7 +18,7 @@ function CartBug(props) {
     const currencyCode = "CAD"
 
 
-    console.log(count, subtotal)
+    // console.log(count, subtotal)
 
 
 
@@ -89,7 +89,7 @@ function CartBug(props) {
                                     // Update product quantities
 
                                     const items = cart.cartItems
-                                    console.log('items: ', items);
+                                    // console.log('items: ', items);
                                     items.forEach(async item => {
                                         try {
                                             const res = await fetch(`/api/products/${item.id}`, {
@@ -102,10 +102,10 @@ function CartBug(props) {
                                                 })
                                             })
                                         const data = res.json()
-                                            console.log('Data: ', data)
+                                            // console.log('Data: ', data)
 
                                         } catch (err) {
-                                            console.log("approve failed")
+                                            // console.log("approve failed")
                                             console.error(err)
                                         }
                                     })

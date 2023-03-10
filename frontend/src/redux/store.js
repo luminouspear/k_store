@@ -44,7 +44,7 @@ const socket = io(socketUrl);
 
 //Listen for quantityUpdated event on the websocket connection
 socket.on('quantityUpdated', (data) => {
-    console.log('Quantity updated: ', data)
+    // console.log('Quantity updated: ', data)
     // Dispatch an action to update teh quantity on the redux store.
 
     store.dispatch({type: 'UPDATE_QUANTITY', payload: data})

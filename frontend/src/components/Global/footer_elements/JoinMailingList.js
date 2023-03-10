@@ -93,7 +93,7 @@ const NewsletterForm = ({ status, message, onValidated, subscriptionStatus }) =>
   }, [status])
 
   useEffect(() => {
-    console.log('isSubscribedToNewsletter: ', isSubscribedToNewsletter);
+    // console.log('isSubscribedToNewsletter: ', isSubscribedToNewsletter);
   }, [isSubscribedToNewsletter])
 
   const clearFields = () => {

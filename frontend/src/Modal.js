@@ -1,7 +1,7 @@
 import React from 'react';
 
 function Modal({ onClose, imageUrl, imageAlt}) {
-    console.log('imageUrl: ', imageUrl);
+    // console.log('imageUrl: ', imageUrl);
 
     const filePath = "/assets/" + imageUrl
 

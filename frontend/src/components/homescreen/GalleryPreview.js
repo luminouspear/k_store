@@ -26,7 +26,7 @@ export default function GalleryPreview(props) {
 
 
   if (!galleryLoading && !galleryError && gallery?.images) {
-    console.log(gallery)
+    // console.log(gallery)
     galleryPreviewImages = [...gallery.images].map((image, index) => {
 
       return (<div key={index}><ProductTileImage

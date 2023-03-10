@@ -8,7 +8,7 @@ const ProductPhotoGrid = (props) => {
     const imageAlt = images[0].imageAlt
     const imageId = images[0].id
 
-    console.log('imageUrl2: ', imageUrl);
+    // console.log('imageUrl2: ', imageUrl);
     const localPath = "../../../public/assets/"
 
     return (
