@@ -2,7 +2,7 @@ import * as actionTypes from '../constants/cartConstants'
 import axios from 'axios'
 
 export const addToCart = (id, quantity) => async (dispatch, getState) => {
-    console.log(`id: ${id} quantity: ${quantity}`)
+    // console.log(`id: ${id} quantity: ${quantity}`)
 
     const { data } = await axios.get(`/api/products/${id}`)
 
@@ -29,7 +29,7 @@ export const addToCart = (id, quantity) => async (dispatch, getState) => {
 }
 
 export const removeFromCart = (id) => async (dispatch, getState) => {
-    console.log(`remove from cart running ${id}`)
+    // console.log(`remove from cart running ${id}`)
     dispatch(
         {
             type: actionTypes.REMOVE_FROM_CART,

@@ -18,7 +18,7 @@ const Gallery = ({onSelectImage}) => {
   const getGalleries = useSelector(state => state.getGalleries)
   const { galleries, galleriesLoading, galleriesError } = getGalleries
 
-  console.log('getGalleries: ', getGalleries);
+  // console.log('getGalleries: ', getGalleries);
   const sectionTitle = "Gallery"
 
   const pathToImages = "/assets/"

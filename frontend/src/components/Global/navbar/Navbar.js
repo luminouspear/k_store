@@ -15,10 +15,6 @@ const Navbar = ({ toggleNav, click, setSideToggle }) => {
     return cartItems.reduce((qty, item) => qty + Number(item.quantity), 0)
   }
 
-  console.log(getCartCount())
-
-
-
 
   return (
 

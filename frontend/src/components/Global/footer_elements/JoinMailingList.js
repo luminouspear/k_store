@@ -64,8 +64,8 @@ const [email, setEmail] = useState('')
 export default JoinMailingList
 
 const NewsletterForm = ({ status, message, onValidated, subscriptionStatus }) => {
-  console.log('message: ', message);
-  console.log('status: ', status);
+  // console.log('message: ', message);
+  // console.log('status: ', status);
   const [email, setEmail] = useState('');
   const [userName, setUsername] = useState('');
   const [userMessage, setUserMessage] = useState(`Newsletter subscription on ${new Date().toLocaleString('en-US', {weekday: 'long', month: 'long', day: 'numeric', year: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: true, timeZoneName: 'short'}).replace(/[^\w\d,'.-]/g, ' ')}`);
@@ -81,10 +81,7 @@ const NewsletterForm = ({ status, message, onValidated, subscriptionStatus }) =>
       MERGE3: isSubscribedToNewsletter === "No" ? "No" : "Yes",
 
     })
-    console.log('userName: ', userName);
-    console.log('email: ', email);
-    console.log('isSubscribedToNewsletter: ', isSubscribedToNewsletter);
-    console.log('userMessage: ', userMessage);
+
   }
 
   useEffect(() => {

@@ -4,12 +4,13 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "start": "node ./backend/server.js",
+    "start": "node ./server.js",
     "server": "nodemon ./backend/server.js",
     "build": "webpack",
     "client": "npm start --prefix frontend",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "data:import": "node ./backend/seederScript.js"
+    "data:import:local": "node ./backend/seederScript.js",
+    "data:import:server": "node ./seederScript.js"
   },
   "browser": {
     "./src": "./frontend/src/index.js",

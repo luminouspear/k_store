@@ -36,8 +36,11 @@ const store = createStore(
     composeWithDevTools(applyMiddleware(...middleware))
 )
 
+const socketUrl = process.env.NODE_ENV === 'production' ? 'https://www.simcoestitchcraft.com' : 'http://localhost:5005';
+
+
 //Create a websocket connection
-const socket = io('http://localhost:5005');
+const socket = io(socketUrl);
 
 //Listen for quantityUpdated event on the websocket connection
 socket.on('quantityUpdated', (data) => {
