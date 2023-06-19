@@ -8,7 +8,7 @@ import { PayPalScriptProvider, PayPalButtons } from "@paypal/react-paypal-js"
 
 const paypalClientId = process.env.REACT_APP_PAYPAL_CLIENT_ID
 
-function CartBug(props) {
+function  CartBug(props) {
 
     const { count, subtotal, shippingTotal } = props
     const cart = useSelector(state => state.cart)

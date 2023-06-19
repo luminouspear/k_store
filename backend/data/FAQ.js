@@ -5,10 +5,10 @@ const faqData = [{
 }, {
     id: 2,
     faqQuestionHeader: 'How long would it take to make a quilt?',
-    faqAnswer: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum porro assumenda quod similique. Deleniti quas obcaecati autem adipisci possimus sit ducimus facere corrupti ipsum tempora? Voluptates, velit cum. Labore, cumque? '
+    faqAnswer: 'It really depends on what you want! I can make a mini quilt pretty quickly, but a larger complex quilt will take more time. If you want to get a timeline for your commission, please reach out and we’ll chat.  '
 }, {
     id: 3,
     faqQuestionHeader: 'Do you ship internationally?',
-    faqAnswer: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, dolorem? Adipisci explicabo exercitationem esse nulla, mollitia voluptatem cupiditate commodi excepturi nemo tempora aliquam blanditiis maxime?'
+    faqAnswer: "As I'm based in Canada, I ship to anywhere in Canada or the United States. If you're looking for shipping outside of North America, please contact me first and we can probably work something out!"
 }]
 module.exports = faqData

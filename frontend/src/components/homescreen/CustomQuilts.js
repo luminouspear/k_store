@@ -20,7 +20,7 @@ export default function CustomQuilts(props) {
           <LargeImageContainer contents={
             <img
               src={"/assets/image_dragonfly_spock.jpg"}
-              className="object-cover object-center w-full h-full"
+              className="object-cover object-center w-full h-full content-auto"
               alt="Mr. Spock trying to help..."
               loading="lazy"
           decoding="async"
@@ -29,11 +29,11 @@ export default function CustomQuilts(props) {
 
           <TextCalloutBox layoutPrefs={" text-center lg:top-[28%] xl:top-[25%] 2xl:top-[25%] lg:left-12  2xl:mx-0 2xl:-translate-x-24  2xl:ml-24  2xl:left-0 lg:w-5/12 mx-auto "} >
             <>
-              <h2 className="w-full mx-auto mt-12 mb-12 md:w-6/12 lg:w-10/12 ">
+              <h2 className="w-full mx-auto mt-12 mb-12 md:w-6/12 lg:w-10/12 px-8 lg:px-0 ">
                 <span className="text-3xl md:text-3xl text-center text-white font-quicksand sm:text-5xl lg:text-kblack font-normal leading-tight sm:leading-[3.6rem] ">Want something made{" "}<br className="sm:hidden" /></span>
                 <span className="flex flex-col items-center h-fit"><KStoreTitle title="just for you?" textType="nocaps" /></span>
                 {" "}
-               <span className="text-3xl md:text-3xl text-center text-white font-quicksand sm:text-5xl lg:text-kblack font-normal leading-tight sm:leading-[3.6rem] "><br />
+               <span className="text-3xl md:text-3xl text-center text-white font-quicksand sm:text-5xl lg:text-kblack font-normal leading-tight sm:leading-[3.6rem]  "><br />
 
                 Check out my quilt tops and projects in progress!</span>
               </h2>

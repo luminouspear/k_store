@@ -26,7 +26,7 @@ function ProductTileImage({imageUrl, imageAlt, localPath = "/assets/", onSelectI
 
     return (
 
-        <div className="relative max-w-full overflow-hidden bg-white rounded-3xl group-odd:shadow-kcyan4 shadow-kyellow4 isolate group-odd:hover:shadow-kmag4">
+        <div className="relative max-w-full overflow-hidden bg-white rounded-3xl group-odd:shadow-kcyan4 shadow-kyellow4 isolate group-odd:hover:shadow-kmag4 content-auto">
             <img
                 src={filePath}
                 className="inline-block object-cover object-center h-auto max-w-full cursor-pointer scale-110"

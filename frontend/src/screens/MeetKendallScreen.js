@@ -33,7 +33,7 @@ const MeetKendallScreen = () => {
             <LargeImageContainer contents={
                 <img
                   src={"/assets/image_portrait_kendall.jpg"}
-                  className="object-cover w-full h-full object-top-middle"
+                  className="object-cover w-full h-full object-top-middle content-auto"
                 alt="Kendall in downtown Barrie"
                 loading="lazy"
           decoding="async"

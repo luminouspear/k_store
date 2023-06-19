@@ -19,7 +19,7 @@ const AboutKendall = (props) => {
           <div className="w-full p-8 pt-2 mx-auto lg:w-3/4 lg:col-start-1 lg:col-span-8 lg:row-start-1 ">
             <img
               src={"/assets/image_portrait_kendall.jpg"}
-              className="object-cover object-center w-full bg-no-repeat rounded-3xl shadow-kyellow4 hover:shadow-kcyan4 isolate"
+              className="object-cover object-center w-full bg-no-repeat rounded-3xl shadow-kyellow4 hover:shadow-kcyan4 isolate content-auto"
               alt="Kendall, the artist"
             loading="lazy"
           decoding="async"/>

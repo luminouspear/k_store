@@ -17,6 +17,7 @@ frontend/build
 /dist
 /frontend/dist
 /backend/public
+/other
 
 #staging
 Dockerfile

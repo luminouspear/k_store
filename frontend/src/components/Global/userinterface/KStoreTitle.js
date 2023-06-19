@@ -1,4 +1,3 @@
-import { React } from 'react';
 
 export function KStoreTitle({ title, textType, allowLineBreak = false, layoutPrefs }) {
   const wordInTitle = title.toString().split(' ')
